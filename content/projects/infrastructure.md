@@ -6,22 +6,25 @@ title: "Cloud & Virtualisation Labs"
 
 ## Overview
 
-A series of advanced infrastructure laboratories demonstrating proficiency in cloud platforms, on-premise virtualisation, and Infrastructure as Code (IaC).
+A series of advanced infrastructure laboratories demonstrating proficiency in cloud platforms, on-premise virtualisation, and Infrastructure as Code (IaC), documented thoroughly in technical reports.
 
-## Key Features
-- **Azure Deployments**: Automated provisioning of Virtual Machines and virtual networks.
-- **Kubernetes Orchestration**: Deployment and management of Azure Kubernetes Service (AKS) clusters.
-- **On-Premise Infrastructure**: Setup of VMware ESXi hypervisors.
-- **Identity & Network Services**: Configuration of Windows Server Domain Controllers and DHCP services.
+## VMware ESXi & Windows Server Domain Lab
+In this on-premise simulation:
+- Deployed a **VMware ESXi 8.0** hypervisor as a nested VM inside VMware Workstation Pro.
+- Provisioned a **Windows Server 2022** Domain Controller.
+- Configured **Active Directory Domain Services (AD DS)** with Organization Units (OUs) and users.
+- Set up a **DHCP** scope and successfully joined a Windows 10 Pro client machine to the domain.
+- Configured virtual switches (vSwitch0) with security policies and NIC teaming.
 
-## Tech Stack
-- **Cloud Provider**: Microsoft Azure
-- **Containers**: Docker & Kubernetes
-- **Virtualisation**: VMware Workstation & ESXi
-- **OS**: Windows Server, Ubuntu Linux
-- **Automation**: ARM Templates / Bicep
+## Azure Cloud Infrastructure Lab
+Using the Azure for Students subscription, I completed a comprehensive portfolio of cloud deployments:
+- **Virtual Machines**: Deployed Ubuntu Linux VMs in Switzerland North, accessing them securely via SSH keys.
+- **Virtual Networks**: Designed VNets with segmented subnets (Frontend/Backend) and Network Security Groups (NSGs).
+- **Container Instances**: Deployed public-facing web apps using Azure Container Instances with custom DNS configurations.
+- **Infrastructure as Code**: Authenticated and deployed Azure Storage Accounts using JSON **ARM Templates** via Deployment Stacks.
+- **Kubernetes (AKS)**: Provisioned an Azure Kubernetes Service cluster, managed nodes via `kubectl`, and deployed NGINX load balancer services using YAML manifests.
 
-## Security Measures
-- Network Security Groups (NSGs) with strictly scoped inbound rules.
-- Isolated subnets for frontend and backend infrastructure.
-- Implementation of Azure Policies to restrict deployment regions and SKUs.
+## Security & Governance Measures
+- Network Security Groups (NSGs) with strictly scoped inbound SSH rules.
+- Implementation of Azure Policies to restrict deployment regions and enforce compliance.
+- Secure Storage Account deployments (LRS, hot access tier).
