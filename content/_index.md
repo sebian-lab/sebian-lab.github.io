@@ -2,11 +2,11 @@
 title: "Sebian Van de Spiegle"
 ---
 
-## Building secure, scalable systems from mobile to cloud
+## Full‑Stack Engineer | Cloud & DevOps | Android
 
-I am a **Toegepaste Informatica** (Applied Computer Science) student at **Odisee Brussel**, with a strong passion for **cybersecurity**, **DevOps**, and **cloud infrastructure**. I am currently seeking an internship in **Luxembourg** where I can apply my skills in securing networks, automating deployments, and managing cloud-native architectures.
-
-Below you'll find my portfolio — showcasing live, integrated, and continuously delivered projects.
+I build secure, scalable systems – from mobile apps to cloud infrastructure.  
+Currently pursuing a degree in **Toegepaste Informatica** at **Odisee Brussel**,  
+and seeking a **Cyber/DevOps internship in Luxembourg**.
 
 {{< mermaid >}}
 graph LR
@@ -14,34 +14,34 @@ graph LR
     B --> C[FastAPI Backend]
     C --> D[(PostgreSQL)]
     C --> E[Yahoo Finance]
+    C --> F[Redis Cache]
+    B -- TLS --> G[Cloudflare Tunnel]
+    style A fill:#f96,stroke:#333
+    style C fill:#bbf,stroke:#333
+    style D fill:#bfb,stroke:#333
 {{< /mermaid >}}
 
----
+## Featured Projects
 
 {{< project-card
-    title="AlphaTracer Android"
-    description="Real‑time portfolio tracker with biometric auth, CI/CD, and strong app security."
-    link="/projects/alphatracer-mobile"
-    tags="Jetpack Compose, Retrofit, ProGuard, DevOps"
+    title="AlphaTracer Mobile"
+    description="Real‑time portfolio tracker with biometric auth and background alerts."
+    link="/projects/alphatracer-mobile/"
+    tags="Jetpack Compose, Kotlin, Retrofit, WorkManager"
 >}}
 
 {{< project-card
     title="Backend API"
-    description="FastAPI service with JWT, PostgreSQL, rate limiting, and Trivy/Bandit security scans."
-    link="/projects/backend-api"
-    tags="FastAPI, Docker, Security, CI/CD"
+    description="FastAPI service with JWT, yfinance, PostgreSQL. Rate‑limited, secure."
+    link="/projects/backend-api/"
+    tags="FastAPI, Python, SQLAlchemy, Docker, PostgreSQL"
 >}}
 
 {{< project-card
-    title="Cloud & Virtualisation Labs"
-    description="Azure AKS, ARM templates, ESXi hypervisors, and Windows Server AD/DHCP."
-    link="/projects/infrastructure"
-    tags="Azure, VMware, Kubernetes, IaC"
+    title="Cloud & Homelab"
+    description="Azure VMs, AKS, ARM; VMware ESXi with AD/DHCP; plus my personal homelab (orion‑o6) running 30+ containers."
+    link="/projects/infrastructure/"
+    tags="Azure, VMware, Docker, Kubernetes, Debian"
 >}}
 
-{{< project-card
-    title="Home Server Infrastructure"
-    description="Self-hosted Debian environment managing 30+ Docker containers."
-    link="/projects/home-server"
-    tags="Debian, Docker, Self-Hosted, SysAdmin"
->}}
+[📄 Download Resume](/resume.pdf) · [📧 Contact](mailto:sebian.vandespiegle@student.odisee.be)

@@ -1,46 +1,36 @@
 ---
-title: "System Architecture"
+title: "Architecture"
 ---
 
-## Full Stack Integration
-
-This portfolio represents a fully integrated ecosystem, bridging the gap between mobile frontend, cloud-hosted backend APIs, and underlying virtualized infrastructure.
+## Full-System Diagram
 
 {{< mermaid >}}
 flowchart TD
-    subgraph Mobile Client
-        A[AlphaTracer Android App]
-    end
-
-    subgraph Azure Cloud Infrastructure
-        B[Nginx Reverse Proxy]
-        C[FastAPI Backend Container]
-        D[(PostgreSQL Database)]
-    end
-
-    subgraph External Services
-        E[Yahoo Finance API]
-    end
-
-    A -- HTTPS / JWT --> B
-    B -- Port 8000 --> C
-    C -- SQLAlchemy --> D
-    C -- API Calls --> E
+    Android[Android app] -->|JWT / HTTPS| CF[Cloudflare Tunnel]
+    CF --> Nginx[Nginx]
+    Nginx --> FastAPI[FastAPI]
+    
+    FastAPI --> Postgres[(PostgreSQL)]
+    FastAPI --> Redis[(Redis Cache)]
+    FastAPI --> YF[Yahoo Finance]
 {{< /mermaid >}}
 
 ## Data Flow
-1. The **Android client** initiates requests using Retrofit, authenticating via a JWT bearer token.
-2. The **Nginx reverse proxy** intercepts the requests, handles SSL/TLS termination (if configured), and enforces rate-limiting to protect backend resources.
-3. The **FastAPI service** validates the JWT, processes the business logic, and queries external market data from **Yahoo Finance**.
-4. User portfolios and state are persisted securely in the **PostgreSQL database** running in a separate, isolated container or managed service.
+- **User authentication**: JWT validation via FastAPI.
+- **Portfolio transactions**: Stored securely in PostgreSQL.
+- **Price fetching**: `yfinance` cached 60s in Redis.
+- **Alert handling**: WorkManager on Android runs background tasks.
 
-## Security Layers
-- **Transport Security**: TLS encryption for all data in transit.
-- **Identity**: Stateless JWT token verification.
-- **API Protection**: Nginx rate-limiting and robust CORS policies.
-- **Network**: Backend containers and databases are hidden within private virtual networks/Docker bridges and are only accessible via the proxy.
+## CI/CD pipelines
+- GitHub Actions automatically trigger tests, linting (`lintDebug`), and build (`assembleDebug`) for the Android app.
+- Backend pipeline includes **Bandit (SAST)** and **Trivy (vulnerability scan)**.
 
-## CI/CD Pipeline
-- **Version Control**: Codebases managed in GitHub.
-- **Automation**: GitHub Actions automatically trigger on push to `main`.
-- **Build & Deploy**: The backend is dockerized and pushed to a registry, while the Android app is compiled and signed securely using encrypted secrets.
+## Security layers
+- **TLS**: Enforced across all endpoints.
+- **Rate limiting**: 5 requests/minute on sensitive routes (e.g., login).
+- **Headers**: HSTS, X-Frame-Options, X-Content-Type-Options.
+
+## Deployment
+- **Docker Compose**: Orchestrates nginx, FastAPI, PostgreSQL, and Redis.
+- **AKS**: Azure Kubernetes Service used for scalable deployments in labs.
+- **Infrastructure as Code**: ARM templates and k8s manifests.

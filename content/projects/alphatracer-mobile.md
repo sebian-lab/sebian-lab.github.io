@@ -2,37 +2,23 @@
 title: "AlphaTracer Mobile"
 ---
 
-![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?style=flat&logo=kotlin&logoColor=white) ![Android](https://img.shields.io/badge/Android-3DDC84?style=flat&logo=android&logoColor=white) ![Jetpack Compose](https://img.shields.io/badge/Compose-4285F4?style=flat&logo=android&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat&logo=kotlin) ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat&logo=jetpackcompose) ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions)
 
-## Overview
+## Problem
+Users need a secure way to track investments on the go.
 
-AlphaTracer is a real-time financial portfolio tracking application for Android. It uses modern MVVM architecture with Jetpack Compose to deliver a secure, responsive user experience. 
+## Features
+- **Biometric authentication** (fingerprint/face)
+- **Background price alerts** (WorkManager)
+- **MVVM architecture** with Room and Retrofit
+- **Secure secrets** (`local.properties` → `BuildConfig`)
 
-## Key Features
-- **Real-Time Tracking**: Monitors stocks and portfolio performance dynamically.
-- **Biometric Authentication**: Secure access using fingerprint/face recognition.
-- **Background Alerts**: Periodic syncing and alerts using Android `WorkManager`.
-- **Modern UI**: Fully built with Jetpack Compose for a reactive and declarative interface.
+## Security Measures
+- **ProGuard obfuscation** (rules preserved for Gson/Retrofit)
+- **Network Security Config** (HTTPS + certificate pinning)
+- **GitHub Actions CI**: `lintDebug`, `assembleDebug`, artifacts
 
-## DevOps & Cybersecurity Additions
-
-I have heavily focused on implementing industry-standard DevOps and security practices in this project:
-
-### Automated Build Pipeline (CI/CD)
-- A GitHub Actions workflow automatically checks out code, sets up JDK 17, and runs quality checks (`lintDebug`).
-- Compiles the debug APK (`assembleDebug`) and saves artifacts automatically upon push or pull request to the `main` branch.
-
-### Secure Secrets Management
-- Sensitive configurations (like `API_BASE_URL`) are stored locally in `local.properties` and excluded from Git.
-- Gradle injects these values at compile-time via `buildConfigField`.
-- The CI pipeline includes fallbacks to prevent build failures when secrets are unavailable.
-
-### Network Security Config & Certificate Pinning
-- **Cleartext traffic (HTTP) is explicitly forbidden**; all communication is forced over HTTPS.
-- **Certificate Pinning** is implemented for the API backend to prevent Man-in-the-Middle (MitM) attacks.
-
-### Code Obfuscation
-- R8/ProGuard is configured to obfuscate the code, renaming classes and variables to hinder reverse engineering.
-- Custom rules protect `@SerializedName` annotations and Retrofit HTTP interfaces to prevent runtime crashes.
+## Screenshots
+*(Mockups of the Android App Interface)*
 
 [**View Source on GitHub**](https://github.com/sebian-lab/alphatracer-mobile)

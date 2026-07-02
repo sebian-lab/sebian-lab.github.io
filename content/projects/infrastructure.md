@@ -2,29 +2,38 @@
 title: "Cloud & Virtualisation Labs"
 ---
 
-![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat&logo=microsoft-azure&logoColor=white) ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white) ![VMware](https://img.shields.io/badge/VMware-607078?style=flat&logo=vmware&logoColor=white)
+## Azure Labs
 
-## Overview
+**Virtual Machine**: VM (FreeVM01) with SSH
+![Azure VM](/images/azure_lab_1.png)
 
-A series of advanced infrastructure laboratories demonstrating proficiency in cloud platforms, on-premise virtualisation, and Infrastructure as Code (IaC), documented thoroughly in technical reports.
+**Virtual Network**: VNet with two subnets (Frontend/Backend)
+![Azure VNet](/images/azure_lab_15.png)
 
-## VMware ESXi & Windows Server Domain Lab
-In this on-premise simulation:
-- Deployed a **VMware ESXi 8.0** hypervisor as a nested VM inside VMware Workstation Pro.
-- Provisioned a **Windows Server 2022** Domain Controller.
-- Configured **Active Directory Domain Services (AD DS)** with Organization Units (OUs) and users.
-- Set up a **DHCP** scope and successfully joined a Windows 10 Pro client machine to the domain.
-- Configured virtual switches (vSwitch0) with security policies and NIC teaming.
+**Container Instances**: webappcontainer with DNS
+![Azure Container](/images/azure_lab_19.png)
 
-## Azure Cloud Infrastructure Lab
-Using the Azure for Students subscription, I completed a comprehensive portfolio of cloud deployments:
-- **Virtual Machines**: Deployed Ubuntu Linux VMs in Switzerland North, accessing them securely via SSH keys.
-- **Virtual Networks**: Designed VNets with segmented subnets (Frontend/Backend) and Network Security Groups (NSGs).
-- **Container Instances**: Deployed public-facing web apps using Azure Container Instances with custom DNS configurations.
-- **Infrastructure as Code**: Authenticated and deployed Azure Storage Accounts using JSON **ARM Templates** via Deployment Stacks.
-- **Kubernetes (AKS)**: Provisioned an Azure Kubernetes Service cluster, managed nodes via `kubectl`, and deployed NGINX load balancer services using YAML manifests.
+**Storage Account**: Storage Account + Blob container
+![Azure Storage](/images/azure_lab_25.png)
 
-## Security & Governance Measures
-- Network Security Groups (NSGs) with strictly scoped inbound SSH rules.
-- Implementation of Azure Policies to restrict deployment regions and enforce compliance.
-- Secure Storage Account deployments (LRS, hot access tier).
+**Infrastructure as Code**: ARM Template (storage account as Deployment Stack)
+![Azure ARM](/images/azure_lab_31.png)
+
+**AKS Cluster**: aksdemo with NGINX deployment
+![Azure AKS](/images/azure_lab_43.png)
+
+---
+
+## VMware ESXi Lab
+
+**Nested Virtualisation**: ESXi nested VM on Workstation Pro
+![ESXi VM](/images/vmware_lab_9.png)
+
+**Networking & Storage**: Static IP, datastore, vSwitch configuration
+![ESXi Datastore](/images/vmware_lab_16.png)
+
+**Domain Controller**: Windows Server VM → AD DS (domain se26-DC-ESX.EXA), DHCP scope
+![Windows Server](/images/vmware_lab_23.png)
+
+**Client Join**: Windows 10 client joined to domain
+![Windows 10](/images/vmware_lab_30.png)
