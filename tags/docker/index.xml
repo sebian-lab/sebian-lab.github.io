@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Sebian Van de Spiegle</title><link>https://sebian-lab.github.io/tags/docker/</link><description>Recent content in Docker on Sebian Van de Spiegle</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</managingEditor><webMaster>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</webMaster><copyright>© 2026 Sebian Van de Spiegle</copyright><lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://sebian-lab.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Backend Financial API</title><link>https://sebian-lab.github.io/projects/backend-api/</link><pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate><author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author><guid>https://sebian-lab.github.io/projects/backend-api/</guid><description>&lt;p&gt;&lt;strong&gt;Skills Demonstrated:&lt;/strong&gt; FastAPI, Python, Docker, PostgreSQL, REST API Design, Rate Limiting, JWT Authentication, Security Headers, SAST (Bandit/Trivy), Docker Compose.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;Endpoints
+ &lt;div id="endpoints" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#endpoints" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Auth, stocks, portfolio, watchlist, market data.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://sebian-lab.github.io/projects/backend-api/feature.png"/></item><item><title>Homelab — orion-o6</title><link>https://sebian-lab.github.io/projects/homelab/</link><pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate><author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author><guid>https://sebian-lab.github.io/projects/homelab/</guid><description>&lt;p&gt;&lt;strong&gt;Skills Demonstrated:&lt;/strong&gt; Docker Compose &amp;amp; volumes, Reverse proxying &amp;amp; SSL termination (Nginx/Traefik), Linux System Administration (Debian 12, cron jobs, logs), Database management (PostgreSQL), Network segmentation (Docker bridge, Tailscale), System security &amp;amp; isolation.&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://sebian-lab.github.io/projects/homelab/feature.png"/></item></channel></rss>
