@@ -12,7 +12,7 @@ Auth, stocks, portfolio, watchlist, market data.
 - **JWT** with refresh tokens
 - **Rate limiting** (5/min on login)
 
-## Security Measures
+## Security
 - **HSTS, X‑Frame‑Options, X‑Content‑Type‑Options**
 - **CORS** with dynamic allowed origins
 - **CI security**: Bandit (SAST), Trivy (vulnerability scan)

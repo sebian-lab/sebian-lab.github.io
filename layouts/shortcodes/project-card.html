@@ -1,5 +1,8 @@
-<div class="project-card" style="border: 1px solid #e2e8f0; padding: 20px; margin-bottom: 20px; border-radius: 8px; background-color: #f8fafc; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-  <h3 style="margin-top: 0;"><a href="{{ .Get "link" }}" style="text-decoration: none; color: #2563eb;">{{ .Get "title" }}</a></h3>
-  <p style="color: #475569;">{{ .Get "description" }}</p>
-  <p style="margin-bottom: 0;"><small style="color: #64748b;"><strong>Tags:</strong> {{ .Get "tags" }}</small></p>
+<div class="project-card">
+  <h3 style="margin-top: 0;"><a href="{{ .Get "link" }}" style="text-decoration: none;">{{ .Get "title" }}</a></h3>
+  {{ if .Get "badge" }}
+  <img src="{{ .Get "badge" }}" alt="Badge" style="margin-bottom: 10px;" />
+  {{ end }}
+  <p style="color: #c9d1d9;">{{ .Get "description" }}</p>
+  <p style="margin-bottom: 0;"><small style="color: #8b949e;"><strong>Tags:</strong> {{ .Get "tags" }}</small></p>
 </div>

@@ -1,0 +1,14 @@
+body {
+    background: #0d1117;
+    color: #c9d1d9;
+}
+h1, h2, h3 { color: #58a6ff; }
+a { color: #58a6ff; }
+.project-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+.project-card:hover { transform: translateY(-5px); }

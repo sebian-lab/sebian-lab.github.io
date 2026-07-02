@@ -2,35 +2,42 @@
 title: "Architecture"
 ---
 
-## Full-System Diagram
+## Full-system Diagram
 
 {{< mermaid >}}
-flowchart TD
-    Android[Android app] -->|JWT / HTTPS| CF[Cloudflare Tunnel]
-    CF --> Nginx[Nginx]
-    Nginx --> FastAPI[FastAPI]
-    
-    FastAPI --> Postgres[(PostgreSQL)]
-    FastAPI --> Redis[(Redis Cache)]
-    FastAPI --> YF[Yahoo Finance]
+graph TD
+    subgraph "User Client"
+        A[Android App]
+    end
+    subgraph "Cloud (Azure)"
+        B[Azure VM / AKS]
+        C[FastAPI Backend]
+        D[(PostgreSQL)]
+        E[Yahoo Finance API]
+    end
+    subgraph "Homelab (orion‑o6)"
+        F[Docker Host]
+        G[Media / AI / Monitoring Containers]
+    end
+    A -- HTTPS --> B
+    B -- HTTP --> C
+    C -- SQL --> D
+    C -- yfinance --> E
+    C -- monitoring --> F
 {{< /mermaid >}}
 
-## Data Flow
-- **User authentication**: JWT validation via FastAPI.
-- **Portfolio transactions**: Stored securely in PostgreSQL.
-- **Price fetching**: `yfinance` cached 60s in Redis.
-- **Alert handling**: WorkManager on Android runs background tasks.
+## Data Flow Explanation
+- **User authentication**: JWT tokens stored securely.
+- **Portfolio transactions**: Stored in PostgreSQL.
+- **Price fetching**: `yfinance` cached 60s.
+- **Alert handling**: WorkManager on Android.
 
-## CI/CD pipelines
-- GitHub Actions automatically trigger tests, linting (`lintDebug`), and build (`assembleDebug`) for the Android app.
-- Backend pipeline includes **Bandit (SAST)** and **Trivy (vulnerability scan)**.
+## CI/CD Pipelines
+- **GitHub Actions** for Android and Backend.
 
-## Security layers
-- **TLS**: Enforced across all endpoints.
-- **Rate limiting**: 5 requests/minute on sensitive routes (e.g., login).
-- **Headers**: HSTS, X-Frame-Options, X-Content-Type-Options.
+## Security Layers
+- **TLS**, **Rate limiting**, **JWT**, **Headers**.
 
 ## Deployment
-- **Docker Compose**: Orchestrates nginx, FastAPI, PostgreSQL, and Redis.
-- **AKS**: Azure Kubernetes Service used for scalable deployments in labs.
-- **Infrastructure as Code**: ARM templates and k8s manifests.
+- **Docker Compose** vs. **AKS** (both used).
+- **Infrastructure as Code** (ARM templates, k8s manifests).
