@@ -1,0 +1,21 @@
+locale = "en"
+label = "English"
+weight = 1
+title = "Sebian Van de Spiegle"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Portfolio of Sebian Van de Spiegle – Full-Stack Engineer | Cloud & DevOps | Android. Seeking internship in Luxembourg."
+
+[params.author]
+  name = "Sebian Van de Spiegle"
+  email = "sebian.vandespiegle@student.odisee.be"
+  headline = "Full-Stack Engineer | Cloud & DevOps | Android"
+  bio = "I build secure, scalable systems – from mobile apps to cloud infrastructure. Currently pursuing Toegepaste Informatica at Odisee Brussel, seeking a Cybersecurity/DevOps internship in Luxembourg."
+  links = [
+    { github = "https://github.com/sebian-lab" },
+    { linkedin = "https://linkedin.com/in/sebian" },
+  ]

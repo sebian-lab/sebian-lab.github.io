@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure on Sebian Van de Spiegle</title>
+    <link>http://localhost:1313/tags/azure/</link>
+    <description>Recent content in Azure on Sebian Van de Spiegle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</managingEditor>
+    <webMaster>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</webMaster>
+    <copyright>© 2026 Sebian Van de Spiegle</copyright>
+    <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cloud &amp; Virtualisation Labs</title>
+      <link>http://localhost:1313/projects/infrastructure/</link>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
+      <guid>http://localhost:1313/projects/infrastructure/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Skills Demonstrated:&lt;/strong&gt; Azure VM, VNet, NSG provisioning, Azure Container Instances (ACI), Infrastructure as Code (ARM Templates, Deployment Stacks), Azure Kubernetes Service (AKS), VMware ESXi 8.0, Active Directory Domain Services (AD DS) administration, vSwitch networking.&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/infrastructure/feature.png" />
+    </item>
+    
+  </channel>
+</rss>
