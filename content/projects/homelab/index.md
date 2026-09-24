@@ -1,89 +1,131 @@
 ---
-title: "Homelab — orion-o6"
-description: "Home server administration and self-hosted services manager running Debian."
-date: 2026-05-30
-tags: ["Docker", "Linux", "Debian", "Nginx", "Reverse Proxy"]
+title: "Production Homelab & Tailscale Mesh — orion-o6"
+description: "Debian 12 home server running 30+ containers with an enterprise Zero-Trust Tailscale mesh network, subnet routing, and access controls."
+date: 2026-09-24
+tags: ["Docker", "Linux", "Debian", "Tailscale", "Zero-Trust", "Reverse Proxy", "Networking"]
+featureimage: "./image.png"
 ---
 
-**Skills Demonstrated:** Docker Compose & volumes, Reverse proxying & SSL termination (Nginx/Traefik), Linux System Administration (Debian 12, cron jobs, logs), Database management (PostgreSQL), Network segmentation (Docker bridge, Tailscale), System security & isolation.
+**Skills Demonstrated:** Zero-Trust Network Architecture (ZTNA), Tailscale (WireGuard Mesh VPN, Subnet Routers, Exit Nodes, ACL Policies), Docker Compose (30+ active containers), Linux System Administration (Debian 12 Bookworm, systemd, ufw), Reverse Proxying & SSL Termination (Nginx/Traefik), Database Administration (PostgreSQL with VectorChord, Redis, Valkey, MongoDB), System & Port Monitoring (PortTracker).
 
 ---
 
-<div style="background:#0d1117; color:#c9d1d9; padding:24px; border-radius:12px; font-family:monospace; border:1px solid #30363d; margin-bottom:32px;">
-  <div style="display:flex; align-items:center; gap:12px; border-bottom:1px solid #30363d; padding-bottom:16px; margin-bottom:16px;">
-    <span style="font-size:24px;">🖥️</span>
-    <div>
-      <h3 style="color:#58a6ff; margin:0; font-size:18px;">orion-o6 — Homelab Dashboard</h3>
-      <span style="color:#6a9955; font-size:13px;">● Online — 100.101.168.17</span>
+## 🖥️ Live Homelab Overview
+
+`orion-o6` is a 24/7 dedicated production homelab server running **Debian GNU/Linux 12 (bookworm)** equipped with 12 CPU cores and 28.57 GB RAM. It orchestrates over 30 microservices covering AI/LLM workloads, self-hosted search, media pipelines, automated continuous data synchronization, and internal infrastructure telemetry.
+
+![PortTracker Homelab Dashboard](./image.png)
+
+<div style="background:#0d1117; color:#c9d1d9; padding:20px; border-radius:10px; font-family:monospace; border:1px solid #30363d; margin-top:20px; margin-bottom:28px;">
+  <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #30363d; padding-bottom:12px; margin-bottom:14px;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <span style="font-size:20px;">🖥️</span>
+      <strong style="color:#58a6ff; font-size:16px;">orion-o6 — System Metrics</strong>
+    </div>
+    <span style="color:#3fb950; font-size:12px; font-weight:bold;">● 24/7 Production Node</span>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+    <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
+      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Operating System</div>
+      <div style="color:#e6edf3; font-size:13px; font-weight:600;">Debian 12 Bookworm</div>
+    </div>
+    <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
+      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Compute</div>
+      <div style="color:#e6edf3; font-size:13px; font-weight:600;">12 Cores / 28.57 GB</div>
+    </div>
+    <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
+      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Active Containers</div>
+      <div style="color:#58a6ff; font-size:13px; font-weight:600;">33 Running Services</div>
+    </div>
+    <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
+      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Mesh Network</div>
+      <div style="color:#e6edf3; font-size:13px; font-weight:600;">Tailscale Zero-Trust</div>
     </div>
   </div>
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:20px;">
-    <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px;">
-      <div style="color:#8b949e; font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">OS</div>
-      <div style="color:#e6edf3; font-size:14px;">Debian 12 (bookworm)</div>
-    </div>
-    <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px;">
-      <div style="color:#8b949e; font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">CPU</div>
-      <div style="color:#e6edf3; font-size:14px;">12 Cores</div>
-    </div>
-    <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px;">
-      <div style="color:#8b949e; font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Memory</div>
-      <div style="color:#e6edf3; font-size:14px;">28.57 GB</div>
-    </div>
-  </div>
-  <div style="background:#161b22; border:1px solid #30363d; border-radius:8px; padding:12px; margin-bottom:20px;">
-    <div style="color:#8b949e; font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">Containers</div>
-    <div style="display:flex; gap:16px; align-items:center;">
-      <span style="color:#58a6ff; font-size:28px; font-weight:bold;">30</span>
-      <span style="color:#8b949e;">running</span>
-      <span style="color:#30363d;">/</span>
-      <span style="color:#e6edf3; font-size:18px;">102</span>
-      <span style="color:#8b949e;">total</span>
-    </div>
-  </div>
-  <table style="width:100%; border-collapse:collapse; font-size:13px;">
-    <thead>
-      <tr style="border-bottom:1px solid #30363d;">
-        <th style="text-align:left; padding:8px 4px; color:#8b949e; font-weight:normal; text-transform:uppercase; font-size:11px; letter-spacing:1px;">Status</th>
-        <th style="text-align:left; padding:8px 4px; color:#8b949e; font-weight:normal; text-transform:uppercase; font-size:11px; letter-spacing:1px;">Port</th>
-        <th style="text-align:left; padding:8px 4px; color:#8b949e; font-weight:normal; text-transform:uppercase; font-size:11px; letter-spacing:1px;">Service</th>
-        <th style="text-align:left; padding:8px 4px; color:#8b949e; font-weight:normal; text-transform:uppercase; font-size:11px; letter-spacing:1px;">Category</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">1900</td><td style="padding:8px 4px; color:#e6edf3;">jellyfin</td><td style="padding:8px 4px; color:#8b949e;">Media Streaming</td></tr>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">2283</td><td style="padding:8px 4px; color:#e6edf3;">immich_server</td><td style="padding:8px 4px; color:#8b949e;">Photo Management</td></tr>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">3080</td><td style="padding:8px 4px; color:#e6edf3;">LibreChat</td><td style="padding:8px 4px; color:#8b949e;">AI Chat Interface</td></tr>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">4111</td><td style="padding:8px 4px; color:#e6edf3;">debian_web_stream</td><td style="padding:8px 4px; color:#8b949e;">Media</td></tr>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">4999</td><td style="padding:8px 4px; color:#e6edf3;">portracker</td><td style="padding:8px 4px; color:#8b949e;">Port Monitoring</td></tr>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">5000</td><td style="padding:8px 4px; color:#e6edf3;">questarr_app_1</td><td style="padding:8px 4px; color:#8b949e;">Media Automation</td></tr>
-      <tr style="border-bottom:1px solid #21262d;"><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">5055</td><td style="padding:8px 4px; color:#e6edf3;">jellyseerr</td><td style="padding:8px 4px; color:#8b949e;">Media Requests</td></tr>
-      <tr><td style="padding:8px 4px;"><span style="color:#3fb950;">●</span></td><td style="padding:8px 4px; color:#79c0ff;">5432</td><td style="padding:8px 4px; color:#e6edf3;">questarr_db_1</td><td style="padding:8px 4px; color:#8b949e;">PostgreSQL Database</td></tr>
-    </tbody>
-  </table>
-  <div style="margin-top:12px; color:#6e7681; font-size:11px; text-align:right;">+ 14 more active ports</div>
 </div>
 
-## What I Manage
+---
 
-Running a production-grade homelab means dealing with real-world challenges every day:
+## 🔒 Tailscale Zero-Trust Mesh Architecture
 
-- **Container Orchestration**: Composing and maintaining 30+ Docker containers with persistent volumes, networking, and resource constraints.
-- **Reverse Proxying & TLS**: All services routed through a reverse proxy with automatic SSL certificate renewal — nothing exposed raw to the internet.
-- **Database Administration**: PostgreSQL instances backing media-automation services (Questarr).
-- **AI Workloads**: LibreChat running with external LLM provider integrations and WebSocket networking.
-- **Media & ML Pipeline**: Immich handles photo management with machine-learning-based facial recognition running in a dedicated ML container.
-- **System Monitoring**: PortTracker (my own self-hosted monitoring app) keeps watch over all 22+ exposed ports to catch misconfigurations.
+Rather than opening vulnerable public inbound ports on residential/WAN firewalls or exposing services via legacy dynamic DNS, the homelab implements a modern **Zero-Trust Network Access (ZTNA)** topology powered by **Tailscale (WireGuard)**.
 
-## Why it matters for a Cloud/Cyber recruiter
+{{< mermaid >}}
+graph TD
+    subgraph "External & Remote Clients"
+        DevPC[Workstations & Laptops]
+        Mobile[Mobile Devices - iOS/Android]
+    end
 
-Managing `orion-o6` gives me **daily, hands-on experience** with the same tools and challenges found in production DevOps environments:
+    subgraph "Tailscale Encrypted WireGuard Mesh (Tailnet)"
+        Router1["orion-o6 (100.101.x.x)<br>Subnet Router & Exit Node"]
+        Router2["Secondary Node (100.88.x.x)<br>Redundant Subnet Router"]
+    end
 
-| Skill | Where I Apply It |
-|---|---|
-| Docker Compose & volumes | All 30+ services |
-| Reverse proxy & TLS | Nginx / Traefik in front of every service |
-| Linux system administration | Debian 12 OS patching, cron jobs, log monitoring |
-| Database management | PostgreSQL backing Questarr and Immich |
-| Network segmentation | Docker bridge networks, internal `100.101.x.x` addressing |
-| Security hardening | No direct port exposure, SSH key auth, service isolation |
+    subgraph "Internal Homelab Subnet & Containers"
+        NginxProxy[Nginx / Traefik Reverse Proxy]
+        Containers["Docker Bridge Network<br>• AI & LLM (LibreChat, Ollama, Meilisearch)<br>• Immich ML Pipeline (VectorDB, Redis)<br>• Productivity & Media (Jellyfin, n8n)<br>• Databases (PostgreSQL 16 & 17)"]
+        Monitoring[PortTracker Telemetry Engine]
+    end
+
+    DevPC == "Encrypted WireGuard Peer-to-Peer" ==> Router1
+    Mobile == "Encrypted WireGuard Peer-to-Peer" ==> Router1
+    DevPC -.-> Router2
+
+    Router1 --> NginxProxy
+    NginxProxy --> Containers
+    Containers --> Monitoring
+
+    style Router1 fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Router2 fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Containers fill:#1e293b,stroke:#475569,color:#fff
+{{< /mermaid >}}
+
+### 1. Cross-Platform 20-Node Tailnet
+- **Multi-OS Mesh:** The encrypted mesh connects **20 active endpoints** across heterogeneous environments: Debian server hosts, secondary Linux utility nodes, Windows development machines, and mobile devices.
+- **NAT Traversal & DERP Fallback:** Leveraging interactive STUN/ICE-style hole punching to establish direct peer-to-peer UDP WireGuard connections across double-NAT configurations without public IP dependencies.
+
+### 2. Subnet Routing & Exit Node Capabilities
+- **Subnet Router:** `orion-o6` broadcasts private subnet routes, allowing authorized remote devices on the Tailnet to access internal container networks directly without needing individual VPN clients inside each container.
+- **Dedicated Exit Nodes:** Key server nodes are provisioned as full **Exit Nodes**, enabling secure, encrypted routing of all client internet traffic through trusted homelab egress points when on untrusted public Wi-Fi.
+
+### 3. Granular Access Control Policies (ACLs)
+- **Principle of Least Privilege:** Configured with declarative Tailscale Access Control Lists (ACLs). Access rules restrict specific users and device tags to only their authorized destination nodes and specific ports.
+- **Administrative Isolation:** High-privilege management ports (SSH port 22, database ports, internal API endpoints) are strictly restricted to authenticated administrator devices, preventing lateral movement from lower-trust endpoints.
+- **Key Expiry & Machine Posture:** Device authorization requires periodic cryptographic key refresh, ensuring inactive or decommissioned machines are automatically prevented from reconnecting.
+
+### 4. Zero Open Inbound Ports
+- **Total Attack Surface Elimination:** The WAN router exposes **0 forwarded ports** to the public internet. All traffic is authenticated, encrypted end-to-end, and verified at the cryptographic level before reaching any service.
+
+---
+
+## 📦 Containerized Service Ecosystem (30+ Services)
+
+Every workload on `orion-o6` is containerized, segregated into custom Docker bridge networks, and monitored continuously:
+
+| Domain | Key Container Services | Architecture & Purpose |
+| :--- | :--- | :--- |
+| **AI & LLM Workloads** | `LibreChat`, `open-webui`, `rag_api`, `pgvector`, `chat-mongodb`, `chat-meilisearch` | Private AI assistant interfaces, retrieval-augmented generation (RAG) pipelines, and vector database embeddings. |
+| **Media & ML Pipeline** | `immich_server`, `immich_machine_learning`, `immich_postgres` (VectorChord), `immich_redis` | High-performance self-hosted photo library with local ML facial recognition and vector-based semantic image search. |
+| **Media Automation** | `jellyfin`, `jellyseerr`, `radarr`, `radarr-4k`, `sonarr`, `prowlarr`, `qbittorrent`, `unpackerr` | Full-stack automated media streaming and request management platform. |
+| **Databases & Caching** | `postgres:16-alpine`, `postgres:17`, `redis:7-alpine`, `valkey:9-alpine` | High-availability persistent relational storage, caching tiers, and session backends. |
+| **Automation & Scraping** | `n8n`, `changedetection`, `browserless/chrome`, `searxng-core` | Automated webhook workflows, headless browser rendering, and private meta-search engine. |
+| **System & Monitoring** | `portracker`, `webtop`, `debian_web_stream`, `librespeed`, `wealthfolio` | Real-time port mapping telemetry, secure web-based browser streaming, and system performance diagnostics. |
+
+---
+
+## 🔍 Continuous Telemetry with PortTracker
+
+To monitor all 30+ services across **22+ exposed internal ports**, `orion-o6` runs **PortTracker**. As shown in the dashboard screenshot above:
+- **Port Conflict Detection:** Tracks service allocations across stacks (`arr-stack`, `dashboard-stack`, `librechat`, `questarr`, `sitetrack`).
+- **Health Checks & Status:** Instant detection of container degradation or unhealthy state loops.
+- **Tailnet Internal Binding:** Confirms services bind to internal Tailscale IP interfaces (`100.101.x.x`) and local bridge networks rather than all-interfaces public listeners.
+
+---
+
+## 💡 Why This Matters for Cloud & Security Roles
+
+Operating this production homelab provides daily, practical mastery of enterprise infrastructure requirements:
+- **Network Defense:** Implementing Zero-Trust principles, least-privilege ACL rules, and WireGuard cryptography.
+- **Infrastructure Reliability:** Maintaining 24/7 uptime across multi-tier applications, storage volumes, and database migrations.
+- **Operational Discipline:** Proactive system monitoring, automated log auditing, container image updates, and vulnerability management.
