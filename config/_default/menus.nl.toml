@@ -1,17 +1,17 @@
 [[main]]
   identifier = "home"
   name = "Home"
-  url = "/en/"
+  url = "/"
   weight = 10
 
 [[main]]
   identifier = "projects"
-  name = "Projects"
+  name = "Projecten"
   pageRef = "projects"
   weight = 20
 
 [[main]]
   identifier = "resume"
-  name = "Resume"
+  name = "CV"
   url = "/resume.pdf"
   weight = 30

@@ -2,7 +2,7 @@
 title: "Projects"
 ---
 
-Here is a comprehensive overview of my independent projects, divided by domain:
+Here is a comprehensive overview of my independent and academic projects, divided by domain:
 
 ## Software Engineering
 

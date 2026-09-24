@@ -25,4 +25,4 @@ Currently pursuing **Toegepaste Informatica** at **Odisee Brussel**, seeking a *
 
 ---
 
-[📄 Download Resume (PDF)](/resume.pdf) · [📋 Bekijk CV (HTML)](/cv.html) · [📧 Contact](mailto:sebian.vandespiegle@student.odisee.be)
+[📄 Download Resume (PDF)](/resume.pdf) · [📋 View CV (HTML)](/cv.html) · [📧 Contact](mailto:sebian.vandespiegle@student.odisee.be)

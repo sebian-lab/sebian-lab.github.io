@@ -4,8 +4,8 @@
 
 theme = "blowfish"
 baseURL = "https://sebian-lab.github.io/"
-defaultContentLanguage = "en"
-disableLanguages = [] #to allow translation work requiring shipping to production
+defaultContentLanguage = "nl"
+disableLanguages = ["de", "es", "fr", "it", "ja", "pt-br", "pt-pt", "zh-cn"]
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
