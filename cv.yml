@@ -11,24 +11,24 @@ cv:
       username: sebian
   sections:
     profiel:
-      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)** met praktijkkennis in **DevOps, DevSecOps, Cloud Infrastructure en Software Engineering**. Ervaren in het ontwerpen van end-to-end beveiligde architecturen: van native Android apps en performante FastAPI microservices tot geautomatiseerde CI/CD-pipelines, observability, 24/7 homelab serverbeheer (30+ Docker containers) en een dedicated 9-GPU distributed LLM cluster. Zoekt een **DevOps / Cloud / Cybersecurity stage**.'
+      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een boeiende IT-stage in **België**. Ervaren in het ontwerpen en realiseren van schaalbare, veilige architecturen: van native Android apps en performante FastAPI REST APIs tot geautomatiseerde CI/CD-pipelines, containerisatie (Docker, Kubernetes), 24/7 homelab serverbeheer (30+ Docker containers) en een dedicated 9-GPU distributed AI cluster.'
     technische_vaardigheden:
       - label: Cloud, Containers & Compute
         details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes, VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
-      - label: DevOps, CI/CD & Observability
+      - label: CI/CD, Automatisering & Observability
         details: GitHub Actions (automated build, staging promotion & E2E verification), Bandit (SAST), Trivy (Vulnerability Scanning), Nginx, Traefik
       - label: Software & Data
         details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
       - label: Systeem- & Netwerkbeheer
         details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Zero-Trust Mesh VPN, Network Segmentation
     projecten:
-      - name: '[AlphaTracer Financial API & DevSecOps](https://github.com/sebian-lab/alphatracer-financial-api)'
+      - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
         start_date: 2024-01
         end_date: present
-        summary: Performante Fintech REST API gateway met complete DevSecOps pipeline en observability
+        summary: Performante Fintech REST API gateway met complete CI/CD-pipeline en observability
         highlights:
           - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, gekoppeld aan beursdata, JWT-authenticatie en rate limiting.'
-          - 'Geautomatiseerde **DevSecOps pipeline** met **Bandit** (SAST), **Trivy** vulnerability scans en gestroomlijnde observability.'
+          - 'Geautomatiseerde **CI/CD-pipeline** met **Bandit** (SAST), **Trivy** vulnerability scans en gestroomlijnde observability.'
           - 'End-to-end deployment pipeline met geautomatiseerde image tagging, staging promotion en integratietest-verificatie (`test_deployment_to_running`).'
           - 'Multi-service deployment via **Docker Compose** met Nginx reverse proxy, PostgreSQL persistence en Redis caching.'
       - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
