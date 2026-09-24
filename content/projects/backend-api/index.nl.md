@@ -14,6 +14,8 @@ featureimage: "./feature.png"
 
 De **AlphaTracer Financial API** is een asynchrone REST API-gateway van productieniveau die het AlphaTracer-ecosysteem van data voorziet. Het verzorgt realtime marktdatastromen, dynamische portfolioberekeningen, geautomatiseerde transactieverwerking en multi-tenant gebruikersauthenticatie.
 
+> **Architecturale Context & Stagevoorbereiding:** De initiële microservice-basis werd gegenereerd via OpenHands en gehost via een Cloudflare Tunnel. Vervolgens is het gehele platform door mijzelf diepgaand gehardened, gerefactord en uitgebouwd met enterprise tooling (Bandit SAST, Trivy container scanning, HashiCorp Vault, K3s Kubernetes en een complete observability-stack) als gerichte praktijkvoorbereiding op een IT-stage.
+
 {{< mermaid >}}
 graph TD
     Client["Client Tier: Android App / Web"] -->|"TLS / HTTPS"| Nginx["Nginx Reverse Proxy & SSL"]

@@ -121,7 +121,7 @@ Bij dit project is een **"human-in-the-loop"** methodologie gehanteerd. AI funge
 
 - **Geen AI-gegenereerde frontend:** Hoewel AI hielp bij boilerplate (zoals data classes), werd de volledige Jetpack Compose-architectuur (UI-code, navigatie, thema's) handmatig geschreven.
 - **Geen "Vibe Coding":** Elk voorstel van AI werd kritisch getoetst, getest en geoptimaliseerd.
-- **Backend (OpenHands):** De FastAPI-backend werd gegenereerd via OpenHands en wordt gehost via een Cloudflare Tunnel.
+- **Backend Evolutie & Beveiligingsharding:** De initiële FastAPI-backend werd gegenereerd via OpenHands en gehost via een Cloudflare Tunnel. Vervolgens is deze architectuur door mijzelf volledig handmatig gehardened en uitgebouwd ter voorbereiding op mijn stage: implementatie van geautomatiseerde beveiligingspipelines (Bandit SAST, Trivy vulnerability scanning), HashiCorp Vault secrets management, volledige observability (Prometheus, Grafana, Alertmanager, Jaeger tracing, Loki) en K3s Kubernetes-orkestratie.
 - **Code Review (Gemini & DeepSeek):** Ingezet voor het oplossen van complexe randgevallen (zoals concurrency en state management in de AuthInterceptor).
 
 ---

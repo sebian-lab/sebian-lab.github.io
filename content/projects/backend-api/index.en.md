@@ -14,6 +14,8 @@ featureimage: "./feature.png"
 
 The **AlphaTracer Financial API** is a production-grade, asynchronous REST API gateway that powers the AlphaTracer stock tracking and portfolio management ecosystem. It provides real-time market data ingestion, dynamic portfolio calculations, automated transaction processing, and multi-tenant user authentication.
 
+> **Architectural Context & Internship Preparation:** While the initial microservice foundation was generated via OpenHands and exposed through a Cloudflare Tunnel, the entire platform was subsequently deeply hardened, refactored, and expanded by myself using enterprise tooling (Bandit SAST, Trivy container security, HashiCorp Vault, K3s Kubernetes, and a comprehensive observability stack) as hands-on preparation for an IT internship.
+
 {{< mermaid >}}
 graph TD
     Client["Client Tier: Android App / Web"] -->|"TLS / HTTPS"| Nginx["Nginx Reverse Proxy & SSL"]
