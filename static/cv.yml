@@ -1,0 +1,108 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.3/schema.json
+cv:
+  name: Sebian Van de Spiegle
+  location: België
+  email: sebian.vandespiegle@student.odisee.be
+  website: https://sebian-lab.github.io
+  social_networks:
+    - network: GitHub
+      username: sebian-lab
+    - network: LinkedIn
+      username: sebian
+  sections:
+    profiel:
+      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)** met praktijkkennis in **DevOps, DevSecOps, Cloud Infrastructure en Software Engineering**. Ervaren in het bouwen van end-to-end beveiligde architecturen: van native Android apps en performante FastAPI microservices tot geautomatiseerde CI/CD-pipelines met SAST/container security scanning, observability en 24/7 homelab serverbeheer (30+ Docker containers). Zoekt een **DevOps / Cloud / Cybersecurity stage**.'
+    technische_vaardigheden:
+      - label: Cloud & Containers
+        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM Templates), Docker, Docker Compose, Kubernetes (kubectl), VMware ESXi 8.0
+      - label: DevOps, CI/CD & Observability
+        details: GitHub Actions (automated build, staging promotion & E2E verification), Bandit (SAST), Trivy (Container Vulnerability Scanning), Nginx, Traefik
+      - label: Software & Data
+        details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
+      - label: Systeem- & Netwerkbeheer
+        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Mesh VPN, Network Segmentation
+    projecten:
+      - name: '[AlphaTracer Financial API & DevSecOps](https://github.com/sebian-lab/alphatracer-financial-api)'
+        start_date: 2024-01
+        end_date: present
+        summary: Performante Fintech REST API gateway met complete DevSecOps pipeline en observability
+        highlights:
+          - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, gekoppeld aan beursdata, JWT-authenticatie en rate limiting.'
+          - 'Geautomatiseerde **DevSecOps pipeline** met **Bandit** (SAST), **Trivy** vulnerability scans en gestroomlijnde observability.'
+          - 'End-to-end deployment pipeline met geautomatiseerde image tagging, staging promotion en integratietest-verificatie (`test_deployment_to_running`).'
+          - 'Multi-service deployment via **Docker Compose** met Nginx reverse proxy, PostgreSQL persistence en Redis caching.'
+      - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
+        start_date: 2024-01
+        end_date: present
+        summary: Native Android applicatie voor portfoliobeheer en slimme koersnotificaties
+        highlights:
+          - 'Gebouwd in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een responsieve dark-theme UI.'
+          - 'Netwerklaag met **Retrofit + OkHttp** en een custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
+          - 'Achtergrondmonitoring via **Android WorkManager** voor koersdaling-notificaties; beveiligd met **Biometrics API** en **ProGuard**.'
+      - name: '[Productie Homelab — Orion-o6](https://sebian-lab.github.io/projects/homelab/)'
+        start_date: 2023-09
+        end_date: present
+        summary: Zelfstandig beheerde Debian 12 Linux server met 30+ gecontaineriseerde microservices
+        highlights:
+          - 'Beheer van **30+ actieve Docker containers** met persistente volumes, Nginx/Traefik reverse proxy en automatische TLS-encryptie.'
+          - 'Interne netwerkisolatie met Docker bridge netwerken, **Tailscale mesh VPN** en zelfontwikkelde monitoring (**PortTracker**).'
+      - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
+        start_date: 2023-09
+        end_date: present
+        summary: Enterprise infrastructuurimplementaties op Microsoft Azure en VMware ESXi
+        highlights:
+          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en **ARM Templates (IaC)**.'
+          - 'Configuratie van **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS).'
+    opleiding:
+      - institution: Odisee Hogeschool Brussel
+        area: Toegepaste Informatica (BSc)
+        degree: Bachelor
+        start_date: 2023-09
+        end_date: present
+        location: Brussel, België
+        highlights:
+          - 'Specialisatie: Software Engineering, Cloud Architecture, Virtualisatie, Computer- & Netwerkbeveiliging.'
+    talen:
+      - label: Talenkennis
+        details: 'Nederlands (Moedertaal), Engels (Vloeiend / Professioneel werkniveau), Frans (Praktische basis)'
+design:
+  theme: engineeringresumes
+  page:
+    size: a4
+    top_margin: 1.0cm
+    bottom_margin: 1.0cm
+    left_margin: 1.2cm
+    right_margin: 1.2cm
+    show_page_numbering: false
+    show_last_updated_date: false
+  colors:
+    text: rgb(30, 41, 59)
+    name: rgb(15, 23, 42)
+    connections: rgb(37, 99, 235)
+    section_titles: rgb(15, 23, 42)
+    links: rgb(37, 99, 235)
+  text:
+    font_family: Source Sans 3
+    font_size: 9pt
+    leading: 0.45em
+    alignment: justified
+    date_and_location_column_alignment: right
+  links:
+    underline: false
+    use_external_link_icon: false
+  header:
+    name_font_family: Source Sans 3
+    name_font_size: 22pt
+    name_bold: true
+    small_caps_for_name: false
+    vertical_space_between_name_and_connections: 0.2cm
+    vertical_space_between_connections_and_first_section: 0.25cm
+  section_titles:
+    type: with-full-line
+    font_family: Source Sans 3
+    font_size: 10.5pt
+    bold: true
+    small_caps: false
+    line_thickness: 0.5pt
+    vertical_space_above: 0.25cm
+    vertical_space_below: 0.15cm
