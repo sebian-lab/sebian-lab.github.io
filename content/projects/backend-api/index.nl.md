@@ -10,6 +10,63 @@ featureimage: "./feature.png"
 
 ---
 
+## 🏛️ Systeemoverzicht
+
+De **AlphaTracer Financial API** is een asynchrone REST API-gateway van productieniveau die het AlphaTracer-ecosysteem van data voorziet. Het verzorgt realtime marktdatastromen, dynamische portfolioberekeningen, geautomatiseerde transactieverwerking en multi-tenant gebruikersauthenticatie.
+
+{{< mermaid >}}
+graph TD
+    Client["Client Tier: Android App / Web"] -->|"TLS / HTTPS"| Nginx["Nginx Reverse Proxy & SSL"]
+    Nginx -->|"Reverse Proxy :8011"| FastAPI["FastAPI Backend Application"]
+    FastAPI -->|"Caching & Rate Limiting"| Redis[("Redis Cache")]
+    FastAPI -->|"Dynamische SQL / Migraties"| Postgres[("PostgreSQL Database")]
+    FastAPI -->|"Financiële Datastream"| YFinance["Yahoo Finance Stream"]
+    
+    subgraph Pipeline ["Automatisering & Observability Pipeline"]
+        Bandit["Bandit SAST Scanner"] -.-> CI["GitHub Actions CI/CD"]
+        Trivy["Trivy Container Scanner"] -.-> CI
+        E2E["E2E Verificatie Suite"] -.-> CI
+        CI --> Staging["Automatische Staging Promotie"]
+    end
+{{< /mermaid >}}
+
+---
+
+## ✨ Belangrijkste Functionaliteiten
+
+- **Realtime Financiële Engine:** Asynchrone koersdata-ophaling, technische indicatoren en dynamische winst/verliesberekeningen van portfolio's.
+- **Robuuste Authenticatie & Beveiliging:** JWT-tokens met veilige refresh token-rotatie, bcrypt wachtwoordhashing en endpoint rate limiting (maximaal 5 pogingen per minuut op authenticatie-endpoints).
+- **Geïntegreerde Observability & Tracing:** Health-check en metrics-endpoints (`/api/v1/health`, `/metrics`), Prometheus scraping, Grafana dashboards, Jaeger distributed tracing en Loki log streaming.
+- **Geautomatiseerde CI/CD Pipeline:**
+  - **Bandit (SAST):** Geautomatiseerde statische code-analyse op beveiligingskwetsbaarheden bij elke pull request.
+  - **Trivy (Containerbeveiliging):** Geautomatiseerde vulnerability-scans voor base images en bekende CVE's vóór uitrol.
+  - **Geautomatiseerde Staging Promotie:** Automatische tagging en promotie van containerimages van `dev` naar `staging`.
+- **Uitgebreide E2E Testsuite (`test_deployment_to_running.sh`):** Geautomatiseerd end-to-end verificatiescript dat de volledige levenscyclus test: container boot, databasemigraties, authenticatie, watchlist CRUD en realtime beursdata-queries.
+
+---
+
+## 🛠️ Tech Stack & Architectuur
+
+| Component | Technologie | Rol |
+| :--- | :--- | :--- |
+| **Backend Framework** | **FastAPI** (Python 3.10+) | Asynchrone REST-endpoints met Pydantic-validatie |
+| **ORM & Database** | **SQLAlchemy** + **PostgreSQL** | Datamodellering en persistente transactie-opslag |
+| **Caching & Limiting** | **Redis** | In-memory token blacklisting en rate-limit statusbeheer |
+| **Observability & Tracing** | **Prometheus + Grafana + Jaeger + Loki** | Complete telemetrie-, tracing- en gecentraliseerde loggingstack |
+| **Secrets Management** | **HashiCorp Vault** | Gecentraliseerde, versleutelde credential-opslag |
+| **Container Orchestratie** | **K3s + Docker Compose** | Multi-service orkestratie, pod lifecycle en bridging |
+| **CI/CD & Security** | **GitHub Actions + Trivy** | Automatische linting, pytest, Bandit SAST en vulnerability scans |
+
+---
+
+## 🔒 Beveiligingsharding
+
+- **HTTP Security Headers:** Afgedwongen `Strict-Transport-Security` (HSTS), `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`.
+- **Dynamische CORS-Configuratie:** Strikte whitelisting van origins zonder permissieve wildcards.
+- **Niet-blokkerende Platform-opstart:** Geoptimaliseerde opstartscripts (`setup-platform.ps1`) met snelle clusterdetectie en fail-safes.
+
+---
+
 ## 📸 Bewijs & Technische Validatie (Screenshots)
 
 Onderstaande screenshots tonen de actieve, lokaal draaiende microservice-architectuur, observability-stack, containerbeveiliging en Kubernetes-orkestratie:
@@ -68,63 +125,6 @@ Onderstaande screenshots tonen de actieve, lokaal draaiende microservice-archite
 > **K3s Kubernetes Cluster:** Volledig operationeel lightweight Kubernetes-cluster met Pods, Services, Deployments en ConfigMaps voor schaalbare containerorkestratie.
 
 ![K3s Kubernetes Cluster Status](./10_k3s_cluster.png)
-
----
-
-## 🏛️ Systeemoverzicht
-
-De **AlphaTracer Financial API** is een asynchrone REST API-gateway van productieniveau die het AlphaTracer-ecosysteem van data voorziet. Het verzorgt realtime marktdatastromen, dynamische portfolioberekeningen, geautomatiseerde transactieverwerking en multi-tenant gebruikersauthenticatie.
-
-{{< mermaid >}}
-graph TD
-    Client["Client Tier: Android App / Web"] -->|"TLS / HTTPS"| Nginx["Nginx Reverse Proxy & SSL"]
-    Nginx -->|"Reverse Proxy :8011"| FastAPI["FastAPI Backend Application"]
-    FastAPI -->|"Caching & Rate Limiting"| Redis[("Redis Cache")]
-    FastAPI -->|"Dynamische SQL / Migraties"| Postgres[("PostgreSQL Database")]
-    FastAPI -->|"Financiële Datastream"| YFinance["Yahoo Finance Stream"]
-    
-    subgraph Pipeline ["Automatisering & Observability Pipeline"]
-        Bandit["Bandit SAST Scanner"] -.-> CI["GitHub Actions CI/CD"]
-        Trivy["Trivy Container Scanner"] -.-> CI
-        E2E["E2E Verificatie Suite"] -.-> CI
-        CI --> Staging["Automatische Staging Promotie"]
-    end
-{{< /mermaid >}}
-
----
-
-## ✨ Belangrijkste Functionaliteiten
-
-- **Realtime Financiële Engine:** Asynchrone koersdata-ophaling, technische indicatoren en dynamische winst/verliesberekeningen van portfolio's.
-- **Robuuste Authenticatie & Beveiliging:** JWT-tokens met veilige refresh token-rotatie, bcrypt wachtwoordhashing en endpoint rate limiting (maximaal 5 pogingen per minuut op authenticatie-endpoints).
-- **Geïntegreerde Observability & Tracing:** Health-check en metrics-endpoints (`/api/v1/health`, `/metrics`), Prometheus scraping, Grafana dashboards, Jaeger distributed tracing en Loki log streaming.
-- **Geautomatiseerde CI/CD Pipeline:**
-  - **Bandit (SAST):** Geautomatiseerde statische code-analyse op beveiligingskwetsbaarheden bij elke pull request.
-  - **Trivy (Containerbeveiliging):** Geautomatiseerde vulnerability-scans voor base images en bekende CVE's vóór uitrol.
-  - **Geautomatiseerde Staging Promotie:** Automatische tagging en promotie van containerimages van `dev` naar `staging`.
-- **Uitgebreide E2E Testsuite (`test_deployment_to_running.sh`):** Geautomatiseerd end-to-end verificatiescript dat de volledige levenscyclus test: container boot, databasemigraties, authenticatie, watchlist CRUD en realtime beursdata-queries.
-
----
-
-## 🛠️ Tech Stack & Architectuur
-
-| Component | Technologie | Rol |
-| :--- | :--- | :--- |
-| **Backend Framework** | **FastAPI** (Python 3.10+) | Asynchrone REST-endpoints met Pydantic-validatie |
-| **ORM & Database** | **SQLAlchemy** + **PostgreSQL** | Datamodellering en persistente transactie-opslag |
-| **Caching & Limiting** | **Redis** | In-memory token blacklisting en rate-limit statusbeheer |
-| **Observability & Tracing** | **Prometheus + Grafana + Jaeger + Loki** | Complete telemetrie-, tracing- en gecentraliseerde loggingstack |
-| **Secrets Management** | **HashiCorp Vault** | Gecentraliseerde, versleutelde credential-opslag |
-| **Container Orchestratie** | **K3s + Docker Compose** | Multi-service orkestratie, pod lifecycle en bridging |
-| **CI/CD & Security** | **GitHub Actions + Trivy** | Automatische linting, pytest, Bandit SAST en vulnerability scans |
-
----
-
-## 🔒 Beveiligingsharding
-
-- **HTTP Security Headers:** Afgedwongen `Strict-Transport-Security` (HSTS), `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`.
-- **Dynamische CORS-Configuratie:** Strikte whitelisting van origins zonder permissieve wildcards.
-- **Niet-blokkerende Platform-opstart:** Geoptimaliseerde opstartscripts (`setup-platform.ps1`) met snelle clusterdetectie en fail-safes.
 
 ---
 
