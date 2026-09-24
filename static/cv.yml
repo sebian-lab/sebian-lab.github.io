@@ -11,68 +11,77 @@ cv:
       username: sebian-van-de-spiegle-72620528a
   sections:
     profiel:
-      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een boeiende IT-stage in **België**. Ervaren in het ontwerpen en realiseren van schaalbare, veilige architecturen: van native Android apps en performante FastAPI REST APIs tot geautomatiseerde CI/CD-pipelines, containerisatie (Docker, Kubernetes), 24/7 homelab serverbeheer (30+ Docker containers) en een dedicated 9-GPU distributed AI cluster.'
+      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een boeiende IT-stage in **België**. Ervaren in het ontwerpen en realiseren van schaalbare, veilige architecturen: van native Android apps en performante FastAPI REST APIs tot geautomatiseerde CI/CD-pipelines, containerisatie (Docker, Kubernetes), 24/7 homelab serverbeheer (30+ containers) en een dedicated 9-GPU distributed AI cluster.'
     technische_vaardigheden:
       - label: Cloud, Containers & Compute
-        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes, VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
+        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes (K3s), VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
       - label: CI/CD, Automatisering & Observability
-        details: GitHub Actions (automated build, staging promotion & E2E verification), Bandit (SAST), Trivy (Vulnerability Scanning), Nginx, Traefik
+        details: GitHub Actions, Bandit (SAST), Trivy (Vulnerability Scanning), HashiCorp Vault, Prometheus, Grafana, Alertmanager, Jaeger, Loki
       - label: Software & Data
         details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
       - label: Systeem- & Netwerkbeheer
         details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Zero-Trust Mesh VPN, Network Segmentation
-    projecten:
+    zelfstandige_projecten:
       - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
         start_date: 2024-01
         end_date: present
-        summary: Performante Fintech REST API gateway met complete CI/CD-pipeline en observability
+        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met CI/CD, security & observability
         highlights:
           - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, gekoppeld aan beursdata, JWT-authenticatie en rate limiting.'
-          - 'Geautomatiseerde **CI/CD-pipeline** met **Bandit** (SAST), **Trivy** vulnerability scans en gestroomlijnde observability.'
-          - 'End-to-end deployment pipeline met geautomatiseerde image tagging, staging promotion en integratietest-verificatie (`test_deployment_to_running`).'
-          - 'Multi-service deployment via **Docker Compose** met Nginx reverse proxy, PostgreSQL persistence en Redis caching.'
+          - 'Geautomatiseerde **CI/CD-pipeline** met **Bandit** (SAST), **Trivy** vulnerability scans, **Vault** secrets en **Prometheus/Grafana** metrics.'
+          - 'Multi-service deployment via **Docker Compose** en **Kubernetes (K3s)** met Nginx reverse proxy en E2E testautomatisering.'
       - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
         start_date: 2024-01
         end_date: present
-        summary: Native Android applicatie voor portfoliobeheer en slimme koersnotificaties
+        summary: Zelfstandig praktijkproject (Hobby) – Native Android app voor portfoliobeheer en slimme koersnotificaties
         highlights:
           - 'Gebouwd in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een responsieve dark-theme UI.'
-          - 'Netwerklaag met **Retrofit + OkHttp** en een custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
-          - 'Achtergrondmonitoring via **Android WorkManager** voor koersdaling-notificaties; beveiligd met **Biometrics API** en **ProGuard**.'
+          - 'Netwerklaag via **Retrofit + OkHttp** met custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
+          - 'Achtergrondmonitoring via **WorkManager** voor koersdaling-alerts; beveiligd met **Biometrics API** en **ProGuard**.'
       - name: '[Productie Homelab & 9-GPU LLM Cluster](https://sebian-lab.github.io/projects/homelab/)'
         start_date: 2023-09
         end_date: present
-        summary: Zelfstandig beheerde Debian 12 server (30+ containers) en dedicated 9-GPU AI cluster
+        summary: Zelfstandige infrastructuur (Hobby) – 24/7 Debian 12 server (30+ containers) en dedicated 9-GPU AI cluster
         highlights:
-          - 'Beheer van **30+ actieve containers** (PostgreSQL, Immich ML, LibreChat) en een **9-GPU inference cluster (50+ GB VRAM, llama.cpp)**.'
-          - 'Beveiligd via een **Tailscale Zero-Trust mesh netwerk (20 nodes)** met subnet routers, exit nodes en interne monitoring (**PortTracker**).'
+          - 'Beheer van **30+ actieve Docker containers** (PostgreSQL, Immich ML, LibreChat) en een **9-GPU inference cluster (50+ GB VRAM, llama.cpp)**.'
+          - 'Beveiligd via een **Tailscale Zero-Trust mesh netwerk (20 nodes)** met subnet routers, exit nodes en monitoring (**PortTracker**).'
+    academische_projecten:
       - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
-        start_date: 2023-09
+        start_date: 2024-09
         end_date: present
-        summary: Enterprise infrastructuurimplementaties op Microsoft Azure en VMware ESXi
+        summary: Schoolproject (Odisee Hogeschool Brussel) – Hybride enterprise cloud- en datacenterinfrastructuur
         highlights:
-          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en **ARM Templates (IaC)**.'
-          - 'Configuratie van **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS).'
+          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (IaC)**.'
+          - 'Configuratie van **VMware ESXi 8.0** met vSwitch netwerken en een **Windows Server 2022** Domain Controller (AD DS / DNS).'
     opleiding:
-      - institution: Odisee Hogeschool Brussel
+      - institution: Hogeschool Odisee
         area: Toegepaste Informatica (BSc)
-        degree: Bachelor
-        start_date: 2023-09
-        end_date: present
+        degree: Bachelor (2e bachelorfase)
+        start_date: 2026-01
+        end_date: 2027-06
         location: Brussel, België
         highlights:
-          - 'Specialisatie: Software Engineering, Cloud Architecture, Virtualisatie, Computer- & Netwerkbeveiliging.'
-    talen:
+          - 'Focus: Cloud Computing, Wireshark netwerkanalyse, Cloud Infrastructure en Computerbeveiliging.'
+      - institution: HOGENT
+        area: Toegepaste Informatica
+        start_date: 2023-09
+        end_date: 2026-01
+        location: Gent, België
+        highlights:
+          - 'Basis- en gevorderde Software Engineering, Object-Georiënteerd Programmeren, Databanken en Algoritmen.'
+    certificaten_en_talen:
+      - label: Certificeringen
+        details: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728) (ISC2, apr 2026 – apr 2027), EF SET English Certificate 75/100 (C2 Proficient)'
       - label: Talenkennis
-        details: 'Nederlands (Moedertaal), Engels (Vloeiend / Professioneel werkniveau), Frans (Praktische basis)'
+        details: 'Nederlands (Moedertaal), Engels (C2 Proficient / Vloeiend), Frans (Praktische basis)'
 design:
   theme: engineeringresumes
   page:
     size: a4
-    top_margin: 1.0cm
-    bottom_margin: 1.0cm
-    left_margin: 1.2cm
-    right_margin: 1.2cm
+    top_margin: 0.8cm
+    bottom_margin: 0.8cm
+    left_margin: 1.1cm
+    right_margin: 1.1cm
     show_page_numbering: false
     show_last_updated_date: false
   colors:
@@ -83,8 +92,8 @@ design:
     links: rgb(37, 99, 235)
   text:
     font_family: Source Sans 3
-    font_size: 9pt
-    leading: 0.45em
+    font_size: 8.5pt
+    leading: 0.38em
     alignment: justified
     date_and_location_column_alignment: right
   links:
@@ -92,17 +101,17 @@ design:
     use_external_link_icon: false
   header:
     name_font_family: Source Sans 3
-    name_font_size: 22pt
+    name_font_size: 20pt
     name_bold: true
     small_caps_for_name: false
-    vertical_space_between_name_and_connections: 0.2cm
-    vertical_space_between_connections_and_first_section: 0.25cm
+    vertical_space_between_name_and_connections: 0.15cm
+    vertical_space_between_connections_and_first_section: 0.2cm
   section_titles:
     type: with-full-line
     font_family: Source Sans 3
-    font_size: 10.5pt
+    font_size: 9.8pt
     bold: true
     small_caps: false
     line_thickness: 0.5pt
-    vertical_space_above: 0.25cm
-    vertical_space_below: 0.15cm
+    vertical_space_above: 0.18cm
+    vertical_space_below: 0.1cm
