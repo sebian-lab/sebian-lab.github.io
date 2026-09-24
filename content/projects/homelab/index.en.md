@@ -52,25 +52,25 @@ Rather than opening vulnerable public inbound ports on residential/WAN firewalls
 
 {{< mermaid >}}
 graph TD
-    subgraph "Client Tier: Authenticated Remote Endpoints"
-        DevPC[Workstations & Laptops]
-        Mobile[Mobile Devices - iOS/Android]
+    subgraph ClientTier ["Client Tier: Authenticated Remote Endpoints"]
+        DevPC["Workstations & Laptops"]
+        Mobile["Mobile Devices - iOS/Android"]
     end
 
-    subgraph "Tailscale Encrypted WireGuard Mesh (Tailnet)"
+    subgraph Tailnet ["Tailscale Encrypted WireGuard Mesh (Tailnet)"]
         Router1["orion-o6 (100.101.x.x)<br>Subnet Router & Exit Node"]
         Router2["Secondary Node (100.88.x.x)<br>Redundant Subnet Router"]
         GPUCluster["ubunt (100.113.x.x)<br>⚡ 9-GPU LLM Inference Cluster<br>50+ GB VRAM / llama.cpp Server"]
     end
 
-    subgraph "Internal Application & AI Ecosystem (orion-o6)"
-        NginxProxy[Nginx / Traefik Reverse Proxy]
+    subgraph InternalApps ["Internal Application & AI Ecosystem (orion-o6)"]
+        NginxProxy["Nginx / Traefik Reverse Proxy"]
         Containers["Docker Bridge Network<br>• AI Workloads: LibreChat, Open-WebUI<br>• RAG Pipeline: rag_api, pgvector, Meilisearch<br>• Photo & ML: Immich Server & ML VectorChord<br>• Media & Automation: Jellyfin, n8n, Questarr<br>• Databases: PostgreSQL 16 & 17, Redis, Valkey"]
-        Monitoring[PortTracker Telemetry Engine]
+        Monitoring["PortTracker Telemetry Engine"]
     end
 
-    DevPC == "Encrypted WireGuard Peer-to-Peer" ==> Router1
-    Mobile == "Encrypted WireGuard Peer-to-Peer" ==> Router1
+    DevPC -->|"Encrypted WireGuard Peer-to-Peer"| Router1
+    Mobile -->|"Encrypted WireGuard Peer-to-Peer"| Router1
     DevPC -.-> Router2
 
     Router1 --> NginxProxy
@@ -78,7 +78,7 @@ graph TD
     Containers --> Monitoring
 
     %% Interconnection between orion-o6 AI frontends and 9-GPU cluster
-    Containers <== "High-Speed Internal Tailnet Mesh<br>(OpenAI-Compatible API)" ==> GPUCluster
+    Containers <-->|"High-Speed Internal Tailnet Mesh<br>(OpenAI-Compatible API)"| GPUCluster
 
     style Router1 fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
     style Router2 fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff

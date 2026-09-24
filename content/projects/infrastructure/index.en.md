@@ -26,7 +26,7 @@ During my **Applied Computer Science** degree at **Odisee University of Applied 
 
 {{< mermaid >}}
 graph LR
-    subgraph "Public Cloud Environment (Microsoft Azure)"
+    subgraph AzureCloud ["Public Cloud Environment (Microsoft Azure)"]
         VNet["Azure VNet (Switzerland North)<br>10.0.0.0/16"]
         Subnet1["Frontend Subnet + NSG<br>Web Tier / ACI"]
         Subnet2["Backend Subnet + NSG<br>Linux VM (FreeVM01)"]
@@ -40,7 +40,7 @@ graph LR
         IaC -.-> Storage
     end
 
-    subgraph "Private Virtualized Datacenter (VMware ESXi 8.0)"
+    subgraph VMwareDC ["Private Virtualized Datacenter (VMware ESXi 8.0)"]
         vSwitch["vSwitch0 Network Topology<br>192.168.50.0/24"]
         DC["Windows Server 2022 (sebi2026-EXA-DC)<br>Primary Domain Controller (AD DS / DNS)"]
         WKS["Attached Client VM<br>(sebi2026-WKS-EX)"]

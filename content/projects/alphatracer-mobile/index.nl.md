@@ -40,30 +40,30 @@ AlphaTracer is opgesplitst in een native Android-frontend en een high-performanc
 
 {{< mermaid >}}
 graph TD
-    subgraph "Client Tier"
-        A[Android App (Jetpack Compose)]
+    subgraph ClientTier ["Client Tier"]
+        A["Android App (Jetpack Compose)"]
     end
     
-    subgraph "API Gateway"
-        B[Nginx Reverse Proxy]
+    subgraph Gateway ["API Gateway"]
+        B["Nginx Reverse Proxy"]
     end
     
-    subgraph "Application Tier"
-        C[FastAPI Backend (Python)]
+    subgraph AppTier ["Application Tier"]
+        C["FastAPI Backend (Python)"]
     end
     
-    subgraph "Data Tier"
-        D[(PostgreSQL Database)]
+    subgraph DataTier ["Data Tier"]
+        D[("PostgreSQL Database")]
     end
     
-    subgraph "Externe Integraties"
-        E[Yahoo Finance API]
+    subgraph ExtIntegrations ["Externe Integraties"]
+        E["Yahoo Finance API"]
     end
     
-    A -- "HTTPS (TLS)" --> B
-    B -- HTTP --> C
-    C -- SQL --> D
-    C -- yfinance --> E
+    A -->|"HTTPS (TLS)"| B
+    B -->|HTTP| C
+    C -->|SQL| D
+    C -->|yfinance| E
 
     style A fill:#f96,stroke:#333
     style C fill:#bbf,stroke:#333
@@ -97,8 +97,14 @@ erDiagram
         string refresh_token
     }
     Portfolio {
+        string id PK
+        string user_id FK
     }
     Transaction {
+        string id PK
+        string portfolio_id FK
+        string ticker
+        int quantity
     }
     AlertRule {
         string id PK

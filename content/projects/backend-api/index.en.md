@@ -24,17 +24,17 @@ The **AlphaTracer Financial API** is a production-grade, asynchronous REST API g
 
 {{< mermaid >}}
 graph TD
-    Client[Client Tier: Android App / Web] -->|TLS / HTTPS| Nginx[Nginx Reverse Proxy & SSL]
-    Nginx -->|Reverse Proxy :8011| FastAPI[FastAPI Backend Application]
-    FastAPI -->|Caching & Rate Limiting| Redis[(Redis Cache)]
-    FastAPI -->|Dynamic SQL / Migrations| Postgres[(PostgreSQL Database)]
-    FastAPI -->|Financial Data Stream| YFinance[Yahoo Finance Stream]
+    Client["Client Tier: Android App / Web"] -->|"TLS / HTTPS"| Nginx["Nginx Reverse Proxy & SSL"]
+    Nginx -->|"Reverse Proxy :8011"| FastAPI["FastAPI Backend Application"]
+    FastAPI -->|"Caching & Rate Limiting"| Redis[("Redis Cache")]
+    FastAPI -->|"Dynamic SQL / Migrations"| Postgres[("PostgreSQL Database")]
+    FastAPI -->|"Financial Data Stream"| YFinance["Yahoo Finance Stream"]
     
-    subgraph "DevSecOps & Observability Pipeline"
-        Bandit[Bandit SAST Scanner] -.-> CI[GitHub Actions CI/CD]
-        Trivy[Trivy Container Scanner] -.-> CI
-        E2E[E2E Verification Suite] -.-> CI
-        CI --> Staging[Automated Staging Promotion]
+    subgraph DevSecOpsPipeline ["DevSecOps & Observability Pipeline"]
+        Bandit["Bandit SAST Scanner"] -.-> CI["GitHub Actions CI/CD"]
+        Trivy["Trivy Container Scanner"] -.-> CI
+        E2E["E2E Verification Suite"] -.-> CI
+        CI --> Staging["Automated Staging Promotion"]
     end
 {{< /mermaid >}}
 
