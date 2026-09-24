@@ -1,0 +1,17 @@
+# Hugo generated files
+.hugo_build.lock
+resources/_gen/
+
+# Executables & zip archives
+*.exe
+*.zip
+*.tar.gz
+
+# Python cache & temporary scripts
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
