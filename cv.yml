@@ -72,17 +72,24 @@ cv:
         location: Gent, België
         highlights:
           - 'Basis- en gevorderde Software Engineering, Object-Georiënteerd Programmeren, Databanken en Algoritmen.'
-    certificaten_en_talen:
-      - label: Certificeringen
-        details: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728) (ISC2, apr 2026 – apr 2027), [EF SET English Certificate 75/100](https://cert.efset.org/en/HHqJU5) (C2 Proficient)'
-      - label: Talenkennis
-        details: 'Nederlands (Moedertaal), Engels (C2 Proficient / Vloeiend), Frans (Praktische basis)'
+    certificaten:
+      - label: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728)'
+        details: 'ISC2 (apr 2026 – apr 2027) – Voorbereiding op Certified in Cybersecurity (CC); focus op netwerkbeveiliging, security operations en DevSecOps.'
+      - label: '[EF SET English Certificate](https://cert.efset.org/en/HHqJU5)'
+        details: 'Score 75/100 (C2 Proficient) – Hoogste CEFR-beheersingsniveau; uitstekende professionele en technische communicatie in internationale teams.'
+    talen:
+      - label: Nederlands
+        details: 'Moedertaal – Vloeiend in woord en geschrift'
+      - label: Engels
+        details: 'C2 Proficient – Vloeiende professionele en technische communicatie (volledige werkvaardigheid)'
+      - label: Frans
+        details: 'Praktische basis – Professionele basiskennis en elementaire communicatie'
 design:
   theme: engineeringresumes
   page:
     size: a4
-    top_margin: 0.7cm
-    bottom_margin: 0.7cm
+    top_margin: 0.6cm
+    bottom_margin: 0.6cm
     left_margin: 1.0cm
     right_margin: 1.0cm
     show_page_numbering: false
@@ -95,8 +102,8 @@ design:
     links: rgb(37, 99, 235)
   text:
     font_family: Source Sans 3
-    font_size: 8.2pt
-    leading: 0.35em
+    font_size: 8.0pt
+    leading: 0.32em
     alignment: justified
     date_and_location_column_alignment: right
   links:
@@ -104,17 +111,17 @@ design:
     use_external_link_icon: false
   header:
     name_font_family: Source Sans 3
-    name_font_size: 19pt
+    name_font_size: 18.5pt
     name_bold: true
     small_caps_for_name: false
-    vertical_space_between_name_and_connections: 0.12cm
-    vertical_space_between_connections_and_first_section: 0.15cm
+    vertical_space_between_name_and_connections: 0.1cm
+    vertical_space_between_connections_and_first_section: 0.12cm
   section_titles:
     type: with-full-line
     font_family: Source Sans 3
-    font_size: 9.4pt
+    font_size: 9.0pt
     bold: true
     small_caps: false
     line_thickness: 0.5pt
-    vertical_space_above: 0.14cm
-    vertical_space_below: 0.08cm
+    vertical_space_above: 0.11cm
+    vertical_space_below: 0.05cm
