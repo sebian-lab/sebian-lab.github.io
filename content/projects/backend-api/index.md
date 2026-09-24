@@ -3,9 +3,16 @@ title: "Backend Financial API & DevSecOps"
 description: "High-performance FastAPI gateway for the AlphaTracer system with automated DevSecOps pipelines and streamlined observability."
 date: 2026-09-24
 tags: ["FastAPI", "Python", "Docker", "DevSecOps", "PostgreSQL", "Observability", "CI/CD"]
+featureimage: "./image.png"
 ---
 
 **Skills Demonstrated:** FastAPI, Python 3.10+, Docker Compose, PostgreSQL, Redis, REST API Architecture, JWT Authentication & Refresh Tokens, Rate Limiting, Automated DevSecOps Pipelines (Bandit SAST & Trivy Vulnerability Scanning), Staging Promotion, E2E Test Automation, Observability & Container Health Monitoring.
+
+---
+
+## 📖 Interactive API Documentation (Swagger / OpenAPI)
+
+![AlphaTracer FastAPI Swagger UI Docs](./image.png)
 
 ---
 
