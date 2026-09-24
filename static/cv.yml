@@ -11,16 +11,16 @@ cv:
       username: sebian
   sections:
     profiel:
-      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)** met praktijkkennis in **DevOps, DevSecOps, Cloud Infrastructure en Software Engineering**. Ervaren in het bouwen van end-to-end beveiligde architecturen: van native Android apps en performante FastAPI microservices tot geautomatiseerde CI/CD-pipelines met SAST/container security scanning, observability en 24/7 homelab serverbeheer (30+ Docker containers). Zoekt een **DevOps / Cloud / Cybersecurity stage**.'
+      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)** met praktijkkennis in **DevOps, DevSecOps, Cloud Infrastructure en Software Engineering**. Ervaren in het ontwerpen van end-to-end beveiligde architecturen: van native Android apps en performante FastAPI microservices tot geautomatiseerde CI/CD-pipelines, observability, 24/7 homelab serverbeheer (30+ Docker containers) en een dedicated 9-GPU distributed LLM cluster. Zoekt een **DevOps / Cloud / Cybersecurity stage**.'
     technische_vaardigheden:
-      - label: Cloud & Containers
-        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM Templates), Docker, Docker Compose, Kubernetes (kubectl), VMware ESXi 8.0
+      - label: Cloud, Containers & Compute
+        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes, VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
       - label: DevOps, CI/CD & Observability
-        details: GitHub Actions (automated build, staging promotion & E2E verification), Bandit (SAST), Trivy (Container Vulnerability Scanning), Nginx, Traefik
+        details: GitHub Actions (automated build, staging promotion & E2E verification), Bandit (SAST), Trivy (Vulnerability Scanning), Nginx, Traefik
       - label: Software & Data
         details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
       - label: Systeem- & Netwerkbeheer
-        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Mesh VPN, Network Segmentation
+        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Zero-Trust Mesh VPN, Network Segmentation
     projecten:
       - name: '[AlphaTracer Financial API & DevSecOps](https://github.com/sebian-lab/alphatracer-financial-api)'
         start_date: 2024-01
@@ -39,13 +39,13 @@ cv:
           - 'Gebouwd in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een responsieve dark-theme UI.'
           - 'Netwerklaag met **Retrofit + OkHttp** en een custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
           - 'Achtergrondmonitoring via **Android WorkManager** voor koersdaling-notificaties; beveiligd met **Biometrics API** en **ProGuard**.'
-      - name: '[Productie Homelab — Orion-o6](https://sebian-lab.github.io/projects/homelab/)'
+      - name: '[Productie Homelab & 9-GPU LLM Cluster](https://sebian-lab.github.io/projects/homelab/)'
         start_date: 2023-09
         end_date: present
-        summary: Zelfstandig beheerde Debian 12 Linux server met 30+ gecontaineriseerde microservices
+        summary: Zelfstandig beheerde Debian 12 server (30+ containers) en dedicated 9-GPU AI cluster
         highlights:
-          - 'Beheer van **30+ actieve Docker containers** met persistente volumes, Nginx/Traefik reverse proxy en automatische TLS-encryptie.'
-          - 'Interne netwerkisolatie met Docker bridge netwerken, **Tailscale mesh VPN** en zelfontwikkelde monitoring (**PortTracker**).'
+          - 'Beheer van **30+ actieve containers** (PostgreSQL, Immich ML, LibreChat) en een **9-GPU inference cluster (50+ GB VRAM, llama.cpp)**.'
+          - 'Beveiligd via een **Tailscale Zero-Trust mesh netwerk (20 nodes)** met subnet routers, exit nodes en interne monitoring (**PortTracker**).'
       - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
         start_date: 2023-09
         end_date: present

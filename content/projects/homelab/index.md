@@ -1,12 +1,12 @@
 ---
-title: "Production Homelab & Tailscale Mesh — orion-o6"
-description: "Debian 12 home server running 30+ containers with an enterprise Zero-Trust Tailscale mesh network, subnet routing, and access controls."
+title: "Production Homelab, Tailscale Mesh & 9-GPU LLM Cluster — orion-o6"
+description: "Debian 12 home server running 30+ containers with an enterprise Zero-Trust Tailscale mesh network, subnet routing, and a dedicated 9-GPU LLM inference cluster."
 date: 2026-09-24
-tags: ["Docker", "Linux", "Debian", "Tailscale", "Zero-Trust", "Reverse Proxy", "Networking"]
+tags: ["Docker", "Linux", "Debian", "Tailscale", "Zero-Trust", "LLM", "llama.cpp", "GPU Cluster"]
 featureimage: "./image.png"
 ---
 
-**Skills Demonstrated:** Zero-Trust Network Architecture (ZTNA), Tailscale (WireGuard Mesh VPN, Subnet Routers, Exit Nodes, ACL Policies), Docker Compose (30+ active containers), Linux System Administration (Debian 12 Bookworm, systemd, ufw), Reverse Proxying & SSL Termination (Nginx/Traefik), Database Administration (PostgreSQL with VectorChord, Redis, Valkey, MongoDB), System & Port Monitoring (PortTracker).
+**Skills Demonstrated:** Zero-Trust Network Architecture (ZTNA), Tailscale (WireGuard Mesh VPN, Subnet Routers, Exit Nodes, ACL Policies), Distributed AI Inference (9-GPU Cluster, 50+ GB VRAM, llama.cpp, GGUF/Layer Splitting), Docker Compose (30+ active containers), Linux System Administration (Debian 12 Bookworm, systemd, ufw), Reverse Proxying & SSL Termination (Nginx/Traefik), Database Administration (PostgreSQL with VectorChord, Redis, Valkey, MongoDB), System & Port Monitoring (PortTracker).
 
 ---
 
@@ -20,18 +20,18 @@ featureimage: "./image.png"
   <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #30363d; padding-bottom:12px; margin-bottom:14px;">
     <div style="display:flex; align-items:center; gap:10px;">
       <span style="font-size:20px;">🖥️</span>
-      <strong style="color:#58a6ff; font-size:16px;">orion-o6 — System Metrics</strong>
+      <strong style="color:#58a6ff; font-size:16px;">orion-o6 & Cluster Telemetry</strong>
     </div>
     <span style="color:#3fb950; font-size:12px; font-weight:bold;">● 24/7 Production Node</span>
   </div>
   <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
     <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
-      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Operating System</div>
-      <div style="color:#e6edf3; font-size:13px; font-weight:600;">Debian 12 Bookworm</div>
+      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Host System</div>
+      <div style="color:#e6edf3; font-size:13px; font-weight:600;">Debian 12 (12 Cores / 28 GB)</div>
     </div>
     <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
-      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Compute</div>
-      <div style="color:#e6edf3; font-size:13px; font-weight:600;">12 Cores / 28.57 GB</div>
+      <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">GPU Compute Node</div>
+      <div style="color:#a855f7; font-size:13px; font-weight:600;">9-GPU Cluster (50+ GB VRAM)</div>
     </div>
     <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
       <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Active Containers</div>
@@ -39,7 +39,7 @@ featureimage: "./image.png"
     </div>
     <div style="background:#161b22; border:1px solid #30363d; border-radius:6px; padding:10px;">
       <div style="color:#8b949e; font-size:10px; text-transform:uppercase;">Mesh Network</div>
-      <div style="color:#e6edf3; font-size:13px; font-weight:600;">Tailscale Zero-Trust</div>
+      <div style="color:#e6edf3; font-size:13px; font-weight:600;">Tailscale Zero-Trust (20 Nodes)</div>
     </div>
   </div>
 </div>
@@ -52,7 +52,7 @@ Rather than opening vulnerable public inbound ports on residential/WAN firewalls
 
 {{< mermaid >}}
 graph TD
-    subgraph "External & Remote Clients"
+    subgraph "Client Tier: Authenticated Remote Endpoints"
         DevPC[Workstations & Laptops]
         Mobile[Mobile Devices - iOS/Android]
     end
@@ -60,11 +60,12 @@ graph TD
     subgraph "Tailscale Encrypted WireGuard Mesh (Tailnet)"
         Router1["orion-o6 (100.101.x.x)<br>Subnet Router & Exit Node"]
         Router2["Secondary Node (100.88.x.x)<br>Redundant Subnet Router"]
+        GPUCluster["ubunt (100.113.x.x)<br>⚡ 9-GPU LLM Inference Cluster<br>50+ GB VRAM / llama.cpp Server"]
     end
 
-    subgraph "Internal Homelab Subnet & Containers"
+    subgraph "Internal Application & AI Ecosystem (orion-o6)"
         NginxProxy[Nginx / Traefik Reverse Proxy]
-        Containers["Docker Bridge Network<br>• AI & LLM (LibreChat, Ollama, Meilisearch)<br>• Immich ML Pipeline (VectorDB, Redis)<br>• Productivity & Media (Jellyfin, n8n)<br>• Databases (PostgreSQL 16 & 17)"]
+        Containers["Docker Bridge Network<br>• AI Workloads: LibreChat, Open-WebUI<br>• RAG Pipeline: rag_api, pgvector, Meilisearch<br>• Photo & ML: Immich Server & ML VectorChord<br>• Media & Automation: Jellyfin, n8n, Questarr<br>• Databases: PostgreSQL 16 & 17, Redis, Valkey"]
         Monitoring[PortTracker Telemetry Engine]
     end
 
@@ -76,13 +77,17 @@ graph TD
     NginxProxy --> Containers
     Containers --> Monitoring
 
+    %% Interconnection between orion-o6 AI frontends and 9-GPU cluster
+    Containers <== "High-Speed Internal Tailnet Mesh<br>(OpenAI-Compatible API)" ==> GPUCluster
+
     style Router1 fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
     style Router2 fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style GPUCluster fill:#581c87,stroke:#a855f7,stroke-width:2px,color:#fff
     style Containers fill:#1e293b,stroke:#475569,color:#fff
 {{< /mermaid >}}
 
 ### 1. Cross-Platform 20-Node Tailnet
-- **Multi-OS Mesh:** The encrypted mesh connects **20 active endpoints** across heterogeneous environments: Debian server hosts, secondary Linux utility nodes, Windows development machines, and mobile devices.
+- **Multi-OS Mesh:** The encrypted mesh connects **20 active endpoints** across heterogeneous environments: Debian server hosts, specialized Linux compute nodes, Windows development machines, and mobile devices.
 - **NAT Traversal & DERP Fallback:** Leveraging interactive STUN/ICE-style hole punching to establish direct peer-to-peer UDP WireGuard connections across double-NAT configurations without public IP dependencies.
 
 ### 2. Subnet Routing & Exit Node Capabilities
@@ -99,13 +104,25 @@ graph TD
 
 ---
 
-## 📦 Containerized Service Ecosystem (30+ Services)
+## ⚡ 9-GPU LLM Inference Cluster (`ubunt`)
+
+A premier component of the network is **`ubunt`** (`100.113.x.x`), a dedicated bare-metal Linux compute node specifically architected as a **distributed 9-GPU LLM inference cluster**:
+
+- **Hardware & VRAM Pool:** Houses **9 discrete GPUs delivering an aggregate pool of over 50 GB VRAM**.
+- **Large-Model Hosting (50+ GB Models):** Engineered to run heavy quantized parameter models (such as LLaMA-3 70B, Qwen 72B, Mixtral 8x22B, Command-R+) entirely offloaded across GPU memory without falling back to slow CPU system RAM.
+- **High-Throughput Runtime:** Powered by **llama.cpp** server using GPU tensor and layer splitting to maximize memory bandwidth and tokens-per-second generation rates.
+- **Seamless Tailnet Integration:** The cluster communicates privately across the Tailscale mesh to `orion-o6`, exposing OpenAI-compatible endpoints directly to internal AI clients (**LibreChat**, **Open-WebUI**, and the **RAG API** pipeline with `pgvector` and `Meilisearch`).
+- **Complete Data Sovereignty:** Zero proprietary API dependencies; enterprise-grade intelligence running entirely within a private, self-hosted perimeter.
+
+---
+
+## 📦 Containerized Service Ecosystem (30+ Services on `orion-o6`)
 
 Every workload on `orion-o6` is containerized, segregated into custom Docker bridge networks, and monitored continuously:
 
 | Domain | Key Container Services | Architecture & Purpose |
 | :--- | :--- | :--- |
-| **AI & LLM Workloads** | `LibreChat`, `open-webui`, `rag_api`, `pgvector`, `chat-mongodb`, `chat-meilisearch` | Private AI assistant interfaces, retrieval-augmented generation (RAG) pipelines, and vector database embeddings. |
+| **AI & LLM Workloads** | `LibreChat`, `open-webui`, `rag_api`, `pgvector`, `chat-mongodb`, `chat-meilisearch` | Private AI assistant interfaces, retrieval-augmented generation (RAG) pipelines, and vector database embeddings connected to the 9-GPU inference node. |
 | **Media & ML Pipeline** | `immich_server`, `immich_machine_learning`, `immich_postgres` (VectorChord), `immich_redis` | High-performance self-hosted photo library with local ML facial recognition and vector-based semantic image search. |
 | **Media Automation** | `jellyfin`, `jellyseerr`, `radarr`, `radarr-4k`, `sonarr`, `prowlarr`, `qbittorrent`, `unpackerr` | Full-stack automated media streaming and request management platform. |
 | **Databases & Caching** | `postgres:16-alpine`, `postgres:17`, `redis:7-alpine`, `valkey:9-alpine` | High-availability persistent relational storage, caching tiers, and session backends. |
@@ -126,6 +143,6 @@ To monitor all 30+ services across **22+ exposed internal ports**, `orion-o6` ru
 ## 💡 Why This Matters for Cloud & Security Roles
 
 Operating this production homelab provides daily, practical mastery of enterprise infrastructure requirements:
-- **Network Defense:** Implementing Zero-Trust principles, least-privilege ACL rules, and WireGuard cryptography.
-- **Infrastructure Reliability:** Maintaining 24/7 uptime across multi-tier applications, storage volumes, and database migrations.
-- **Operational Discipline:** Proactive system monitoring, automated log auditing, container image updates, and vulnerability management.
+- **Zero-Trust Network Defense:** Implementing WireGuard mesh networking, least-privilege ACL rules, and zero-inbound-port architectures.
+- **Advanced AI Infrastructure:** Deploying and operating multi-GPU clusters, VRAM pooling, and tensor-parallel inference pipelines.
+- **Infrastructure Reliability & High Availability:** Maintaining 24/7 uptime across multi-tier applications, storage volumes, and database migrations.
