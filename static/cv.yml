@@ -8,7 +8,7 @@ cv:
     - network: GitHub
       username: sebian-lab
     - network: LinkedIn
-      username: sebian
+      username: sebian-van-de-spiegle-72620528a
   sections:
     profiel:
       - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een boeiende IT-stage in **België**. Ervaren in het ontwerpen en realiseren van schaalbare, veilige architecturen: van native Android apps en performante FastAPI REST APIs tot geautomatiseerde CI/CD-pipelines, containerisatie (Docker, Kubernetes), 24/7 homelab serverbeheer (30+ Docker containers) en een dedicated 9-GPU distributed AI cluster.'
