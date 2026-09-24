@@ -25,34 +25,36 @@ cv:
       - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
         start_date: 2024-01
         end_date: present
-        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met CI/CD, security & observability
+        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met DevSecOps CI/CD, security hardening & observability
         highlights:
-          - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, gekoppeld aan beursdata, JWT-authenticatie en rate limiting.'
-          - 'Geautomatiseerde **CI/CD-pipeline** met **Bandit** (SAST), **Trivy** vulnerability scans, **Vault** secrets en **Prometheus/Grafana** metrics.'
-          - 'Multi-service deployment via **Docker Compose** en **Kubernetes (K3s)** met Nginx reverse proxy en E2E testautomatisering.'
+          - 'Realtime beursdata- en portfolioplatform gebouwd met **FastAPI** en **PostgreSQL**, met asynchrone sessies, JWT-authenticatie en rate limiting.'
+          - 'Backend geïnitieerd via **OpenHands** en vervolgens eigenhandig gehardened: secrets via **Vault**, SAST via **Bandit**, container scans via **Trivy**.'
+          - 'Full-stack observability ingericht met **Prometheus**, **Grafana**, **Alertmanager** en **Jaeger** tracing; geautomatiseerd getest via Pytest testsuites.'
+          - 'Multi-service deployment via **Docker Compose** en **Kubernetes (K3s)** met Nginx reverse proxy en Cloudflare Tunnel integratie.'
       - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
         start_date: 2024-01
         end_date: present
-        summary: Zelfstandig praktijkproject (Hobby) – Native Android app voor portfoliobeheer en slimme koersnotificaties
+        summary: Zelfstandig praktijkproject (Hobby) – Native Android app voor realtime portfoliobeheer en koerswaarschuwingen
         highlights:
-          - 'Gebouwd in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een responsieve dark-theme UI.'
-          - 'Netwerklaag via **Retrofit + OkHttp** met custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
-          - 'Achtergrondmonitoring via **WorkManager** voor koersdaling-alerts; beveiligd met **Biometrics API** en **ProGuard**.'
+          - 'Volledig native ontwikkeld in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een responsieve, moderne dark-theme UI.'
+          - 'Robuuste netwerkcommunicatie via **Retrofit + OkHttp** met custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
+          - 'Achtergrondmonitoring via **WorkManager** voor actieve koersdaling-alerts; beveiligd met **Biometrics API** en **ProGuard** code-obfuscatie (zelf getest op Android).'
       - name: '[Productie Homelab & 9-GPU LLM Cluster](https://sebian-lab.github.io/projects/homelab/)'
         start_date: 2023-09
         end_date: present
-        summary: Zelfstandige infrastructuur (Hobby) – 24/7 Debian 12 server (30+ containers) en dedicated 9-GPU AI cluster
+        summary: Zelfstandige infrastructuur (Hobby) – 24/7 on-premise Debian server (30+ containers) en dedicated 9-GPU AI cluster
         highlights:
-          - 'Beheer van **30+ actieve Docker containers** (PostgreSQL, Immich ML, LibreChat) en een **9-GPU inference cluster (50+ GB VRAM, llama.cpp)**.'
-          - 'Beveiligd via een **Tailscale Zero-Trust mesh netwerk (20 nodes)** met subnet routers, exit nodes en monitoring (**PortTracker**).'
+          - 'Beheer van **30+ actieve Docker containers** (PostgreSQL, Immich ML, LibreChat, Nginx) met geautomatiseerde back-ups en persistent storage volumes.'
+          - 'High-throughput **9-GPU distributed AI inference cluster** (50+ GB VRAM) aangestuurd via **llama.cpp** voor lokale LLM workloads.'
+          - 'Beveiligd via een **Tailscale Zero-Trust mesh netwerk (20 nodes)** met subnet routers en exit nodes; 24/7 gemonitord via custom **PortTracker** dashboard.'
     academische_projecten:
       - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
         start_date: 2024-09
         end_date: present
         summary: Schoolproject (Odisee Hogeschool Brussel) – Hybride enterprise cloud- en datacenterinfrastructuur
         highlights:
-          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (IaC)**.'
-          - 'Configuratie van **VMware ESXi 8.0** met vSwitch netwerken en een **Windows Server 2022** Domain Controller (AD DS / DNS).'
+          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (Infrastructure as Code)**.'
+          - 'Configuratie van on-premise datacenter stack: **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS / DNS).'
     opleiding:
       - institution: Hogeschool Odisee
         area: Toegepaste Informatica (BSc)
@@ -71,17 +73,17 @@ cv:
           - 'Basis- en gevorderde Software Engineering, Object-Georiënteerd Programmeren, Databanken en Algoritmen.'
     certificaten_en_talen:
       - label: Certificeringen
-        details: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728) (ISC2, apr 2026 – apr 2027), EF SET English Certificate 75/100 (C2 Proficient)'
+        details: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728) (ISC2, apr 2026 – apr 2027), EF SET English Certificate 75/100 (C2 Proficient – online zelf getest / zonder externe publieke verificatielink)'
       - label: Talenkennis
         details: 'Nederlands (Moedertaal), Engels (C2 Proficient / Vloeiend), Frans (Praktische basis)'
 design:
   theme: engineeringresumes
   page:
     size: a4
-    top_margin: 0.8cm
-    bottom_margin: 0.8cm
-    left_margin: 1.1cm
-    right_margin: 1.1cm
+    top_margin: 0.7cm
+    bottom_margin: 0.7cm
+    left_margin: 1.0cm
+    right_margin: 1.0cm
     show_page_numbering: false
     show_last_updated_date: false
   colors:
@@ -92,8 +94,8 @@ design:
     links: rgb(37, 99, 235)
   text:
     font_family: Source Sans 3
-    font_size: 8.5pt
-    leading: 0.38em
+    font_size: 8.2pt
+    leading: 0.35em
     alignment: justified
     date_and_location_column_alignment: right
   links:
@@ -101,17 +103,17 @@ design:
     use_external_link_icon: false
   header:
     name_font_family: Source Sans 3
-    name_font_size: 20pt
+    name_font_size: 19pt
     name_bold: true
     small_caps_for_name: false
-    vertical_space_between_name_and_connections: 0.15cm
-    vertical_space_between_connections_and_first_section: 0.2cm
+    vertical_space_between_name_and_connections: 0.12cm
+    vertical_space_between_connections_and_first_section: 0.15cm
   section_titles:
     type: with-full-line
     font_family: Source Sans 3
-    font_size: 9.8pt
+    font_size: 9.4pt
     bold: true
     small_caps: false
     line_thickness: 0.5pt
-    vertical_space_above: 0.18cm
-    vertical_space_below: 0.1cm
+    vertical_space_above: 0.14cm
+    vertical_space_below: 0.08cm
