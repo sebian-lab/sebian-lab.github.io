@@ -7,11 +7,13 @@ featureimage: "./feature.png"
 imageContain: true
 ---
 
-AlphaTracer is een intelligente Android-applicatie voor het beheren van aandelenportfolio's en realtime koerswaarschuwingen, native ontwikkeld in Kotlin.
+AlphaTracer is een intelligente, native Android-applicatie voor het beheren van aandelenportfolio's en het ontvangen van geautomatiseerde koersnotificaties.
 
-**Aangetoonde Vaardigheden:** Android SDK, Kotlin, Jetpack Compose, MVVM Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
+**Aangetoonde Vaardigheden:** Android SDK, Kotlin, Jetpack Compose, MVVM-Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
 
-> *"AlphaTracer biedt realtime marktinzichten, een intelligent portfoliobeheer en instelbare koerswaarschuwingen. Zowel voor beginnende als ervaren beleggers zorgt het voor een direct overzicht over marktbewegingen."*
+> *"AlphaTracer biedt realtime marktinzichten, intelligent portfoliobeheer en instelbare koerswaarschuwingen. Zowel voor beginnende als ervaren beleggers zorgt het voor een direct overzicht over marktbewegingen."*
+
+---
 
 ## 📸 Interface Showcase
 
@@ -21,6 +23,8 @@ AlphaTracer is een intelligente Android-applicatie voor het beheren van aandelen
   <img src="/images/alphatracer_2.png" class="grid-w33" />
   <img src="/images/alphatracer_3.png" class="grid-w33" />
 {{< /gallery >}}
+
+---
 
 ## ✨ Belangrijkste Functionaliteiten
 
@@ -40,41 +44,29 @@ AlphaTracer is opgesplitst in een native Android-frontend en een high-performanc
 
 {{< mermaid >}}
 graph TD
-    subgraph ClientTier ["Client Tier"]
-        A["Android App (Jetpack Compose)"]
-    end
-    
-    subgraph Gateway ["API Gateway"]
-        B["Nginx Reverse Proxy"]
-    end
-    
-    subgraph AppTier ["Application Tier"]
-        C["FastAPI Backend (Python)"]
-    end
-    
-    subgraph DataTier ["Data Tier"]
-        D[("PostgreSQL Database")]
-    end
-    
-    subgraph ExtIntegrations ["Externe Integraties"]
-        E["Yahoo Finance API"]
-    end
-    
-    A -->|"HTTPS (TLS)"| B
-    B -->|HTTP| C
-    C -->|SQL| D
-    C -->|yfinance| E
+    Client["📱 Android Client<br><b>Jetpack Compose & Kotlin MVVM</b>"]
+    Gateway["🛡️ API Gateway<br><b>Nginx Reverse Proxy & TLS</b>"]
+    Backend["⚡ Application Tier<br><b>FastAPI Backend (Python)</b>"]
+    DB[("💾 Data Tier<br><b>PostgreSQL Database</b>")]
+    Finance["🌐 Externe Integratie<br><b>Yahoo Finance API</b>"]
 
-    style A fill:#f96,stroke:#333
-    style C fill:#bbf,stroke:#333
-    style D fill:#bfb,stroke:#333
+    Client -->|"HTTPS / TLS"| Gateway
+    Gateway -->|"HTTP"| Backend
+    Backend -->|"SQL Queries"| DB
+    Backend -->|"yfinance Stream"| Finance
+
+    style Client fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Gateway fill:#1e293b,stroke:#475569,stroke-width:1px,color:#fff
+    style Backend fill:#047857,stroke:#10b981,stroke-width:2px,color:#fff
+    style DB fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
+    style Finance fill:#581c87,stroke:#a855f7,stroke-width:1px,color:#fff
 {{< /mermaid >}}
 
 ### 2. Android App-Architectuur (MVVM)
 
 De Android-frontend volgt het **MVVM (Model-View-ViewModel)** ontwerppatroon met een strikte scheiding van verantwoordelijkheden:
 
-| Laag | Verantwoordelijkheid |
+| Laag | Componenten & Verantwoordelijkheid |
 |---|---|
 | **UI (Composables)** | `AuthScreen`, `PortfolioUi`, `StockDetailScreen`, `AlertListView` – herbruikbare en reactieve componenten. |
 | **State (ViewModels)** | `MainViewModel` (algemene navigatie en auth-state), `PortfolioViewModel`, `StockDetailViewModel`. |
@@ -89,34 +81,35 @@ De Android-frontend volgt het **MVVM (Model-View-ViewModel)** ontwerppatroon met
 
 {{< mermaid >}}
 erDiagram
-    User ||--o{ Portfolio : "has"
-    Portfolio ||--o{ Transaction : "contains"
+    USER ||--o{ PORTFOLIO : "heeft"
+    PORTFOLIO ||--o{ TRANSACTION : "bevat"
+    USER ||--o{ ALERT_RULE : "configureert"
 
-    User {
+    USER {
+        string id PK
+        string email
         string access_token
-        string refresh_token
     }
-    Portfolio {
+    PORTFOLIO {
         string id PK
         string user_id FK
     }
-    Transaction {
+    TRANSACTION {
         string id PK
         string portfolio_id FK
         string ticker
         int quantity
     }
-    AlertRule {
+    ALERT_RULE {
         string id PK
         string ticker
-        int rollingDays
-        float thresholdPercent
+        int rolling_days
+        float threshold_percent
     }
-    StockData {
+    STOCK_DATA {
         string ticker PK
         json metrics
         array candles
-        json analysis
     }
 {{< /mermaid >}}
 

@@ -1,17 +1,19 @@
 ---
 title: "AlphaTracer Mobile"
-description: "A smart stock portfolio and price alerting application built natively for Android."
+description: "A smart stock portfolio and price alerting application built natively for Android with Jetpack Compose."
 date: 2026-05-30
 tags: ["Android", "Kotlin", "Jetpack Compose"]
 featureimage: "./feature.png"
 imageContain: true
 ---
 
-AlphaTracer is a smart stock portfolio and price alerting application built natively for Android.
+AlphaTracer is an intelligent native Android application for stock portfolio management and automated price drop alerts.
 
 **Skills Demonstrated:** Android SDK, Kotlin, Jetpack Compose, MVVM Architecture, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
 
-> *"AlphaTracer provides real-time market insights, an intelligent portfolio manager, and customizable price alerts. Whether you're a beginner or an experienced investor, you won't miss a single market movement."*
+> *"AlphaTracer provides real-time market insights, intelligent portfolio management, and customizable price alerts. Whether you're a beginner or an experienced investor, you won't miss a single market movement."*
+
+---
 
 ## 📸 Interface Showcase
 
@@ -22,10 +24,12 @@ AlphaTracer is a smart stock portfolio and price alerting application built nati
   <img src="/images/alphatracer_3.png" class="grid-w33" />
 {{< /gallery >}}
 
+---
+
 ## ✨ Key Features
 
 - **Live Market Data** – Search for any stock and view detailed financial figures, technical analysis, and trading signals.
-- **Portfolio Management** – Add buy and sell transactions, view total value, profit/loss percentages, and track performance at a glance.
+- **Portfolio Management** – Add buy and sell transactions, view total value, profit/loss percentages, and track performance in real time.
 - **Smart Alerts** – Receive push notifications when a stock drops by a specific percentage over a sliding window (e.g., the last 3 days). Set alerts individually or in bulk.
 - **Secure & Convenient** – Biometric login (fingerprint/face) keeps your data safe. Your session remains active thanks to automatic JWT token renewal.
 - **Modern, Fluid Interface** – Built entirely with **Jetpack Compose**, featuring a dark theme and interactive charts.
@@ -34,47 +38,35 @@ AlphaTracer is a smart stock portfolio and price alerting application built nati
 
 ## 🏛️ System Architecture
 
-AlphaTracer is split into a native Android frontend and a high-performance FastAPI backend. 
+AlphaTracer is split into a native Android frontend and a high-performance FastAPI backend.
 
 ### 1. Overall System Topology
 
 {{< mermaid >}}
 graph TD
-    subgraph ClientTier ["Client Tier"]
-        A["Android App (Jetpack Compose)"]
-    end
-    
-    subgraph Gateway ["API Gateway"]
-        B["Nginx Reverse Proxy"]
-    end
-    
-    subgraph AppTier ["Application Tier"]
-        C["FastAPI Backend (Python)"]
-    end
-    
-    subgraph DataTier ["Data Tier"]
-        D[("PostgreSQL Database")]
-    end
-    
-    subgraph ExtIntegrations ["External Integrations"]
-        E["Yahoo Finance API"]
-    end
-    
-    A -->|"HTTPS (TLS)"| B
-    B -->|HTTP| C
-    C -->|SQL| D
-    C -->|yfinance| E
+    Client["📱 Android Client<br><b>Jetpack Compose & Kotlin MVVM</b>"]
+    Gateway["🛡️ API Gateway<br><b>Nginx Reverse Proxy & TLS</b>"]
+    Backend["⚡ Application Tier<br><b>FastAPI Backend (Python)</b>"]
+    DB[("💾 Data Tier<br><b>PostgreSQL Database</b>")]
+    Finance["🌐 External Integration<br><b>Yahoo Finance API</b>"]
 
-    style A fill:#f96,stroke:#333
-    style C fill:#bbf,stroke:#333
-    style D fill:#bfb,stroke:#333
+    Client -->|"HTTPS / TLS"| Gateway
+    Gateway -->|"HTTP"| Backend
+    Backend -->|"SQL Queries"| DB
+    Backend -->|"yfinance Stream"| Finance
+
+    style Client fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Gateway fill:#1e293b,stroke:#475569,stroke-width:1px,color:#fff
+    style Backend fill:#047857,stroke:#10b981,stroke-width:2px,color:#fff
+    style DB fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
+    style Finance fill:#581c87,stroke:#a855f7,stroke-width:1px,color:#fff
 {{< /mermaid >}}
 
 ### 2. Android App Architecture (MVVM)
 
 The Android frontend follows the strict **MVVM (Model-View-ViewModel)** pattern with a clear separation of responsibilities:
 
-| Layer | Responsibility |
+| Layer | Components & Responsibility |
 |---|---|
 | **UI (Composables)** | `AuthScreen`, `PortfolioUi`, `StockDetailScreen`, `AlertListView` – fully reusable components. |
 | **State (ViewModels)** | `MainViewModel` (global navigation/login), `PortfolioViewModel`, `StockDetailViewModel`. |
@@ -89,34 +81,35 @@ The Android frontend follows the strict **MVVM (Model-View-ViewModel)** pattern 
 
 {{< mermaid >}}
 erDiagram
-    User ||--o{ Portfolio : "has"
-    Portfolio ||--o{ Transaction : "contains"
+    USER ||--o{ PORTFOLIO : "has"
+    PORTFOLIO ||--o{ TRANSACTION : "contains"
+    USER ||--o{ ALERT_RULE : "configures"
 
-    User {
+    USER {
+        string id PK
+        string email
         string access_token
-        string refresh_token
     }
-    Portfolio {
+    PORTFOLIO {
         string id PK
         string user_id FK
     }
-    Transaction {
+    TRANSACTION {
         string id PK
         string portfolio_id FK
         string ticker
         int quantity
     }
-    AlertRule {
+    ALERT_RULE {
         string id PK
         string ticker
-        int rollingDays
-        float thresholdPercent
+        int rolling_days
+        float threshold_percent
     }
-    StockData {
+    STOCK_DATA {
         string ticker PK
         json metrics
         array candles
-        json analysis
     }
 {{< /mermaid >}}
 
