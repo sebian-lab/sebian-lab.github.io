@@ -1,10 +1,10 @@
 ---
 title: "Sebian Van de Spiegle"
-description: "Full-Stack Engineer | Cloud & DevOps | Android"
+description: "Software Engineer | Cloud Infrastructure | Android"
 ---
 
-I build secure, scalable systems – from mobile apps to cloud infrastructure.  
-Currently pursuing **Toegepaste Informatica** at **Odisee Brussel**, seeking a **Cybersecurity/DevOps internship in Luxembourg**.
+I build robust, scalable systems – from mobile apps to cloud infrastructure.  
+Student **Toegepaste Informatica (Applied Computer Science)** at **Odisee Brussel**, seeking an IT internship in **Belgium**.
 
 ## 1. Software Engineering
 

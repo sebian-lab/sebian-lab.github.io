@@ -8,13 +8,13 @@ title = "Sebian Van de Spiegle"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  description = "Portfolio of Sebian Van de Spiegle – Full-Stack Engineer | Cloud & DevOps | Android. Seeking internship in Luxembourg."
+  description = "Portfolio of Sebian Van de Spiegle – Software Engineer | Cloud Infrastructure | Android."
 
 [params.author]
   name = "Sebian Van de Spiegle"
   email = "sebian.vandespiegle@student.odisee.be"
-  headline = "Full-Stack Engineer | Cloud & DevOps | Android"
-  bio = "I build secure, scalable systems – from mobile apps to cloud infrastructure. Currently pursuing Toegepaste Informatica at Odisee Brussel, seeking a Cybersecurity/DevOps internship in Luxembourg."
+  headline = "Software Engineer | Cloud Infrastructure | Android"
+  bio = "Student Applied Computer Science (Toegepaste Informatica) at Odisee Brussels, seeking an IT internship in Belgium. I build robust, scalable systems – from native Android apps to cloud infrastructure."
   links = [
     { github = "https://github.com/sebian-lab" },
     { linkedin = "https://linkedin.com/in/sebian" },

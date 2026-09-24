@@ -1,10 +1,10 @@
 ---
 title: "Sebian Van de Spiegle"
-description: "Full-Stack Engineer | Cloud & DevOps | Android"
+description: "Software Engineer | Cloud Infrastructuur | Android"
 ---
 
-Ik bouw veilige, schaalbare systemen – van mobiele applicaties tot cloudinfrastructuur.  
-Student **Toegepaste Informatica** aan **Odisee Hogeschool Brussel**.
+Ik bouw betrouwbare, schaalbare systemen – van mobiele applicaties tot cloudinfrastructuur.  
+Student **Toegepaste Informatica** aan **Odisee Hogeschool Brussel**, op zoek naar een stage in **België**.
 
 ## 1. Software Engineering
 
