@@ -15,46 +15,47 @@ cv:
     technische_vaardigheden:
       - label: Cloud, Containers & Compute
         details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes (K3s), VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
-      - label: CI/CD, Automatisering & Observability
-        details: GitHub Actions, Bandit (SAST), Trivy (Vulnerability Scanning), HashiCorp Vault, Prometheus, Grafana, Alertmanager, Jaeger, Loki
+      - label: CI/CD, DevSecOps & Observability
+        details: GitHub Actions, ArgoCD (GitOps), Terraform, Bandit (SAST), Aqua Trivy (CVE scans), Sigstore Cosign, Kyverno, Gitleaks, Vault, Prometheus, Grafana, Jaeger, Loki
       - label: Software & Data
         details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
       - label: Systeem- & Netwerkbeheer
         details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Zero-Trust Mesh VPN, Network Segmentation
     zelfstandige_projecten:
       - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
-        start_date: 2024-01
+        start_date: 2025-01
         end_date: present
-        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met DevSecOps CI/CD, security hardening & observability
+        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met DevSecOps CI/CD, security hardening & GitOps
         highlights:
-          - 'Realtime beursdata- en portfolioplatform gebouwd met **FastAPI** en **PostgreSQL**, met asynchrone sessies, JWT-authenticatie en rate limiting.'
-          - 'Backend geïnitieerd via **OpenHands** en vervolgens eigenhandig gehardened: secrets via **Vault**, SAST via **Bandit**, container scans via **Trivy**.'
-          - 'Full-stack observability ingericht met **Prometheus**, **Grafana**, **Alertmanager** en **Jaeger** tracing; geautomatiseerd getest via Pytest testsuites.'
-          - 'Multi-service deployment via **Docker Compose** en **Kubernetes (K3s)** met Nginx reverse proxy en Cloudflare Tunnel integratie.'
+          - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, met JWT-authenticatie, rate limiting en OTLP telemetrie via **Jaeger**.'
+          - 'DevSecOps pipeline: **Bandit** (SAST), **Trivy** (SARIF export), **Gitleaks**, **Cosign** (keyless OIDC signing) en **Vault** secrets.'
+          - 'GitOps continuous deployment via **ArgoCD** op een 3-node **Kubernetes (K3s)** cluster met **Kyverno** admission policies en Kustomize.'
+          - 'Full-stack observability via **Prometheus**, **Grafana**, **Alertmanager** en **Loki** log aggregatie; end-to-end getest met **Pytest**.'
       - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
-        start_date: 2024-01
+        start_date: 2025-01
         end_date: present
         summary: Zelfstandig praktijkproject (Hobby) – Native Android app voor realtime portfoliobeheer en koerswaarschuwingen
         highlights:
-          - 'Volledig native ontwikkeld in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een responsieve, moderne dark-theme UI.'
-          - 'Robuuste netwerkcommunicatie via **Retrofit + OkHttp** met custom `AuthInterceptor` voor automatische JWT refresh token-rotatie.'
-          - 'Achtergrondmonitoring via **WorkManager** voor actieve koersdaling-alerts; beveiligd met **Biometrics API** en **ProGuard** code-obfuscatie (zelf getest op Android).'
+          - 'Volledig native ontwikkeld in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een moderne dark-theme UI.'
+          - 'Netwerklaag via **Retrofit + OkHttp** met custom `AuthInterceptor` voor JWT token-rotatie en fallback naar Cloudflare Tunnel.'
+          - 'Gehardened via **Network Security Config** (Certificate Pinning, HTTPS-only), **Biometrics API** en **ProGuard/R8** obfuscatie.'
+          - 'Achtergrondmonitoring via **WorkManager** (`AlertWorker`) en geautomatiseerde **GitHub Actions** CI build pipeline (lint & APK).'
       - name: '[Productie Homelab & 9-GPU LLM Cluster](https://sebian-lab.github.io/projects/homelab/)'
         start_date: 2023-09
         end_date: present
         summary: Zelfstandige infrastructuur (Hobby) – 24/7 on-premise Debian server (30+ containers) en dedicated 9-GPU AI cluster
         highlights:
-          - 'Beheer van **30+ actieve Docker containers** (PostgreSQL, Immich ML, LibreChat, Nginx) met geautomatiseerde back-ups en persistent storage volumes.'
-          - 'High-throughput **9-GPU distributed AI inference cluster** (50+ GB VRAM) aangestuurd via **llama.cpp** voor lokale LLM workloads.'
-          - 'Beveiligd via een **Tailscale Zero-Trust mesh netwerk (20 nodes)** met subnet routers en exit nodes; 24/7 gemonitord via custom **PortTracker** dashboard.'
+          - 'Beheer van **33 actieve Docker containers** (PostgreSQL, Immich ML, LibreChat, Nginx) met geautomatiseerde back-ups en persistente volumes.'
+          - 'High-throughput **9-GPU distributed AI cluster** (50+ GB VRAM) aangestuurd via **llama.cpp** (GGUF layer split) voor lokale LLM workloads.'
+          - 'Beveiligd via een **Tailscale Zero-Trust WireGuard mesh (20 nodes)** met subnet routers en exit nodes; 24/7 monitoring via **PortTracker**.'
     academische_projecten:
       - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
         start_date: 2024-09
         end_date: present
         summary: Schoolproject (Odisee Hogeschool Brussel) – Hybride enterprise cloud- en datacenterinfrastructuur
         highlights:
-          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (Infrastructure as Code)**.'
-          - 'Configuratie van on-premise datacenter stack: **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS / DNS).'
+          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (IaC)**.'
+          - 'Configuratie van on-premise stack: **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS / DNS).'
     opleiding:
       - institution: Hogeschool Odisee
         area: Toegepaste Informatica (BSc)
