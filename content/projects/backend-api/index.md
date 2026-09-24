@@ -10,7 +10,9 @@ featureimage: "./image.png"
 
 ---
 
-## 📖 Interactive API Documentation (Swagger / OpenAPI)
+## 📸 Bewijs & Technische Validatie (Screenshots)
+
+> **FastAPI Swagger UI & OpenAPI 3.1 Bewijs:** Onderstaande screenshot toont de actieve, lokaal draaiende API-documentatie op `localhost:8011/docs`. Dit verifieert de werking van de authenticatiemodules (OAuth2 password flow, JWT token renewal via `/api/v1/auth/refresh`), beveiligde gebruikersendpoints (`/api/v1/users/me`) en financiële beursdata-integraties.
 
 ![AlphaTracer FastAPI Swagger UI Docs](./image.png)
 

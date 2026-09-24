@@ -10,9 +10,9 @@ featureimage: "./image.png"
 
 ---
 
-## 🖥️ Live Homelab Overview
+## 📸 Bewijs & Live Systeemmonitoring (Screenshots)
 
-`orion-o6` is a 24/7 dedicated production homelab server running **Debian GNU/Linux 12 (bookworm)** equipped with 12 CPU cores and 28.57 GB RAM. It orchestrates over 30 microservices covering AI/LLM workloads, self-hosted search, media pipelines, automated continuous data synchronization, and internal infrastructure telemetry.
+> **PortTracker Live Telemetrie Bewijs:** Onderstaande screenshot van de zelfontwikkelde monitoringtool (*PortTracker*) toont de actieve status van de `orion-o6` productieserver (`100.101.168.17:4999`). Het toont realtime inzicht in 33 actieve containers, 12 CPU-cores, 28.57 GB RAM en 190 gedetecteerde poorttoewijzingen (waaronder AI-workloads, mediastacks en netwerkservices).
 
 ![PortTracker Homelab Dashboard](./image.png)
 
