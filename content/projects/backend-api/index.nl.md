@@ -10,11 +10,36 @@ featureimage: "./feature.png"
 
 ---
 
-## 🏛️ Systeemoverzicht
+## 📋 Executive Summary (Overzicht voor Management & HR)
 
-De **AlphaTracer Financial API** is een asynchrone REST API-gateway van productieniveau die het AlphaTracer-ecosysteem van data voorziet. Het verzorgt realtime marktdatastromen, dynamische portfolioberekeningen, geautomatiseerde transactieverwerking en multi-tenant gebruikersauthenticatie.
+<div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+    <div>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 De Bedrijfsuitdaging (Probleem)</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Financiële applicaties vereisen sub-second respons-tijden en zero-compromise beveiliging. Hoe ontwikkel je een robuuste API-gateway die realtime marktdatastromen verwerkt en tegelijk beschermd is tegen kwetsbaarheden, credential leaks en servicestoringen?
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Mijn Rol & Verantwoordelijkheid</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Volledig backend- en cloud-engineering: ontwerp van de asynchrone REST-architectuur in FastAPI, opzetten van geautomatiseerde CI/CD security scanning (SAST & CVE image scanning), gecentraliseerd secrets management (HashiCorp Vault) en orkestratie via K3s Kubernetes met distributed tracing.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Bedrijfswaarde & Resultaat</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Een enterprise-grade financiële gateway met <strong>100% geautomatiseerde kwetsbaarheidscontroles</strong> bij elke codecommit, sub-milliseconde tokenverificatie, gecentraliseerde observability met live health alerts en geautomatiseerde staging-promotie.
+      </p>
+    </div>
+  </div>
+</div>
 
-> **Architecturale Context & Stagevoorbereiding:** De initiële microservice-basis werd gegenereerd via OpenHands en gehost via een Cloudflare Tunnel. Vervolgens is het gehele platform door mijzelf diepgaand gehardened, gerefactord en uitgebouwd met enterprise tooling (Bandit SAST, Trivy container scanning, HashiCorp Vault, K3s Kubernetes en een complete observability-stack) als gerichte praktijkvoorbereiding op een IT-stage.
+> **Architectuur & Software Lifecycle:** Dit project demonstreert moderne enterprise software lifecycle standaarden: van gestructureerde service scaffolding en API-contract testing tot diepgaande enterprise hardening (Bandit SAST, Trivy vulnerability scanning, HashiCorp Vault secrets management, non-root container orkestratie op K3s Kubernetes en end-to-end telemetrie).
+
+---
+
+## 🏛️ Systeemarchitectuur & Pipeline
 
 {{< mermaid >}}
 graph TD

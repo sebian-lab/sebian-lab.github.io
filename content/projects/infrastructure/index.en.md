@@ -10,6 +10,33 @@ featureimage: "./feature.png"
 
 ---
 
+## 📋 Executive Summary (Management & Recruiter Overview)
+
+<div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+    <div>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Business Challenge (The Problem)</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Modern corporate enterprises rely on hybrid cloud models. How to architect, isolate, and interconnect scalable public cloud resources (Microsoft Azure & Kubernetes) seamlessly with secure on-premises virtualized datacenters (VMware ESXi & Active Directory)?
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 My Role & Engineering Ownership</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        End-to-end infrastructure design and provisioning: cloud network architecture (VNets, NSGs, subnet tiers), Infrastructure as Code (declarative ARM Templates & Deployment Stacks), AKS container orchestration, bare-metal ESXi hypervisor virtualization, and central Active Directory identity management.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Business Impact & Measurable Outcome</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        An enterprise-standard hybrid architecture with 100% reproducible IaC cloud deployments, strict network boundary defense (least-privilege firewall rules), and centralized enterprise directory governance.
+      </p>
+    </div>
+  </div>
+</div>
+
+---
+
 ## 🏛️ Introduction & Architecture Context
 
 During my **Applied Computer Science** degree at **Odisee University of Applied Sciences Brussels**, I designed and deployed a comprehensive suite of enterprise infrastructure projects. These labs simulate a realistic **hybrid enterprise architecture**, structured around two complementary pillars:

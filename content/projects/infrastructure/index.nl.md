@@ -6,7 +6,34 @@ tags: ["Azure", "VMware", "Kubernetes", "AKS", "Active Directory", "IaC", "DevOp
 featureimage: "./feature.png"
 ---
 
-**Skills Demonstrated:** Microsoft Azure (VM, VNet, Subnet Segmentation, NSG, Storage Accounts, ACI, AKS), Infrastructure as Code (ARM Templates & Deployment Stacks), Kubernetes (kubectl, Load Balancers), VMware ESXi 8.0, Virtual Switching (vSwitch & Port Groups), Windows Server 2022, Active Directory Domain Services (AD DS, DNS, Identity Management).
+**Aangetoonde Vaardigheden:** Microsoft Azure (VM, VNet, Subnet Segmentation, NSG, Storage Accounts, ACI, AKS), Infrastructure as Code (ARM Templates & Deployment Stacks), Kubernetes (kubectl, Load Balancers), VMware ESXi 8.0, Virtual Switching (vSwitch & Port Groups), Windows Server 2022, Active Directory Domain Services (AD DS, DNS, Identity Management).
+
+---
+
+## 📋 Executive Summary (Overzicht voor Management & HR)
+
+<div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+    <div>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 De Bedrijfsuitdaging (Probleem)</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Moderne enterprise organisaties opereren vrijwel altijd in hybride omgevingen. Hoe ontwerp en koppel je schaalbare public cloud resources (Microsoft Azure & Kubernetes) naadloos aan veilige, on-premises gevirtualiseerde datacenters (VMware ESXi & Active Directory)?
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Mijn Rol & Verantwoordelijkheid</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Volledige opzet en provisioning: cloudnetwerk-architectuur (VNets, NSGs, subnet-isolatie), Infrastructure as Code (declaratieve ARM Templates & Deployment Stacks), AKS container-orkestratie, bare-metal ESXi hypervisor inrichting en centrale Active Directory domeinadministratie.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Bedrijfswaarde & Resultaat</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Een enterprise-conforme hybride architectuur met 100% reproduceerbare IaC-cloudimplementaties, strikte netwerkisolatie (least-privilege firewallregels), en gecentraliseerd enterprise-identiteitsbeheer.
+      </p>
+    </div>
+  </div>
+</div>
 
 ---
 

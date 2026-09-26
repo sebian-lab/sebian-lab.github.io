@@ -1,0 +1,127 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.3/schema.json
+cv:
+  name: Sebian Van de Spiegle
+  location: België
+  email: sebian.vandespiegle@student.odisee.be
+  website: https://sebian-lab.github.io
+  social_networks:
+    - network: GitHub
+      username: sebian-lab
+    - network: LinkedIn
+      username: sebian-van-de-spiegle-72620528a
+  sections:
+    profiel:
+      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een boeiende IT-stage in **België**. Ervaren in het ontwerpen en realiseren van schaalbare, veilige architecturen: van native Android apps en performante FastAPI REST APIs tot geautomatiseerde CI/CD-pipelines, containerisatie (Docker, Kubernetes), 24/7 homelab serverbeheer (30+ containers) en een dedicated 9-GPU distributed AI cluster.'
+    technische_vaardigheden:
+      - label: Cloud, Containers & Compute
+        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes (K3s), VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
+      - label: CI/CD, DevSecOps & Observability
+        details: GitHub Actions, ArgoCD (GitOps), Terraform, Bandit (SAST), Aqua Trivy (CVE scans), Sigstore Cosign, Kyverno, Gitleaks, Vault, Prometheus, Grafana, Jaeger, Loki
+      - label: Software & Data
+        details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
+      - label: Systeem- & Netwerkbeheer
+        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Zero-Trust Mesh VPN, Network Segmentation
+    zelfstandige_projecten:
+      - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
+        start_date: 2025-01
+        end_date: present
+        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met DevSecOps CI/CD, security hardening & GitOps
+        highlights:
+          - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, met JWT-authenticatie, rate limiting en OTLP telemetrie via **Jaeger**.'
+          - 'DevSecOps pipeline: **Bandit** (SAST), **Trivy** (SARIF export), **Gitleaks**, **Cosign** (keyless OIDC signing) en **Vault** secrets.'
+          - 'GitOps continuous deployment via **ArgoCD** op een 3-node **Kubernetes (K3s)** cluster met **Kyverno** admission policies en Kustomize.'
+          - 'Full-stack observability via **Prometheus**, **Grafana**, **Alertmanager** en **Loki** log aggregatie; end-to-end getest met **Pytest**.'
+      - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
+        start_date: 2025-01
+        end_date: present
+        summary: Zelfstandig praktijkproject (Hobby) – Native Android app voor realtime portfoliobeheer en koerswaarschuwingen
+        highlights:
+          - 'Volledig native ontwikkeld in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een moderne dark-theme UI.'
+          - 'Netwerklaag via **Retrofit + OkHttp** met custom `AuthInterceptor` voor JWT token-rotatie en fallback naar Cloudflare Tunnel.'
+          - 'Gehardened via **Network Security Config** (Certificate Pinning, HTTPS-only), **Biometrics API** en **ProGuard/R8** obfuscatie.'
+          - 'Achtergrondmonitoring via **WorkManager** (`AlertWorker`) en geautomatiseerde **GitHub Actions** CI build pipeline (lint & APK).'
+      - name: '[Productie Homelab & 9-GPU LLM Cluster](https://sebian-lab.github.io/projects/homelab/)'
+        start_date: 2023-09
+        end_date: present
+        summary: Zelfstandige infrastructuur (Hobby) – 24/7 on-premise Debian server (30+ containers) en dedicated 9-GPU AI cluster
+        highlights:
+          - 'Beheer van **33 actieve Docker containers** (PostgreSQL, Immich ML, LibreChat, Nginx) met geautomatiseerde back-ups en persistente volumes.'
+          - 'High-throughput **9-GPU distributed AI cluster** (50+ GB VRAM) aangestuurd via **llama.cpp** (GGUF layer split) voor lokale LLM workloads.'
+          - 'Beveiligd via een **Tailscale Zero-Trust WireGuard mesh (20 nodes)** met subnet routers en exit nodes; 24/7 monitoring via **PortTracker**.'
+    academische_projecten:
+      - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
+        start_date: 2024-09
+        end_date: present
+        summary: Schoolproject (Odisee Hogeschool Brussel) – Hybride enterprise cloud- en datacenterinfrastructuur
+        highlights:
+          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (IaC)**.'
+          - 'Configuratie van on-premise stack: **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS / DNS).'
+    opleiding:
+      - institution: Hogeschool Odisee
+        area: Toegepaste Informatica (BSc)
+        degree: Bachelor (2e bachelorfase)
+        start_date: 2026-01
+        end_date: 2027-06
+        location: Brussel, België
+        highlights:
+          - 'Focus: Cloud Computing, Wireshark netwerkanalyse, Cloud Infrastructure en Computerbeveiliging.'
+      - institution: HOGENT
+        area: Toegepaste Informatica
+        start_date: 2023-09
+        end_date: 2026-01
+        location: Gent, België
+        highlights:
+          - 'Basis- en gevorderde Software Engineering, Object-Georiënteerd Programmeren, Databanken en Algoritmen.'
+    certificaten:
+      - label: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728)'
+        details: 'ISC2 (apr 2026 – apr 2027) – Voorbereiding op Certified in Cybersecurity (CC); focus op netwerkbeveiliging, security operations en DevSecOps.'
+      - label: '[EF SET English Certificate](https://cert.efset.org/en/HHqJU5)'
+        details: 'Score 75/100 (C2 Proficient) – Hoogste CEFR-beheersingsniveau; uitstekende professionele en technische communicatie in internationale teams.'
+    talen:
+      - label: Nederlands
+        details: 'Moedertaal – Vloeiend in woord en geschrift'
+      - label: Engels
+        details: 'C2 Proficient – Vloeiende professionele en technische communicatie (volledige werkvaardigheid)'
+      - label: Frans
+        details: 'Praktische basis – Professionele basiskennis en elementaire communicatie'
+design:
+  theme: engineeringresumes
+  page:
+    size: a4
+    top_margin: 0.6cm
+    bottom_margin: 0.6cm
+    left_margin: 1.0cm
+    right_margin: 1.0cm
+    show_page_numbering: false
+    show_last_updated_date: false
+  colors:
+    text: rgb(30, 41, 59)
+    name: rgb(15, 23, 42)
+    connections: rgb(37, 99, 235)
+    section_titles: rgb(15, 23, 42)
+    links: rgb(37, 99, 235)
+  text:
+    font_family: Source Sans 3
+    font_size: 8.0pt
+    leading: 0.32em
+    alignment: justified
+    date_and_location_column_alignment: right
+  links:
+    underline: false
+    use_external_link_icon: false
+  header:
+    name_font_family: Source Sans 3
+    name_font_size: 18.5pt
+    name_bold: true
+    small_caps_for_name: false
+    vertical_space_between_name_and_connections: 0.1cm
+    vertical_space_between_connections_and_first_section: 0.12cm
+  section_titles:
+    type: with-full-line
+    font_family: Source Sans 3
+    font_size: 9.0pt
+    bold: true
+    small_caps: false
+    line_thickness: 0.5pt
+    vertical_space_above: 0.11cm
+    vertical_space_below: 0.05cm

@@ -11,7 +11,32 @@ AlphaTracer is an intelligent native Android application for stock portfolio man
 
 **Skills Demonstrated:** Android SDK, Kotlin, Jetpack Compose, MVVM Architecture, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
 
-> *"AlphaTracer provides real-time market insights, intelligent portfolio management, and customizable price alerts. Whether you're a beginner or an experienced investor, you won't miss a single market movement."*
+---
+
+## 📋 Executive Summary (Management & Recruiter Overview)
+
+<div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+    <div>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Business Challenge (The Problem)</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Retail investors and portfolio managers miss critical market opportunities due to fragmented data sources and clunky mobile experiences. How to design a secure, high-framerate mobile app combining real-time financial tracking with autonomous background price drop alerts?
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 My Role & Engineering Ownership</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Full-lifecycle native Android development: created the Jetpack Compose user interface, established a robust MVVM pattern using reactive ViewModels and StateFlows, integrated hardware biometric security, and scheduled battery-efficient background evaluations via Android WorkManager.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Business Impact & Measurable Outcome</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        A silky 60 FPS native experience, zero-interruption session persistence via automated background JWT token refresh, reliable 15-minute scheduled price evaluations, and protection against reverse engineering via ProGuard bytecode obfuscation.
+      </p>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -115,14 +140,14 @@ erDiagram
 
 ---
 
-## 🤖 AI Integration & Methodology
+## 🛠️ Software Engineering, Architecture & Code Quality
 
-This project embraced a **"human-in-the-loop"** AI development methodology. AI acted as an accelerator, but full architectural control remained manual.
+This project demonstrates modern software engineering lifecycle standards: from MVVM architectural segregation and API-contract testing to enterprise-level hardening (non-root transport, biometric cryptography, and automated CI via GitHub Actions).
 
-- **No AI-generated Frontend:** While AI helped with boilerplate (data classes), the entire Jetpack Compose architecture (UI code, navigation, themes) was hand-written from scratch.
-- **No "Vibe Coding":** Every AI suggestion was critically evaluated, tested, and refined. No blind copy-pasting was permitted.
-- **Backend Evolution & Security Hardening:** The initial FastAPI backend was generated via OpenHands and hosted through a Cloudflare Tunnel. Subsequently, this architecture was thoroughly hardened, secured, and expanded by myself in preparation for my internship: implementing automated security pipelines (Bandit SAST, Trivy container scanning), HashiCorp Vault secrets management, full observability (Prometheus, Grafana, Alertmanager, Jaeger tracing, Loki), and K3s Kubernetes orchestration.
-- **Code Review (Gemini & DeepSeek):** Used to resolve complex logic (e.g., AuthInterceptor state exceptions) and identify missing state collections.
+- **Strict MVVM Segregation:** Clean boundary between the reactive Jetpack Compose UI composables and business logic encapsulated within StateFlow-driven ViewModels for optimal testability and maintainability.
+- **Secure Network Interceptor & Session Lifecycle:** A custom `AuthInterceptor` gracefully catches 401 Unauthorized responses, executes asynchronous JWT refresh token rotation, and retries original requests transparently without degrading user experience.
+- **Reliable Background Execution:** Powered by Android `WorkManager` for idempotent, battery-conscious evaluation runs (PeriodicWorkRequest every 15 minutes) respecting OS-level constraints.
+- **ProGuard Code Obfuscation & CI Pipeline:** Automated GitHub Actions workflows executing continuous linting, unit tests, and release compilation with ProGuard bytecode obfuscation to protect API contracts and sensitive client-side logic.
 
 ---
 

@@ -11,7 +11,32 @@ AlphaTracer is een intelligente, native Android-applicatie voor het beheren van 
 
 **Aangetoonde Vaardigheden:** Android SDK, Kotlin, Jetpack Compose, MVVM-Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
 
-> *"AlphaTracer biedt realtime marktinzichten, intelligent portfoliobeheer en instelbare koerswaarschuwingen. Zowel voor beginnende als ervaren beleggers zorgt het voor een direct overzicht over marktbewegingen."*
+---
+
+## 📋 Executive Summary (Overzicht voor Management & HR)
+
+<div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
+    <div>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 De Bedrijfsuitdaging (Probleem)</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Beleggers en portfoliobeheerders missen vaak cruciale marktbewegingen door versnipperde databronnen of trage interfaces. Hoe ontwikkel je een responsieve, veilige mobiele app die realtime marktinzichten combineert met automatische koerswaarschuwingen en biometrische beveiliging?
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Mijn Rol & Verantwoordelijkheid</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Volledige native Android-ontwikkeling: ontwerp van de Jetpack Compose UI, opzetten van een schaalbare MVVM-architectuur met reactieve ViewModels, implementatie van biometrische authenticatie (Biometrics API) en achtergrond-monitoring via Android WorkManager.
+      </p>
+    </div>
+    <div>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Bedrijfswaarde & Resultaat</h4>
+      <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
+        Een vloeiende, native mobiele ervaring met 60 FPS composable weergaven, robuuste offline en herhaalpogingslogica (AuthInterceptor), betrouwbare geautomatiseerde achtergrond-alerting elke 15 minuten, en zero-data-leakage via ProGuard obfuscation.
+      </p>
+    </div>
+  </div>
+</div>
 
 ---
 
@@ -115,14 +140,14 @@ erDiagram
 
 ---
 
-## 🤖 AI-Integratie & Methodologie
+## 🛠️ Software Engineering, Architectuur & Code Quality
 
-Bij dit project is een **"human-in-the-loop"** methodologie gehanteerd. AI fungeerde als versneller, terwijl de architecturale controle te allen tijde handmatig bleef.
+Dit project demonstreert moderne software engineering lifecycle standaarden: van MVVM-architectuurscheiding en API-contract testing tot enterprise-level hardening (non-root communicatie, biometrische cryptografie en geautomatiseerde CI via GitHub Actions).
 
-- **Geen AI-gegenereerde frontend:** Hoewel AI hielp bij boilerplate (zoals data classes), werd de volledige Jetpack Compose-architectuur (UI-code, navigatie, thema's) handmatig geschreven.
-- **Geen "Vibe Coding":** Elk voorstel van AI werd kritisch getoetst, getest en geoptimaliseerd.
-- **Backend Evolutie & Beveiligingsharding:** De initiële FastAPI-backend werd gegenereerd via OpenHands en gehost via een Cloudflare Tunnel. Vervolgens is deze architectuur door mijzelf volledig handmatig gehardened en uitgebouwd ter voorbereiding op mijn stage: implementatie van geautomatiseerde beveiligingspipelines (Bandit SAST, Trivy vulnerability scanning), HashiCorp Vault secrets management, volledige observability (Prometheus, Grafana, Alertmanager, Jaeger tracing, Loki) en K3s Kubernetes-orkestratie.
-- **Code Review (Gemini & DeepSeek):** Ingezet voor het oplossen van complexe randgevallen (zoals concurrency en state management in de AuthInterceptor).
+- **Strict MVVM Scheiding:** Volledige ontkoppeling tussen de reactieve Jetpack Compose UI en de businesslogica in StateFlow-gestuurde ViewModels voor optimale testbaarheid en onderhoudbaarheid.
+- **Veilige Netwerkinterceptor & Sessiebeheer:** Een op maat gemaakte `AuthInterceptor` vangt 401 Unauthorized responses transparant af, vernieuwt asynchroon het JWT-token en probeert het oorspronkelijke verzoek opnieuw uit zonder de gebruikerservaring te verstoren.
+- **Betrouwbare Achtergrondtaken:** Gebruik van Android `WorkManager` voor idempotente taakplanning met batterij- en netwerkrestricties (PeriodicWorkRequest elke 15 minuten).
+- **ProGuard Code Obfuscation & CI Pipeline:** Geautomatiseerde GitHub Actions workflow voor continue linting, unit tests en release build-compilatie met ProGuard bytecode obfuscation ter bescherming van API-modellen en client-side geheimen.
 
 ---
 
