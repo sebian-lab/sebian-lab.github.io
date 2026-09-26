@@ -23,7 +23,7 @@ featureimage: "./image.png"
     <div>
       <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Mijn Rol & Verantwoordelijkheid</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        End-to-end architectuur en beheer: implementatie van een Zero-Trust WireGuard mesh-netwerk, container-orkestratie met Docker, geautomatiseerde backup- en storage-pipelines en het ontwikkelen van een op maat gemaakte poort- en servicemonitor (<strong>PortTracker</strong>).
+        End-to-end architectuur en beheer: implementatie van een Zero-Trust WireGuard mesh-netwerk, container-orkestratie met Docker, geautomatiseerde storage-pipelines en het opzetten van continue poort- en servicetelemetrie via <strong>PortTracker</strong>.
       </p>
     </div>
     <div>
@@ -37,7 +37,7 @@ featureimage: "./image.png"
 
 ### 📸 Visueel Bewijs & Live Systeemmonitoring
 
-> **Gecentraliseerde Systeemtelemetrie:** Onderstaande weergave van het zelfontwikkelde monitoringplatform (*PortTracker*) toont de actieve status van de `orion-o6` productieserver. Het biedt realtime inzicht in containergezondheid, resourceconsumptie (12 CPU-cores, 28 GB RAM) en actieve serviceregistraties over geïsoleerde netwerkstacks.
+> **Gecentraliseerde Systeemtelemetrie:** Onderstaande weergave van de actieve monitoringtool (*PortTracker*) toont de productiestatus van de `orion-o6` server. Het biedt realtime inzicht in containergezondheid, resourceconsumptie (12 CPU-cores, 28 GB RAM) en servicetoewijzingen over geïsoleerde netwerkstacks.
 
 ![PortTracker Homelab Dashboard](./image.png)
 
@@ -93,7 +93,7 @@ graph TD
     subgraph InternalApps ["Interne Applicaties & Services (orion-o6)"]
         NginxProxy["Nginx / Traefik Reverse Proxy & TLS"]
         Containers["Docker Bridge Netwerk (Geïsoleerde Stacks)<br>• AI Workloads: LibreChat, Open-WebUI<br>• RAG Pipeline: rag_api, pgvector, Meilisearch<br>• Media & ML: Immich Server & ML VectorChord<br>• Ingestion & Workflows: n8n, Event Workers, Jellyfin<br>• Databases: PostgreSQL 16 & 17, Redis, Valkey"]
-        Monitoring["PortTracker Telemetrie Engine"]
+        Monitoring["PortTracker Telemetrie"]
     end
 
     DevPC -->|"Versleutelde WireGuard Peer-to-Peer Tunnel"| Router1

@@ -23,7 +23,7 @@ featureimage: "./image.png"
     <div>
       <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 My Role & Engineering Ownership</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        End-to-end architecture & administration: architected an encrypted Zero-Trust WireGuard mesh overlay, orchestrated container stacks via Docker Compose, automated storage tiers, and built a custom service-monitoring engine (<strong>PortTracker</strong>).
+        End-to-end architecture & administration: architected an encrypted Zero-Trust WireGuard mesh overlay, orchestrated container stacks via Docker Compose, automated storage tiers, and deployed continuous port and service telemetry via <strong>PortTracker</strong>.
       </p>
     </div>
     <div>
@@ -37,7 +37,7 @@ featureimage: "./image.png"
 
 ### 📸 Visual Verification & Live Telemetry
 
-> **Centralized Infrastructure Telemetry:** The live dashboard view below from the custom monitoring engine (*PortTracker*) shows the production host status for `orion-o6`. It gives real-time visibility into container health, system resource utilization (12 CPU cores, 28 GB RAM), and active service registrations across isolated networks.
+> **Centralized Infrastructure Telemetry:** The live dashboard view below from the active monitoring tool (*PortTracker*) shows the production host status for `orion-o6`. It gives real-time visibility into container health, system resource utilization (12 CPU cores, 28 GB RAM), and active service registrations across isolated networks.
 
 ![PortTracker Homelab Dashboard](./image.png)
 
@@ -93,7 +93,7 @@ graph TD
     subgraph InternalApps ["Internal Applications & Services (orion-o6)"]
         NginxProxy["Nginx / Traefik Reverse Proxy & TLS"]
         Containers["Docker Bridge Networks (Isolated Stacks)<br>• AI Workloads: LibreChat, Open-WebUI<br>• RAG Pipeline: rag_api, pgvector, Meilisearch<br>• Media & ML: Immich Server & ML VectorChord<br>• Ingestion & Workflows: n8n, Event Workers, Jellyfin<br>• Databases: PostgreSQL 16 & 17, Redis, Valkey"]
-        Monitoring["PortTracker Telemetry Engine"]
+        Monitoring["PortTracker Telemetry"]
     end
 
     DevPC -->|"Encrypted WireGuard Peer-to-Peer Tunnel"| Router1
