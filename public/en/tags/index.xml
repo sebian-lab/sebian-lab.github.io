@@ -2,291 +2,291 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sebian Van de Spiegle</title>
-    <link>http://localhost:1313/en/tags/</link>
+    <link>https://sebian-lab.github.io/en/tags/</link>
     <description>Recent content in Tags on Sebian Van de Spiegle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</managingEditor>
     <webMaster>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</webMaster>
     <copyright>© 2026 Sebian Van de Spiegle</copyright>
-    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://sebian-lab.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Debian</title>
-      <link>http://localhost:1313/en/tags/debian/</link>
+      <link>https://sebian-lab.github.io/en/tags/debian/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/debian/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/debian/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/en/tags/docker/</link>
+      <link>https://sebian-lab.github.io/en/tags/docker/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/docker/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/docker/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Docker Compose</title>
-      <link>http://localhost:1313/en/tags/docker-compose/</link>
+      <link>https://sebian-lab.github.io/en/tags/docker-compose/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/docker-compose/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/docker-compose/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>FastAPI</title>
-      <link>http://localhost:1313/en/tags/fastapi/</link>
+      <link>https://sebian-lab.github.io/en/tags/fastapi/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/fastapi/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/fastapi/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>GPU Cluster</title>
-      <link>http://localhost:1313/en/tags/gpu-cluster/</link>
+      <link>https://sebian-lab.github.io/en/tags/gpu-cluster/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/gpu-cluster/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/gpu-cluster/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Grafana</title>
-      <link>http://localhost:1313/en/tags/grafana/</link>
+      <link>https://sebian-lab.github.io/en/tags/grafana/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/grafana/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/grafana/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Jaeger</title>
-      <link>http://localhost:1313/en/tags/jaeger/</link>
+      <link>https://sebian-lab.github.io/en/tags/jaeger/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/jaeger/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/jaeger/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/en/tags/linux/</link>
+      <link>https://sebian-lab.github.io/en/tags/linux/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/linux/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/linux/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Llama.cpp</title>
-      <link>http://localhost:1313/en/tags/llama.cpp/</link>
+      <link>https://sebian-lab.github.io/en/tags/llama.cpp/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/llama.cpp/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/llama.cpp/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>LLM</title>
-      <link>http://localhost:1313/en/tags/llm/</link>
+      <link>https://sebian-lab.github.io/en/tags/llm/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/llm/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/llm/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Loki</title>
-      <link>http://localhost:1313/en/tags/loki/</link>
+      <link>https://sebian-lab.github.io/en/tags/loki/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/loki/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/loki/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Observability</title>
-      <link>http://localhost:1313/en/tags/observability/</link>
+      <link>https://sebian-lab.github.io/en/tags/observability/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/observability/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/observability/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>PostgreSQL</title>
-      <link>http://localhost:1313/en/tags/postgresql/</link>
+      <link>https://sebian-lab.github.io/en/tags/postgresql/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/postgresql/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/postgresql/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Prometheus</title>
-      <link>http://localhost:1313/en/tags/prometheus/</link>
+      <link>https://sebian-lab.github.io/en/tags/prometheus/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/prometheus/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/prometheus/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/en/tags/python/</link>
+      <link>https://sebian-lab.github.io/en/tags/python/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/python/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/python/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Tailscale</title>
-      <link>http://localhost:1313/en/tags/tailscale/</link>
+      <link>https://sebian-lab.github.io/en/tags/tailscale/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/tailscale/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/tailscale/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Vault</title>
-      <link>http://localhost:1313/en/tags/vault/</link>
+      <link>https://sebian-lab.github.io/en/tags/vault/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/vault/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/vault/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Zero-Trust</title>
-      <link>http://localhost:1313/en/tags/zero-trust/</link>
+      <link>https://sebian-lab.github.io/en/tags/zero-trust/</link>
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/zero-trust/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/zero-trust/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Active Directory</title>
-      <link>http://localhost:1313/en/tags/active-directory/</link>
+      <link>https://sebian-lab.github.io/en/tags/active-directory/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/active-directory/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/active-directory/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>AKS</title>
-      <link>http://localhost:1313/en/tags/aks/</link>
+      <link>https://sebian-lab.github.io/en/tags/aks/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/aks/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/aks/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Android</title>
-      <link>http://localhost:1313/en/tags/android/</link>
+      <link>https://sebian-lab.github.io/en/tags/android/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/android/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/android/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Azure</title>
-      <link>http://localhost:1313/en/tags/azure/</link>
+      <link>https://sebian-lab.github.io/en/tags/azure/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/azure/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/azure/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>DevOps</title>
-      <link>http://localhost:1313/en/tags/devops/</link>
+      <link>https://sebian-lab.github.io/en/tags/devops/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/devops/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/devops/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>IaC</title>
-      <link>http://localhost:1313/en/tags/iac/</link>
+      <link>https://sebian-lab.github.io/en/tags/iac/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/iac/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/iac/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Jetpack Compose</title>
-      <link>http://localhost:1313/en/tags/jetpack-compose/</link>
+      <link>https://sebian-lab.github.io/en/tags/jetpack-compose/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/jetpack-compose/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/jetpack-compose/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Kotlin</title>
-      <link>http://localhost:1313/en/tags/kotlin/</link>
+      <link>https://sebian-lab.github.io/en/tags/kotlin/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/kotlin/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/kotlin/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>http://localhost:1313/en/tags/kubernetes/</link>
+      <link>https://sebian-lab.github.io/en/tags/kubernetes/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/kubernetes/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/kubernetes/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>VMware</title>
-      <link>http://localhost:1313/en/tags/vmware/</link>
+      <link>https://sebian-lab.github.io/en/tags/vmware/</link>
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
-      <guid>http://localhost:1313/en/tags/vmware/</guid>
+      <guid>https://sebian-lab.github.io/en/tags/vmware/</guid>
       <description></description>
       
     </item>

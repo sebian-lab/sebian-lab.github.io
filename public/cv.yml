@@ -1,127 +1,104 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.3/schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Sebian Van de Spiegle
-  location: België
+  headline: "Kandidaat Stage: Vulnerability Management Engineer | Cegeka Modern SOC"
+
+  location: Regio Landen / Geraardsbergen, België
   email: sebian.vandespiegle@student.odisee.be
-  website: https://sebian-lab.github.io
+  phone: "+32 468 43 93 10"
+  website: https://sebian-lab.github.io/
   social_networks:
     - network: GitHub
       username: sebian-lab
     - network: LinkedIn
       username: sebian-van-de-spiegle-72620528a
   sections:
-    profiel:
-      - 'Enthousiaste student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een leerrijke IT-stage in **België**. Geboeid door backend-engineering, containerisatie en moderne observability-tools: van native Android apps en FastAPI REST APIs tot praktische Docker Compose microservices, pre-commit security checks en 24/7 homelab beheer.'
-    technische_vaardigheden:
-      - label: Cloud, Containers & Compute
-        details: Docker, Docker Compose, Microsoft Azure (AKS, VM, VNet), VMware ESXi 8.0, 9-GPU Cluster (Homelab)
-      - label: CI/CD, DevSecOps & Observability
-        details: GitHub Actions, Prometheus, Grafana, Jaeger (OTel), Loki, HashiCorp Vault, Bandit (SAST), Aqua Trivy, Sigstore Cosign, Gitleaks, Ruff
-      - label: Software & Data
-        details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, REST APIs
-      - label: Systeem- & Netwerkbeheer
-        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Mesh VPN, Netwerksegmentatie
-    zelfstandige_projecten:
-      - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
-        start_date: 2025-01
-        end_date: present
-        summary: Zelfstandig praktijkproject – Financiële REST API om hands-on te leren werken met containerisatie, observability en backend security
-        highlights:
-          - 'REST API met **FastAPI** en **PostgreSQL**, met JWT-authenticatie, in-memory rate limiting en OTel telemetrie via **Jaeger**.'
-          - 'Observability-stack in **Docker Compose**: **Prometheus** (custom ASGI metrics-middleware), **Loki** (direct log push) en **Grafana** dashboards.'
-          - 'DevSecOps pipeline: pre-commit checks met **Gitleaks** en **Ruff**, CI/CD scans met **Bandit** en **Trivy**, en signing via **Sigstore Cosign**.'
-          - 'Gehardende **10-container Docker Compose** productie-appliance (non-root `appuser`) en geautomatiseerde **E2E Bash testsuite** (450+ regels).'
-      - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
-        start_date: 2025-01
-        end_date: present
-        summary: Zelfstandig praktijkproject (Hobby) – Native Android app voor realtime portfoliobeheer en koerswaarschuwingen
-        highlights:
-          - 'Volledig native ontwikkeld in **Kotlin** met **Jetpack Compose** volgens **MVVM-architectuur** met een moderne dark-theme UI.'
-          - 'Netwerklaag via **Retrofit + OkHttp** met custom `AuthInterceptor` voor JWT token-rotatie en fallback naar Cloudflare Tunnel.'
-          - 'Gehardened via **Network Security Config** (Certificate Pinning, HTTPS-only), **Biometrics API** en **ProGuard/R8** obfuscatie.'
-          - 'Achtergrondmonitoring via **WorkManager** (`AlertWorker`) en geautomatiseerde **GitHub Actions** CI build pipeline (lint & APK).'
-      - name: '[Productie Homelab & 9-GPU LLM Cluster](https://sebian-lab.github.io/projects/homelab/)'
-        start_date: 2023-09
-        end_date: present
-        summary: Zelfstandige infrastructuur (Hobby) – 24/7 on-premise Debian server (30+ containers) en dedicated 9-GPU AI cluster
-        highlights:
-          - 'Beheer van **33 actieve Docker containers** (PostgreSQL, Immich ML, LibreChat, Nginx) met geautomatiseerde back-ups en persistente volumes.'
-          - 'High-throughput **9-GPU distributed AI cluster** (50+ GB VRAM) aangestuurd via **llama.cpp** (GGUF layer split) voor lokale LLM workloads.'
-          - 'Beveiligd via een **Tailscale Zero-Trust WireGuard mesh (20 nodes)** met subnet routers en exit nodes; 24/7 monitoring via **PortTracker**.'
-    academische_projecten:
-      - name: '[Cloud & Virtualisatie Labs (Azure & VMware)](https://sebian-lab.github.io/projects/infrastructure/)'
-        start_date: 2024-09
-        end_date: present
-        summary: Schoolproject (Odisee Hogeschool Brussel) – Hybride enterprise cloud- en datacenterinfrastructuur
-        highlights:
-          - 'Uitrol van **Azure Kubernetes Service (AKS)**, gesegmenteerde VNets/NSGs en declaratief beheer via **ARM Templates (IaC)**.'
-          - 'Configuratie van on-premise stack: **VMware ESXi 8.0** met vSwitch netwerken en **Windows Server 2022** Domain Controller (AD DS / DNS).'
-    opleiding:
+    Profiel:
+      - bullet: "Ik ben een bachelorstudent Toegepaste Informatica (Hogeschool Odisee, voorheen HOGENT) en (ISC)² Candidate. Mijn passie ligt bij defensieve cybersecurity: ik wil niet alleen weten hoe iets werkt, maar ook hoe je het veilig en veerkrachtig maakt."
+      - bullet: "In mijn vrije tijd bouw en beheer ik een professionele homelab met 30+ containers, Zero-Trust netwerktoegang via Tailscale/WireGuard en eigen monitoring. Daardoor heb ik hands-on ervaring met Linux, Docker, PostgreSQL, SQL, Power BI en het automatiseren van beveiligingsprocessen."
+      - bullet: "Ik werk graag gestructureerd in Scrum/Kanban en communiceer open over voortgang en uitdagingen. Bij Cegeka wil ik mij graag verdiepen in vulnerability management, health check scenario's en het bouwen van rapportages en dashboards die het SOC echt vooruithelpen."
+    Opleiding:
       - institution: Hogeschool Odisee
-        area: Toegepaste Informatica (BSc)
-        degree: Bachelor (2e bachelorfase)
+        area: Toegepaste Informatica (Cloud Computing & Security)
+        degree: Professionele Bachelor
         start_date: 2026-01
         end_date: 2027-06
         location: Brussel, België
         highlights:
-          - 'Focus: Cloud Computing, Wireshark netwerkanalyse, Cloud Infrastructure en Computerbeveiliging.'
+          - "Focus op Cloud Computing (Azure, AKS), Protocol- & Pakketanalyse (Wireshark), Hybride Datacenters (VMware ESXi 8.0) en Infrastructure as Code."
+          - "Ik koos voor deze richting omdat ik security niet als losstaand iets wil zien, maar als onderdeel van de hele infrastructuur."
       - institution: HOGENT
         area: Toegepaste Informatica
+        degree: Professionele Bachelor
         start_date: 2023-09
         end_date: 2026-01
         location: Gent, België
         highlights:
-          - 'Basis- en gevorderde Software Engineering, Object-Georiënteerd Programmeren, Databanken en Algoritmen.'
-    certificaten:
-      - label: '[ISC2 Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728)'
-        details: 'ISC2 (apr 2026 – apr 2027) – Voorbereiding op Certified in Cybersecurity (CC); focus op netwerkbeveiliging, security operations en DevSecOps.'
-      - label: '[EF SET English Certificate](https://cert.efset.org/en/HHqJU5)'
-        details: 'Score 75/100 (C2 Proficient) – Hoogste CEFR-beheersingsniveau; uitstekende professionele en technische communicatie in internationale teams.'
-    talen:
-      - label: Nederlands
-        details: 'Moedertaal – Vloeiend in woord en geschrift'
-      - label: Engels
-        details: 'C2 Proficient – Vloeiende professionele en technische communicatie (volledige werkvaardigheid)'
-      - label: Frans
-        details: 'Praktische basis – Professionele basiskennis en elementaire communicatie'
+          - "Data-analyse & Dashboard Project (Jan 2025 – Jun 2025): Gegevens geëxtraheerd uit PDF-bronnen, gemodelleerd en geanalyseerd via SQL (elektriciteitssector BE) en omgezet naar interactieve Power BI overzichten; samengewerkt in een Scrum/Kanban team van 4 met Jira."
+          - "Fundament in software engineering, relationele databases & SQL, Linux-systeembeheer en computernetwerken."
+    Technische Vaardigheden:
+      - label: Cybersecurity & Kwetsbaarheidsbeheer
+        details: Vulnerability Scanning (Trivy), Secret Detection (Gitleaks), Statische Code-analyse (Bandit SAST), Zero-Trust (ZTNA, Tailscale WireGuard Mesh, ACL's), Protocolanalyse (Wireshark), Secrets Management (geen plain-text credentials in git).
+      - label: Databases, SQL & Dashboarding
+        details: SQL (data-extractie, relationele datamodellering, complexe queries), Power BI (interactieve overzichten & KPI-dashboards), PostgreSQL (16 & 17), Redis.
+      - label: Netwerkinspectie & Monitoring
+        details: Poort- & Container-monitoring (o.a. PortTracker, Docker inspect), netwerkinspectie (Wireshark), loganalyse, Prometheus, Grafana, Docker container-status.
+      - label: Cloud & Datacenter
+        details: Microsoft Azure (VNets, Subnets, ACI), VMware ESXi 8.0 (vSwitch, Virtual Machines), Windows Server 2022 (Active Directory Domain Services, DNS), Linux (Debian 12, Ubuntu), Docker & Docker Compose.
+      - label: Automatisering & CI/CD
+        details: GitHub Actions CI/CD (geautomatiseerde tests, linting, build-validatie), Python (FastAPI, scripting), Infrastructure as Code (ARM Templates), Git, Bash, PowerShell.
+    Projecten & Praktijkervaring:
+      - name: '[AlphaTracer Financial API — Backend & DevSecOps Pipeline](https://github.com/sebian-lab/alphatracer-financial-api)'
+        start_date: 2026-01
+        end_date: present
+        location: Zelfstandig Project
+        summary: "Een zelfstandig softwareproject waarin ik een financiële API bouwde met FastAPI en PostgreSQL. Ik wilde van bij het begin security en automatisering serieus nemen."
+        highlights:
+          - "DevSecOps & Shift-Left Security: Geautomatiseerde secret scanning via Gitleaks, Python SAST-beveiligingscontroles met Bandit en container CVE-scanning via Trivy in pre-commit en GitHub Actions."
+          - "Veilige Configuratie & Monitoring: Volledige uitsluiting van plain-text credentials uit git via runtime injectie; basis telemetrie-export via Prometheus en Grafana."
+      - name: '[AlphaTracer Mobile — Financiële Android App](https://github.com/sebian-lab/alphatracer-mobile)'
+        start_date: 2026-01
+        end_date: 2026-06
+        location: Academisch Semesterproject
+        summary: "Academisch semesterproject; native Android app voor portfoliobeheer met focus op veilige dataopslag en encryptie."
+        highlights:
+          - "Architectuur & API-integratie: Native Android-applicatie in Kotlin (MVVM, Jetpack Compose) met veilige REST-communicatie via Retrofit."
+          - "Mobiele Beveiliging: Implementatie van biometrische authenticatie (BiometricPrompt API) en veilige opslag van tokens via EncryptedSharedPreferences."
+      - name: '[Homelab & Zero-Trust Tailscale Mesh — orion-o6](https://sebian-lab.github.io/projects/homelab/)'
+        start_date: 2024-01
+        end_date: present
+        location: Zelfstandig Project
+        summary: "Mijn homelab is mijn leeromgeving: een private labomgeving met 30+ containers, multi-GPU hardware en 20 Tailnet endpoints. Ik beheer alles zelf en probeer enterprise-principes toe te passen."
+        highlights:
+          - "Zero-Trust Architectuur: Geen open poorten op het internet; end-to-end versleutelde WireGuard mesh met Tailscale ACL's en subnet routing. Toegang via strikte verificatie (Google-account)."
+          - "Service- & Containerbeheer: Beheer van 30+ Docker-containers en PostgreSQL-databases; implementatie van PortTracker voor realtime inzicht in actieve services, attack surface en poortallocaties binnen de private infrastructuur."
+      - name: '[Enterprise Cloud & Datacenter Virtualisation Labs](https://sebian-lab.github.io/projects/infrastructure/)'
+        start_date: 2026-01
+        end_date: 2026-06
+        location: Odisee Hogeschool
+        summary: "Academisch project (Jan 2026 – Jun 2026); enterprise-infrastructuur met Microsoft Azure en VMware ESXi 8.0. Ik heb hier geleerd hoe cloud en datacenter samenkomen."
+        highlights:
+          - "Azure Cloud Segregatie & IaC: Gesegmenteerde VNets met basis NSG-configuratie, AKS Kubernetes en geautomatiseerde uitrol via ARM Templates."
+          - "Enterprise Identity & Datacenter: Opzet van VMware ESXi 8.0 hypervisor met vSwitch0 en configuratie van een Windows Server 2022 Primary Domain Controller met AD DS, DNS en Kerberos."
+    Certificaten:
+      - name: '[(ISC)² Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728)'
+        date: 2026
+        summary: Uitgegeven door (ISC)² (International Information System Security Certification Consortium)
+        highlights:
+          - "Officiële verificatie via Credly; gecommitteerd aan de (ISC)² Code of Ethics en actief in voorbereiding op verdiepende cybersecurity-certificeringen."
+    Competenties:
+      - label: Methodieken & Samenwerking
+        details: Scrum, Kanban, Jira, Incident- & Wijzigingsbeheer, Agile sprintplanning, Git-flow, gestructureerde communicatie.
+      - label: Talenkennis
+        details: Nederlands (Moedertaal), Engels (Vloeiend in woord en geschrift).
+    Interesses & Passies:
+      - label: Vulnerability Research & Threat Hunting
+        details: Proactief kwetsbaarheden onderzoeken, analyse van CVE-bulletins en hardening van enterprise-services.
+      - label: Homelabbing & Self-Hosting
+        details: 24/7 private infrastructuur beheren, container-orkestratie, Zero-Trust netwerkarchitecturen en telemetrie.
+      - label: AI & Lokale LLM Inference
+        details: Bare-metal hardware, multi-GPU VRAM-pooling en lokale inferentie via open-source modellen (llama.cpp).
 design:
   theme: engineeringresumes
-  page:
-    size: a4
-    top_margin: 0.6cm
-    bottom_margin: 0.6cm
-    left_margin: 1.0cm
-    right_margin: 1.0cm
-    show_page_numbering: false
-    show_last_updated_date: false
-  colors:
-    text: rgb(30, 41, 59)
-    name: rgb(15, 23, 42)
-    connections: rgb(37, 99, 235)
-    section_titles: rgb(15, 23, 42)
-    links: rgb(37, 99, 235)
-  text:
-    font_family: Source Sans 3
-    font_size: 8.0pt
-    leading: 0.32em
-    alignment: justified
-    date_and_location_column_alignment: right
-  links:
-    underline: false
-    use_external_link_icon: false
-  header:
-    name_font_family: Source Sans 3
-    name_font_size: 18.5pt
-    name_bold: true
-    small_caps_for_name: false
-    vertical_space_between_name_and_connections: 0.1cm
-    vertical_space_between_connections_and_first_section: 0.12cm
-  section_titles:
-    type: with-full-line
-    font_family: Source Sans 3
-    font_size: 9.0pt
-    bold: true
-    small_caps: false
-    line_thickness: 0.5pt
-    vertical_space_above: 0.11cm
-    vertical_space_below: 0.05cm
+locale:
+  language: dutch

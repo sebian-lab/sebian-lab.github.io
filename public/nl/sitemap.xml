@@ -3,608 +3,608 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/projects/backend-api/</loc>
+    <loc>https://sebian-lab.github.io/projects/backend-api/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/projects/backend-api/"
+      href="https://sebian-lab.github.io/en/projects/backend-api/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/projects/backend-api/"
+      href="https://sebian-lab.github.io/projects/backend-api/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/debian/</loc>
+    <loc>https://sebian-lab.github.io/tags/debian/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/debian/"
+      href="https://sebian-lab.github.io/en/tags/debian/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/debian/"
+      href="https://sebian-lab.github.io/tags/debian/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/docker/</loc>
+    <loc>https://sebian-lab.github.io/tags/docker/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/docker/"
+      href="https://sebian-lab.github.io/en/tags/docker/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/docker/"
+      href="https://sebian-lab.github.io/tags/docker/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/docker-compose/</loc>
+    <loc>https://sebian-lab.github.io/tags/docker-compose/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/docker-compose/"
+      href="https://sebian-lab.github.io/en/tags/docker-compose/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/docker-compose/"
+      href="https://sebian-lab.github.io/tags/docker-compose/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/fastapi/</loc>
+    <loc>https://sebian-lab.github.io/tags/fastapi/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/fastapi/"
+      href="https://sebian-lab.github.io/en/tags/fastapi/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/fastapi/"
+      href="https://sebian-lab.github.io/tags/fastapi/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/gpu-cluster/</loc>
+    <loc>https://sebian-lab.github.io/tags/gpu-cluster/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/gpu-cluster/"
+      href="https://sebian-lab.github.io/en/tags/gpu-cluster/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/gpu-cluster/"
+      href="https://sebian-lab.github.io/tags/gpu-cluster/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/grafana/</loc>
+    <loc>https://sebian-lab.github.io/tags/grafana/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/grafana/"
+      href="https://sebian-lab.github.io/en/tags/grafana/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/grafana/"
+      href="https://sebian-lab.github.io/tags/grafana/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/jaeger/</loc>
+    <loc>https://sebian-lab.github.io/tags/jaeger/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/jaeger/"
+      href="https://sebian-lab.github.io/en/tags/jaeger/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/jaeger/"
+      href="https://sebian-lab.github.io/tags/jaeger/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/linux/</loc>
+    <loc>https://sebian-lab.github.io/tags/linux/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/linux/"
+      href="https://sebian-lab.github.io/en/tags/linux/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/linux/"
+      href="https://sebian-lab.github.io/tags/linux/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/llama.cpp/</loc>
+    <loc>https://sebian-lab.github.io/tags/llama.cpp/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/llama.cpp/"
+      href="https://sebian-lab.github.io/en/tags/llama.cpp/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/llama.cpp/"
+      href="https://sebian-lab.github.io/tags/llama.cpp/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/llm/</loc>
+    <loc>https://sebian-lab.github.io/tags/llm/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/llm/"
+      href="https://sebian-lab.github.io/en/tags/llm/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/llm/"
+      href="https://sebian-lab.github.io/tags/llm/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/loki/</loc>
+    <loc>https://sebian-lab.github.io/tags/loki/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/loki/"
+      href="https://sebian-lab.github.io/en/tags/loki/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/loki/"
+      href="https://sebian-lab.github.io/tags/loki/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/observability/</loc>
+    <loc>https://sebian-lab.github.io/tags/observability/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/observability/"
+      href="https://sebian-lab.github.io/en/tags/observability/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/observability/"
+      href="https://sebian-lab.github.io/tags/observability/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/postgresql/</loc>
+    <loc>https://sebian-lab.github.io/tags/postgresql/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/postgresql/"
+      href="https://sebian-lab.github.io/en/tags/postgresql/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/postgresql/"
+      href="https://sebian-lab.github.io/tags/postgresql/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/projects/homelab/</loc>
+    <loc>https://sebian-lab.github.io/projects/homelab/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/projects/homelab/"
+      href="https://sebian-lab.github.io/en/projects/homelab/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/projects/homelab/"
+      href="https://sebian-lab.github.io/projects/homelab/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://sebian-lab.github.io/projects/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/projects/"
+      href="https://sebian-lab.github.io/en/projects/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/projects/"
+      href="https://sebian-lab.github.io/projects/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/prometheus/</loc>
+    <loc>https://sebian-lab.github.io/tags/prometheus/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/prometheus/"
+      href="https://sebian-lab.github.io/en/tags/prometheus/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/prometheus/"
+      href="https://sebian-lab.github.io/tags/prometheus/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/python/</loc>
+    <loc>https://sebian-lab.github.io/tags/python/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/python/"
+      href="https://sebian-lab.github.io/en/tags/python/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/python/"
+      href="https://sebian-lab.github.io/tags/python/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://sebian-lab.github.io/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/"
+      href="https://sebian-lab.github.io/en/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/"
+      href="https://sebian-lab.github.io/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://sebian-lab.github.io/tags/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/"
+      href="https://sebian-lab.github.io/en/tags/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/"
+      href="https://sebian-lab.github.io/tags/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/tailscale/</loc>
+    <loc>https://sebian-lab.github.io/tags/tailscale/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/tailscale/"
+      href="https://sebian-lab.github.io/en/tags/tailscale/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/tailscale/"
+      href="https://sebian-lab.github.io/tags/tailscale/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/vault/</loc>
+    <loc>https://sebian-lab.github.io/tags/vault/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/vault/"
+      href="https://sebian-lab.github.io/en/tags/vault/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/vault/"
+      href="https://sebian-lab.github.io/tags/vault/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/zero-trust/</loc>
+    <loc>https://sebian-lab.github.io/tags/zero-trust/</loc>
     <lastmod>2026-09-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/zero-trust/"
+      href="https://sebian-lab.github.io/en/tags/zero-trust/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/zero-trust/"
+      href="https://sebian-lab.github.io/tags/zero-trust/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/active-directory/</loc>
+    <loc>https://sebian-lab.github.io/tags/active-directory/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/active-directory/"
+      href="https://sebian-lab.github.io/en/tags/active-directory/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/active-directory/"
+      href="https://sebian-lab.github.io/tags/active-directory/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/aks/</loc>
+    <loc>https://sebian-lab.github.io/tags/aks/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/aks/"
+      href="https://sebian-lab.github.io/en/tags/aks/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/aks/"
+      href="https://sebian-lab.github.io/tags/aks/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/projects/alphatracer-mobile/</loc>
+    <loc>https://sebian-lab.github.io/projects/alphatracer-mobile/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/projects/alphatracer-mobile/"
+      href="https://sebian-lab.github.io/en/projects/alphatracer-mobile/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/projects/alphatracer-mobile/"
+      href="https://sebian-lab.github.io/projects/alphatracer-mobile/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/android/</loc>
+    <loc>https://sebian-lab.github.io/tags/android/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/android/"
+      href="https://sebian-lab.github.io/en/tags/android/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/android/"
+      href="https://sebian-lab.github.io/tags/android/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/azure/</loc>
+    <loc>https://sebian-lab.github.io/tags/azure/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/azure/"
+      href="https://sebian-lab.github.io/en/tags/azure/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/azure/"
+      href="https://sebian-lab.github.io/tags/azure/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/projects/infrastructure/</loc>
+    <loc>https://sebian-lab.github.io/projects/infrastructure/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/projects/infrastructure/"
+      href="https://sebian-lab.github.io/en/projects/infrastructure/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/projects/infrastructure/"
+      href="https://sebian-lab.github.io/projects/infrastructure/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/devops/</loc>
+    <loc>https://sebian-lab.github.io/tags/devops/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/devops/"
+      href="https://sebian-lab.github.io/en/tags/devops/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/devops/"
+      href="https://sebian-lab.github.io/tags/devops/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/iac/</loc>
+    <loc>https://sebian-lab.github.io/tags/iac/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/iac/"
+      href="https://sebian-lab.github.io/en/tags/iac/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/iac/"
+      href="https://sebian-lab.github.io/tags/iac/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/jetpack-compose/</loc>
+    <loc>https://sebian-lab.github.io/tags/jetpack-compose/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/jetpack-compose/"
+      href="https://sebian-lab.github.io/en/tags/jetpack-compose/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/jetpack-compose/"
+      href="https://sebian-lab.github.io/tags/jetpack-compose/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/kotlin/</loc>
+    <loc>https://sebian-lab.github.io/tags/kotlin/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/kotlin/"
+      href="https://sebian-lab.github.io/en/tags/kotlin/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/kotlin/"
+      href="https://sebian-lab.github.io/tags/kotlin/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/kubernetes/</loc>
+    <loc>https://sebian-lab.github.io/tags/kubernetes/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/kubernetes/"
+      href="https://sebian-lab.github.io/en/tags/kubernetes/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/kubernetes/"
+      href="https://sebian-lab.github.io/tags/kubernetes/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/vmware/</loc>
+    <loc>https://sebian-lab.github.io/tags/vmware/</loc>
     <lastmod>2026-05-30T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/tags/vmware/"
+      href="https://sebian-lab.github.io/en/tags/vmware/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/tags/vmware/"
+      href="https://sebian-lab.github.io/tags/vmware/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/authors/</loc>
+    <loc>https://sebian-lab.github.io/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/authors/"
+      href="https://sebian-lab.github.io/en/authors/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/authors/"
+      href="https://sebian-lab.github.io/authors/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://sebian-lab.github.io/categories/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/categories/"
+      href="https://sebian-lab.github.io/en/categories/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/categories/"
+      href="https://sebian-lab.github.io/categories/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://sebian-lab.github.io/series/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/en/series/"
+      href="https://sebian-lab.github.io/en/series/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="nl"
-      href="http://localhost:1313/series/"
+      href="https://sebian-lab.github.io/series/"
     />
   </url>
 </urlset>
