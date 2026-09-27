@@ -9,7 +9,7 @@ imageContain: true
 
 AlphaTracer is an intelligent native Android application for stock portfolio management and automated price drop alerts.
 
-**Skills Demonstrated:** Android SDK, Kotlin, Jetpack Compose, MVVM Architecture, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
+**Skills Demonstrated:** Android SDK, Kotlin, Jetpack Compose, MVVM Architecture, Retrofit + OkHttp, Android WorkManager, Biometrics API,  GitHub Actions CI.
 
 ---
 
@@ -20,19 +20,19 @@ AlphaTracer is an intelligent native Android application for stock portfolio man
     <div>
       <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Context & Objectives</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Built as an independent engineering project to master modern Android development: declarative UIs with <strong>Jetpack Compose</strong> and asynchronous scheduling with <strong>WorkManager</strong>. The goal was to engineer a reliable native client that consumes real-time market streams, enforces biometric authentication, and autonomously evaluates price drop thresholds.
+        Retail investors and portfolio managers miss critical market opportunities due to fragmented data sources and clunky mobile experiences. How to design a secure, high-framerate mobile app combining real-time financial tracking with autonomous background price drop alerts?
       </p>
     </div>
     <div>
       <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Technical Role & Architecture</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Full-lifecycle native Android development: designed the Compose UI, established a clean MVVM architecture with reactive ViewModels and <code>StateFlow</code>, integrated hardware biometrics (Biometrics API), and scheduled battery-efficient background evaluations via Android WorkManager.
+        Full-lifecycle native Android development: created the Jetpack Compose user interface, established a robust MVVM pattern using reactive ViewModels and StateFlows, integrated hardware biometric security, and scheduled battery-efficient background evaluations via Android WorkManager.
       </p>
     </div>
     <div>
       <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">🚀 Technical Execution & Results</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Fluid navigation with optimized recomposition cycles without UI jank, transparent session persistence via automated background JWT refresh in a custom OkHttp interceptor, reliable 15-minute background evaluations, and R8/ProGuard bytecode obfuscation against reverse engineering.
+        A silky 60 FPS native experience, zero-interruption session persistence via automated background JWT token refresh, reliable 15-minute scheduled price evaluations.
       </p>
     </div>
   </div>
@@ -70,15 +70,18 @@ AlphaTracer is split into a native Android frontend and a high-performance FastA
 {{< mermaid >}}
 graph TD
     Client["📱 Android Client<br><b>Jetpack Compose & Kotlin MVVM</b>"]
+    Gateway["🛡️ API Gateway<br><b>Nginx Reverse Proxy & TLS</b>"]
     Backend["⚡ Application Tier<br><b>FastAPI Backend (Python)</b>"]
     DB[("💾 Data Tier<br><b>PostgreSQL Database</b>")]
     Finance["🌐 External Integration<br><b>Yahoo Finance API</b>"]
 
-    Client -->|"HTTPS / REST API (:8011)"| Backend
+    Client -->|"HTTPS / TLS"| Gateway
+    Gateway -->|"HTTP"| Backend
     Backend -->|"SQL Queries"| DB
     Backend -->|"yfinance Stream"| Finance
 
     style Client fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Gateway fill:#1e293b,stroke:#475569,stroke-width:1px,color:#fff
     style Backend fill:#047857,stroke:#10b981,stroke-width:2px,color:#fff
     style DB fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
     style Finance fill:#581c87,stroke:#a855f7,stroke-width:1px,color:#fff
@@ -144,7 +147,6 @@ This project demonstrates modern software engineering lifecycle standards: from 
 - **Strict MVVM Segregation:** Clean boundary between the reactive Jetpack Compose UI composables and business logic encapsulated within StateFlow-driven ViewModels for optimal testability and maintainability.
 - **Secure Network Interceptor & Session Lifecycle:** A custom `AuthInterceptor` gracefully catches 401 Unauthorized responses, executes asynchronous JWT refresh token rotation, and retries original requests transparently without degrading user experience.
 - **Reliable Background Execution:** Powered by Android `WorkManager` for idempotent, battery-conscious evaluation runs (PeriodicWorkRequest every 15 minutes) respecting OS-level constraints.
-- **R8/ProGuard Bytecode Obfuscation & CI Pipeline:** Automated GitHub Actions workflows executing continuous linting, unit tests, and release compilation with R8/ProGuard bytecode obfuscation and resource shrinking to protect against reverse engineering.
 
 ---
 

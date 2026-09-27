@@ -9,7 +9,7 @@ imageContain: true
 
 AlphaTracer is een intelligente, native Android-applicatie voor het beheren van aandelenportfolio's en het ontvangen van geautomatiseerde koersnotificaties.
 
-**Aangetoonde Vaardigheden:** Android SDK, Kotlin, Jetpack Compose, MVVM-Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.
+**Aangetoonde Vaardigheden:** Android SDK, Kotlin, Jetpack Compose, MVVM-Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, GitHub Actions CI.
 
 ---
 
@@ -20,19 +20,19 @@ AlphaTracer is een intelligente, native Android-applicatie voor het beheren van 
     <div>
       <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Context & Doelstelling</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Als zelfstandig praktijkproject wilde ik moderne Android-ontwikkeling grondig onder de knie krijgen: declaratieve UI's via <strong>Jetpack Compose</strong> en achtergrondtaken met <strong>WorkManager</strong>. Het doel was een robuuste app bouwen die realtime beursdata consumeert, biometrisch beveiligt en autonoom koersdalingen opvolgt.
+        Beleggers en portfoliobeheerders missen vaak cruciale marktbewegingen door versnipperde databronnen of trage interfaces. Hoe ontwikkel je een responsieve, veilige mobiele app die realtime marktinzichten combineert met automatische koerswaarschuwingen en biometrische beveiliging?
       </p>
     </div>
     <div>
       <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Technische Rol & Aanpak</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Volledige native Android-ontwikkeling: ontwerp van de Compose-UI, strikte MVVM-architectuur met reactieve ViewModels en <code>StateFlow</code>, biometrische hardware-authenticatie (Biometrics API) en batterijvriendelijke achtergrond-evaluaties via Android WorkManager.
+        Volledige native Android-ontwikkeling: ontwerp van de Jetpack Compose UI, opzetten van een schaalbare MVVM-architectuur met reactieve ViewModels, implementatie van biometrische authenticatie (Biometrics API) en achtergrond-monitoring via Android WorkManager.
       </p>
     </div>
     <div>
       <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">🚀 Technische Realisatie & Prestaties</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Vloeiende navigatie met geoptimaliseerde recomposition cycles zonder UI-jank, automatische JWT token-rotatie via een custom OkHttp interceptor (transparante 401 recovery), periodieke achtergrond-evaluaties elke 15 minuten, en R8/ProGuard byte-code obfuscatie tegen reverse engineering.
+        Een vloeiende, native mobiele ervaring met 60 FPS composable weergaven, robuuste offline en herhaalpogingslogica (AuthInterceptor), betrouwbare geautomatiseerde achtergrond-alerting elke 15 minuten.
       </p>
     </div>
   </div>
@@ -70,15 +70,18 @@ AlphaTracer is opgesplitst in een native Android-frontend en een high-performanc
 {{< mermaid >}}
 graph TD
     Client["📱 Android Client<br><b>Jetpack Compose & Kotlin MVVM</b>"]
+    Gateway["🛡️ API Gateway<br><b>Nginx Reverse Proxy & TLS</b>"]
     Backend["⚡ Application Tier<br><b>FastAPI Backend (Python)</b>"]
     DB[("💾 Data Tier<br><b>PostgreSQL Database</b>")]
     Finance["🌐 Externe Integratie<br><b>Yahoo Finance API</b>"]
 
-    Client -->|"HTTPS / REST API (:8011)"| Backend
+    Client -->|"HTTPS / TLS"| Gateway
+    Gateway -->|"HTTP"| Backend
     Backend -->|"SQL Queries"| DB
     Backend -->|"yfinance Stream"| Finance
 
     style Client fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Gateway fill:#1e293b,stroke:#475569,stroke-width:1px,color:#fff
     style Backend fill:#047857,stroke:#10b981,stroke-width:2px,color:#fff
     style DB fill:#1e293b,stroke:#64748b,stroke-width:1px,color:#fff
     style Finance fill:#581c87,stroke:#a855f7,stroke-width:1px,color:#fff
@@ -144,7 +147,6 @@ Dit project demonstreert moderne software engineering lifecycle standaarden: van
 - **Strict MVVM Scheiding:** Volledige ontkoppeling tussen de reactieve Jetpack Compose UI en de businesslogica in StateFlow-gestuurde ViewModels voor optimale testbaarheid en onderhoudbaarheid.
 - **Veilige Netwerkinterceptor & Sessiebeheer:** Een op maat gemaakte `AuthInterceptor` vangt 401 Unauthorized responses transparant af, vernieuwt asynchroon het JWT-token en probeert het oorspronkelijke verzoek opnieuw uit zonder de gebruikerservaring te verstoren.
 - **Betrouwbare Achtergrondtaken:** Gebruik van Android `WorkManager` voor idempotente taakplanning met batterij- en netwerkrestricties (PeriodicWorkRequest elke 15 minuten).
-- **R8/ProGuard Bytecode-Obfuscatie & CI Pipeline:** Geautomatiseerde GitHub Actions workflow voor continue linting, unit tests en release build-compilatie met R8/ProGuard bytecode-obfuscatie en resource shrinking tegen reverse engineering.
 
 ---
 

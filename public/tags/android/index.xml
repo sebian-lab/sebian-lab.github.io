@@ -17,7 +17,7 @@
       <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
       <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
       <guid>https://sebian-lab.github.io/projects/alphatracer-mobile/</guid>
-      <description>&lt;p&gt;AlphaTracer is een intelligente, native Android-applicatie voor het beheren van aandelenportfolio&amp;rsquo;s en het ontvangen van geautomatiseerde koersnotificaties.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Aangetoonde Vaardigheden:&lt;/strong&gt; Android SDK, Kotlin, Jetpack Compose, MVVM-Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, ProGuard Obfuscation, GitHub Actions CI.&lt;/p&gt;</description>
+      <description>&lt;p&gt;AlphaTracer is een intelligente, native Android-applicatie voor het beheren van aandelenportfolio&amp;rsquo;s en het ontvangen van geautomatiseerde koersnotificaties.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Aangetoonde Vaardigheden:&lt;/strong&gt; Android SDK, Kotlin, Jetpack Compose, MVVM-Architectuur, Retrofit + OkHttp, Android WorkManager, Biometrics API, GitHub Actions CI.&lt;/p&gt;</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://sebian-lab.github.io/projects/alphatracer-mobile/feature.png" />
     </item>
     
