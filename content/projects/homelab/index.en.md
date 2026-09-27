@@ -10,26 +10,26 @@ featureimage: "./image.png"
 
 ---
 
-## 📋 Executive Summary (Management & Recruiter Overview)
+## 📋 Project Snapshot (Overview)
 
 <div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
     <div>
-      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Business Challenge (The Problem)</h4>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Context & Challenge</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        How to reliably host and operate 30+ mission-critical microservices and heavy AI workloads across heterogeneous nodes with 24/7 uptime, <strong>without exposing vulnerable open inbound ports</strong> to the public internet?
+        In my personal homelab, I run 30+ containers and a dedicated 9-GPU cluster for local AI workloads. The core technical challenge was maintaining high availability across heterogeneous hardware and securely accessing internal services remotely, <strong>without exposing any inbound ports</strong> to the public internet.
       </p>
     </div>
     <div>
-      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 My Role & Engineering Ownership</h4>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Technical Architecture & Approach</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        End-to-end architecture & administration: architected an encrypted Zero-Trust WireGuard mesh overlay, orchestrated container stacks via Docker Compose, automated storage tiers, and deployed continuous port and service telemetry via <strong>PortTracker</strong>.
+        Self-directed architecture and systems administration: deployed an encrypted peer-to-peer WireGuard mesh using Tailscale (subnet routing and exit nodes), managed container lifecycles via Docker Compose, and tracked active socket bindings with <strong>PortTracker</strong>.
       </p>
     </div>
     <div>
-      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Business Impact & Measurable Outcome</h4>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">🚀 Technical Execution & Results</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        <strong>Zero public inbound open ports</strong> (total attack surface reduction), 99.9% uptime across 30+ services, proactive port conflict prevention, and complete on-premises data sovereignty for self-hosted AI models.
+        <strong>Zero inbound port forwarding</strong> (eliminated external perimeter attack surface), stable 24/7 uptime across 30+ microservices, local LLM execution across 50+ GB pooled VRAM via llama.cpp layer splitting, and proactive port collision auditing.
       </p>
     </div>
   </div>

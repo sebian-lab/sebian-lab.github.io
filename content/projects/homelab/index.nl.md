@@ -10,26 +10,26 @@ featureimage: "./image.png"
 
 ---
 
-## 📋 Executive Summary (Overzicht voor Management & HR)
+## 📋 Project Snapshot (Kort Samengevat)
 
 <div style="background:#0d1117; border:1px solid #30363d; border-radius:10px; padding:20px; margin-bottom:24px;">
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px;">
     <div>
-      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 De Uitdaging (Probleem)</h4>
+      <h4 style="color:#58a6ff; margin:0 0 8px 0; font-size:15px;">🎯 Context & Uitdaging</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        Hoe host en beheer je 30+ bedrijfskritische containers en zware AI-workloads over meerdere machines, met 24/7 betrouwbaarheid, <strong>zonder kwetsbare inkomende poorten</strong> open te zetten naar het openbare internet?
+        In mijn persoonlijke homelab beheer ik 30+ actieve containers en een 9-GPU cluster voor lokale AI-workloads. De technische uitdaging was om deze heterogene machines 24/7 stabiel te laten draaien en veilig op afstand te benaderen, <strong>zonder ooit poorten open te zetten</strong> op de router.
       </p>
     </div>
     <div>
-      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Mijn Rol & Verantwoordelijkheid</h4>
+      <h4 style="color:#3fb950; margin:0 0 8px 0; font-size:15px;">👤 Technische Rol & Aanpak</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        End-to-end architectuur en beheer: implementatie van een Zero-Trust WireGuard mesh-netwerk, container-orkestratie met Docker, geautomatiseerde storage-pipelines en het opzetten van continue poort- en servicetelemetrie via <strong>PortTracker</strong>.
+        Volledig eigen beheer en architectuur: opzetten van een peer-to-peer WireGuard mesh via Tailscale (met subnet routing en exit nodes), declaratief containerbeheer met Docker Compose, persistente data-volumes en continue servicemonitoring via de zelfgehoste tool <strong>PortTracker</strong>.
       </p>
     </div>
     <div>
-      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">📈 Bedrijfswaarde & Resultaat</h4>
+      <h4 style="color:#a855f7; margin:0 0 8px 0; font-size:15px;">🚀 Technische Realisatie & Resultaten</h4>
       <p style="margin:0; font-size:14px; line-height:1.5; color:#c9d1d9;">
-        <strong>Nul openbare inkomende poorten</strong> (100% gereduceerd extern aanvalsoppervlak), 99.9% continue beschikbaarheid over 30+ microservices, proactieve conflictpreventie en volledige datasoevereiniteit voor interne AI-modellen.
+        <strong>Nul open inkomende poorten</strong> naar het internet (volledig afgesloten extern aanvalsoppervlak), stabiele 24/7 werking over 30+ containers, lokale LLM-inference over 50+ GB VRAM via llama.cpp (layer splitting), en proactieve poortconflict-detectie.
       </p>
     </div>
   </div>
