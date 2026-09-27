@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Sebian Van de Spiegle
-  headline: "Kandidaat Stage: Vulnerability Management Engineer | Cegeka Modern SOC"
+  headline: "Student Toegepaste Informatica (Cloud & Security) | (ISC)² Candidate"
 
   location: Regio Landen / Geraardsbergen, België
   email: sebian.vandespiegle@student.odisee.be
@@ -14,9 +14,9 @@ cv:
       username: sebian-van-de-spiegle-72620528a
   sections:
     Profiel:
-      - bullet: "Ik ben een bachelorstudent Toegepaste Informatica (Hogeschool Odisee, voorheen HOGENT) en (ISC)² Candidate. Mijn passie ligt bij defensieve cybersecurity: ik wil niet alleen weten hoe iets werkt, maar ook hoe je het veilig en veerkrachtig maakt."
-      - bullet: "In mijn vrije tijd bouw en beheer ik een professionele homelab met 30+ containers, Zero-Trust netwerktoegang via Tailscale/WireGuard en eigen monitoring. Daardoor heb ik hands-on ervaring met Linux, Docker, PostgreSQL, SQL, Power BI en het automatiseren van beveiligingsprocessen."
-      - bullet: "Ik werk graag gestructureerd in Scrum/Kanban en communiceer open over voortgang en uitdagingen. Bij Cegeka wil ik mij graag verdiepen in vulnerability management, health check scenario's en het bouwen van rapportages en dashboards die het SOC echt vooruithelpen."
+      - bullet: "Bachelorstudent Toegepaste Informatica (Odisee Brussel) met afstudeerrichting Cloud Computing & Security en (ISC)² Candidate. Mijn interesse ligt breed in IT: van software- en data-oplossingen tot het betrouwbaar en veilig inrichten van netwerken en systemen."
+      - bullet: "Naast mijn opleiding leer ik het meest door zelf te bouwen: in mijn eigen homelab beheer ik 30+ containers (Docker), Linux-omgevingen, PostgreSQL en monitoring (Prometheus/Grafana). Externe toegang regel ik veilig via Tailscale/WireGuard zonder open poorten op het internet."
+      - bullet: "Ik werk gestructureerd in Scrum/Kanban, communiceer open over voortgang en stel gerichte vragen wanneer nodig. Voor mijn stage zoek ik een team waar ik praktijkervaring kan opdoen in softwareontwikkeling, cloud/systeembeheer of IT-security, en meteen nuttig werk kan leveren."
     Opleiding:
       - institution: Hogeschool Odisee
         area: Toegepaste Informatica (Cloud Computing & Security)
@@ -25,8 +25,7 @@ cv:
         end_date: 2027-06
         location: Brussel, België
         highlights:
-          - "Focus op Cloud Computing (Azure, AKS), Protocol- & Pakketanalyse (Wireshark), Hybride Datacenters (VMware ESXi 8.0) en Infrastructure as Code."
-          - "Ik koos voor deze richting omdat ik security niet als losstaand iets wil zien, maar als onderdeel van de hele infrastructuur."
+          - "Praktijkfocus op Cloud (Azure, AKS), netwerkanalyse (Wireshark), virtualisatie (VMware ESXi) en Infrastructure as Code (ARM Templates)."
       - institution: HOGENT
         area: Toegepaste Informatica
         degree: Professionele Bachelor
@@ -34,70 +33,52 @@ cv:
         end_date: 2026-01
         location: Gent, België
         highlights:
-          - "Data-analyse & Dashboard Project (Jan 2025 – Jun 2025): Gegevens geëxtraheerd uit PDF-bronnen, gemodelleerd en geanalyseerd via SQL (elektriciteitssector BE) en omgezet naar interactieve Power BI overzichten; samengewerkt in een Scrum/Kanban team van 4 met Jira."
-          - "Fundament in software engineering, relationele databases & SQL, Linux-systeembeheer en computernetwerken."
+          - "Data-analyse Project (Power BI & SQL): Uitgebreide dataset van de Belgische energiemarkt gemodelleerd en gevisualiseerd; gewerkt in teamverband met Jira en Scrum."
+          - "Stevige basis in software engineering, relationele databases & SQL, Linux-systeembeheer en netwerken."
     Technische Vaardigheden:
-      - label: Cybersecurity & Kwetsbaarheidsbeheer
-        details: Vulnerability Scanning (Trivy), Secret Detection (Gitleaks), Statische Code-analyse (Bandit SAST), Zero-Trust (ZTNA, Tailscale WireGuard Mesh, ACL's), Protocolanalyse (Wireshark), Secrets Management (geen plain-text credentials in git).
-      - label: Databases, SQL & Dashboarding
-        details: SQL (data-extractie, relationele datamodellering, complexe queries), Power BI (interactieve overzichten & KPI-dashboards), PostgreSQL (16 & 17), Redis.
-      - label: Netwerkinspectie & Monitoring
-        details: Poort- & Container-monitoring (o.a. PortTracker, Docker inspect), netwerkinspectie (Wireshark), loganalyse, Prometheus, Grafana, Docker container-status.
-      - label: Cloud & Datacenter
-        details: Microsoft Azure (VNets, Subnets, ACI), VMware ESXi 8.0 (vSwitch, Virtual Machines), Windows Server 2022 (Active Directory Domain Services, DNS), Linux (Debian 12, Ubuntu), Docker & Docker Compose.
-      - label: Automatisering & CI/CD
-        details: GitHub Actions CI/CD (geautomatiseerde tests, linting, build-validatie), Python (FastAPI, scripting), Infrastructure as Code (ARM Templates), Git, Bash, PowerShell.
+      - label: Besturingssystemen & Virtualisatie
+        details: Linux (Debian, Ubuntu), Windows Server 2022 (Active Directory, DNS), VMware ESXi 8.0, Docker & Docker Compose.
+      - label: Cloud & Netwerken
+        details: Microsoft Azure (VNets, NSG's), Tailscale / WireGuard VPN, Wireshark netwerkinspectie, basis Kubernetes (AKS).
+      - label: Ontwikkeling & Automatisering
+        details: Python (FastAPI, scripting), SQL, Bash, PowerShell, Git & GitHub Actions (CI/CD), pre-commit hooks, ARM Templates.
+      - label: Databases & Dashboarding
+        details: PostgreSQL, Redis, Power BI (datamodellering, interactieve KPI-dashboards).
+      - label: Security Tools & Hygiëne
+        details: Kwetsbaarhedenscanning (Trivy), static code analysis (Bandit SAST), secret detection (Gitleaks), veilige credential-injectie.
     Projecten & Praktijkervaring:
-      - name: '[AlphaTracer Financial API — Backend & DevSecOps Pipeline](https://github.com/sebian-lab/alphatracer-financial-api)'
+      - name: '[AlphaTracer Financial API — Backend & CI/CD Pipeline](https://github.com/sebian-lab/alphatracer-financial-api)'
         start_date: 2026-01
         end_date: present
-        location: Zelfstandig Project
-        summary: "Een zelfstandig softwareproject waarin ik een financiële API bouwde met FastAPI en PostgreSQL. Ik wilde van bij het begin security en automatisering serieus nemen."
-        highlights:
-          - "DevSecOps & Shift-Left Security: Geautomatiseerde secret scanning via Gitleaks, Python SAST-beveiligingscontroles met Bandit en container CVE-scanning via Trivy in pre-commit en GitHub Actions."
-          - "Veilige Configuratie & Monitoring: Volledige uitsluiting van plain-text credentials uit git via runtime injectie; basis telemetrie-export via Prometheus en Grafana."
-      - name: '[AlphaTracer Mobile — Financiële Android App](https://github.com/sebian-lab/alphatracer-mobile)'
+        location: Eigen Project
+        summary: "REST API gebouwd met Python (FastAPI) en PostgreSQL, voorzien van een geautomatiseerde CI/CD-pipeline via GitHub Actions met code- en securitychecks (Gitleaks, Bandit, Trivy)."
+      - name: '[AlphaTracer Mobile — Android App](https://github.com/sebian-lab/alphatracer-mobile)'
         start_date: 2026-01
         end_date: 2026-06
-        location: Academisch Semesterproject
-        summary: "Academisch semesterproject; native Android app voor portfoliobeheer met focus op veilige dataopslag en encryptie."
-        highlights:
-          - "Architectuur & API-integratie: Native Android-applicatie in Kotlin (MVVM, Jetpack Compose) met veilige REST-communicatie via Retrofit."
-          - "Mobiele Beveiliging: Implementatie van biometrische authenticatie (BiometricPrompt API) en veilige opslag van tokens via EncryptedSharedPreferences."
-      - name: '[Homelab & Zero-Trust Tailscale Mesh — orion-o6](https://sebian-lab.github.io/projects/homelab/)'
+        location: Academisch Project (Odisee)
+        summary: "Native Android-applicatie in Kotlin (Jetpack Compose, MVVM) met REST API-koppeling via Retrofit en veilige token-opslag via EncryptedSharedPreferences."
+      - name: '[Homelab & Private Netwerkinfrastructuur](https://sebian-lab.github.io/projects/homelab/)'
         start_date: 2024-01
         end_date: present
-        location: Zelfstandig Project
-        summary: "Mijn homelab is mijn leeromgeving: een private labomgeving met 30+ containers, multi-GPU hardware en 20 Tailnet endpoints. Ik beheer alles zelf en probeer enterprise-principes toe te passen."
-        highlights:
-          - "Zero-Trust Architectuur: Geen open poorten op het internet; end-to-end versleutelde WireGuard mesh met Tailscale ACL's en subnet routing. Toegang via strikte verificatie (Google-account)."
-          - "Service- & Containerbeheer: Beheer van 30+ Docker-containers en PostgreSQL-databases; implementatie van PortTracker voor realtime inzicht in actieve services, attack surface en poortallocaties binnen de private infrastructuur."
-      - name: '[Enterprise Cloud & Datacenter Virtualisation Labs](https://sebian-lab.github.io/projects/infrastructure/)'
+        location: Eigen Project
+        summary: "Zelfgebouwde thuisserver met 30+ Docker-containers, PostgreSQL en PortTracker. Veilig ontsloten via een private WireGuard mesh (Tailscale) en gemonitord met Prometheus en Grafana."
+      - name: '[Cloud & Datacenter Labs](https://sebian-lab.github.io/projects/infrastructure/)'
         start_date: 2026-01
         end_date: 2026-06
-        location: Odisee Hogeschool
-        summary: "Academisch project (Jan 2026 – Jun 2026); enterprise-infrastructuur met Microsoft Azure en VMware ESXi 8.0. Ik heb hier geleerd hoe cloud en datacenter samenkomen."
-        highlights:
-          - "Azure Cloud Segregatie & IaC: Gesegmenteerde VNets met basis NSG-configuratie, AKS Kubernetes en geautomatiseerde uitrol via ARM Templates."
-          - "Enterprise Identity & Datacenter: Opzet van VMware ESXi 8.0 hypervisor met vSwitch0 en configuratie van een Windows Server 2022 Primary Domain Controller met AD DS, DNS en Kerberos."
+        location: Academisch Project (Odisee)
+        summary: "Labo-opzet van gesegmenteerde Azure VNets via ARM Templates, gecombineerd met een lokale VMware ESXi hypervisor en Windows Server Primary Domain Controller."
     Certificaten:
       - name: '[(ISC)² Candidate](https://www.credly.com/badges/182b7df3-0eed-480b-81dd-3966bd800728)'
         date: 2026
-        summary: Uitgegeven door (ISC)² (International Information System Security Certification Consortium)
-        highlights:
-          - "Officiële verificatie via Credly; gecommitteerd aan de (ISC)² Code of Ethics en actief in voorbereiding op verdiepende cybersecurity-certificeringen."
+        summary: "Officiële registratie bij (ISC)²; verbonden aan de ethische code en actief bezig met verdere cybersecurity-verdieping."
     Competenties:
-      - label: Methodieken & Samenwerking
-        details: Scrum, Kanban, Jira, Incident- & Wijzigingsbeheer, Agile sprintplanning, Git-flow, gestructureerde communicatie.
+      - label: Werkmethode
+        details: Scrum, Kanban, Jira, Git-flow, gestructureerd documenteren, leergierig en zelfredzaam.
       - label: Talenkennis
-        details: Nederlands (Moedertaal), Engels (Vloeiend in woord en geschrift).
-    Interesses & Passies:
-      - label: Vulnerability Research & Threat Hunting
-        details: Proactief kwetsbaarheden onderzoeken, analyse van CVE-bulletins en hardening van enterprise-services.
-      - label: Homelabbing & Self-Hosting
-        details: 24/7 private infrastructuur beheren, container-orkestratie, Zero-Trust netwerkarchitecturen en telemetrie.
-      - label: AI & Lokale LLM Inference
-        details: Bare-metal hardware, multi-GPU VRAM-pooling en lokale inferentie via open-source modellen (llama.cpp).
+        details: Nederlands (Moedertaal), Engels (Vlot in woord en geschrift).
+    Interesses:
+      - label: Focusgebieden
+        details: Homelabbing & self-hosting, IT-security fundamenten, open-source AI (lokale LLM's via llama.cpp).
 design:
   theme: engineeringresumes
 locale:
