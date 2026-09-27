@@ -23,6 +23,3 @@ Student **Toegepaste Informatica** aan **Odisee Hogeschool Brussel**, op zoek na
 
 {{< article link="/projects/homelab/" >}}
 
----
-
-[📄 Download CV (PDF)](/resume.pdf) · [📋 Bekijk CV (HTML)](/cv.html) · [📧 Contact](mailto:sebian.vandespiegle@student.odisee.be)

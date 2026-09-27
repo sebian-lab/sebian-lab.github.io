@@ -23,6 +23,3 @@ Student **Toegepaste Informatica (Applied Computer Science)** at **Odisee Brusse
 
 {{< article link="/projects/homelab/" >}}
 
----
-
-[📄 Download Resume (PDF)](/resume.pdf) · [📋 View CV (HTML)](/cv.html) · [📧 Contact](mailto:sebian.vandespiegle@student.odisee.be)
