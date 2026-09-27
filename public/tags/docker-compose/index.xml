@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker Compose on Sebian Van de Spiegle</title>
+    <link>http://localhost:1313/tags/docker-compose/</link>
+    <description>Recent content in Docker Compose on Sebian Van de Spiegle</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl</language>
+    <managingEditor>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</managingEditor>
+    <webMaster>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</webMaster>
+    <copyright>© 2026 Sebian Van de Spiegle</copyright>
+    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Backend Financiële API &amp; Observability Stack</title>
+      <link>http://localhost:1313/projects/backend-api/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
+      <author>sebian.vandespiegle@student.odisee.be (Sebian Van de Spiegle)</author>
+      <guid>http://localhost:1313/projects/backend-api/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Toegepaste Vaardigheden:&lt;/strong&gt; FastAPI, Python 3.10+, Docker Compose (Dual Dev/Prod opzet), PostgreSQL, REST API Architectuur, In-Memory Caching &amp;amp; Limiting, JWT Authenticatie &amp;amp; Refresh Tokens, DevSecOps (Bandit SAST, Trivy Container Scanning, Gitleaks, Sigstore Cosign), HashiCorp Vault, Enterprise Observability (Custom ASGI Prometheus Metrics, Jaeger OTel Spans, Loki Direct Logging Handler, Grafana Dashboards, Alertmanager Webhooks), E2E Testautomatisering (Bash).&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/backend-api/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

@@ -11,26 +11,26 @@ cv:
       username: sebian-van-de-spiegle-72620528a
   sections:
     profiel:
-      - 'Gedreven student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een boeiende IT-stage in **België**. Ervaren in het ontwerpen en realiseren van schaalbare, veilige architecturen: van native Android apps en performante FastAPI REST APIs tot geautomatiseerde CI/CD-pipelines, containerisatie (Docker, Kubernetes), 24/7 homelab serverbeheer (30+ containers) en een dedicated 9-GPU distributed AI cluster.'
+      - 'Enthousiaste student **Toegepaste Informatica (Odisee Brussel)**, op zoek naar een leerrijke IT-stage in **België**. Geboeid door backend-engineering, containerisatie en moderne observability-tools: van native Android apps en FastAPI REST APIs tot praktische Docker Compose microservices, pre-commit security checks en 24/7 homelab beheer.'
     technische_vaardigheden:
       - label: Cloud, Containers & Compute
-        details: Microsoft Azure (AKS, VM, VNet, NSG, IaC ARM), Docker, Docker Compose, Kubernetes (K3s), VMware ESXi 8.0, 9-GPU Cluster (50+ GB VRAM)
+        details: Docker, Docker Compose, Microsoft Azure (AKS, VM, VNet), VMware ESXi 8.0, 9-GPU Cluster (Homelab)
       - label: CI/CD, DevSecOps & Observability
-        details: GitHub Actions, ArgoCD (GitOps), Terraform, Bandit (SAST), Aqua Trivy (CVE scans), Sigstore Cosign, Kyverno, Gitleaks, Vault, Prometheus, Grafana, Jaeger, Loki
+        details: GitHub Actions, Prometheus, Grafana, Jaeger (OTel), Loki, HashiCorp Vault, Bandit (SAST), Aqua Trivy, Sigstore Cosign, Gitleaks, Ruff
       - label: Software & Data
-        details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, Redis, REST APIs
+        details: Python (FastAPI, SQLAlchemy, Pydantic), Kotlin (Android SDK, Jetpack Compose, MVVM), Bash, PowerShell, PostgreSQL, REST APIs
       - label: Systeem- & Netwerkbeheer
-        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Zero-Trust Mesh VPN, Network Segmentation
+        details: Linux (Debian 12, Ubuntu), Windows Server 2022 (Active Directory / AD DS, DNS), Tailscale Mesh VPN, Netwerksegmentatie
     zelfstandige_projecten:
       - name: '[AlphaTracer Financial API & Platform](https://github.com/sebian-lab/alphatracer-financial-api)'
         start_date: 2025-01
         end_date: present
-        summary: Zelfstandig praktijkproject (Hobby) – Performante Fintech REST API met DevSecOps CI/CD, security hardening & GitOps
+        summary: Zelfstandig praktijkproject – Financiële REST API om hands-on te leren werken met containerisatie, observability en backend security
         highlights:
-          - 'Asynchrone REST API met **FastAPI** en **PostgreSQL**, met JWT-authenticatie, rate limiting en OTLP telemetrie via **Jaeger**.'
-          - 'DevSecOps pipeline: **Bandit** (SAST), **Trivy** (SARIF export), **Gitleaks**, **Cosign** (keyless OIDC signing) en **Vault** secrets.'
-          - 'GitOps continuous deployment via **ArgoCD** op een 3-node **Kubernetes (K3s)** cluster met **Kyverno** admission policies en Kustomize.'
-          - 'Full-stack observability via **Prometheus**, **Grafana**, **Alertmanager** en **Loki** log aggregatie; end-to-end getest met **Pytest**.'
+          - 'REST API met **FastAPI** en **PostgreSQL**, met JWT-authenticatie, in-memory rate limiting en OTel telemetrie via **Jaeger**.'
+          - 'Observability-stack in **Docker Compose**: **Prometheus** (custom ASGI metrics-middleware), **Loki** (direct log push) en **Grafana** dashboards.'
+          - 'DevSecOps pipeline: pre-commit checks met **Gitleaks** en **Ruff**, CI/CD scans met **Bandit** en **Trivy**, en signing via **Sigstore Cosign**.'
+          - 'Gehardende **10-container Docker Compose** productie-appliance (non-root `appuser`) en geautomatiseerde **E2E Bash testsuite** (450+ regels).'
       - name: '[AlphaTracer Mobile](https://github.com/sebian-lab/alphatracer-mobile)'
         start_date: 2025-01
         end_date: present
